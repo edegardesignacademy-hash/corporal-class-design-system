@@ -23,7 +23,7 @@ Pacote para aplicar a marca em **qualquer projeto/ferramenta** (web, React, Fram
 ## Notas técnicas
 
 - **Cores:** derivadas das **5 cores institucionais** da Corporal Academy (brandbook §3.6): bordô `#D6515C`, vermelho claro `#FFB1BD`, amarelado `#FFE4A4`, branco `#FFFFFF`, preto `#000000`. Acento derivado coral `#E88A92`. Detalhe no `index.html`.
-- **Tipografia:** Silka (institucional), embutida em base64/woff2; system-ui como fallback.
+- **Tipografia:** Silka (institucional), embutida em base64/woff2; Poppins como fallback (quando a Silka não estiver disponível), depois system-ui.
 - **Ícones:** biblioteca **Phosphor**, peso **Thin** (stroke 1pt na grade 24), `currentColor`.
 - **Tema:** dark por padrão; light via `data-theme="light"`; sem atributo segue `prefers-color-scheme`. Toggle persiste em `cc-theme`.
 

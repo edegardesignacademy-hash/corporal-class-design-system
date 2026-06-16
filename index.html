@@ -77,7 +77,7 @@
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{font-family:'Silka',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--txt);-webkit-font-smoothing:antialiased;line-height:1.5}
+  body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--txt);-webkit-font-smoothing:antialiased;line-height:1.5}
   .wrap{max-width:1080px;margin:0 auto;padding:0 32px}
   .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--coral);font-weight:600}
   .hl{color:var(--coral)}
@@ -394,6 +394,24 @@
   .elev-box{width:98px;height:74px;background:var(--card2);border:1px solid var(--line);border-radius:var(--radius-md);display:flex;align-items:flex-end;justify-content:center;padding:8px;font-size:10.5px;color:var(--mut);font-family:ui-monospace,monospace}
   .motion-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:11px}
   .motion-chip{font-size:12px;color:var(--coral-soft);font-family:ui-monospace,monospace;background:var(--card);border:1px solid var(--line);padding:9px 14px;border-radius:var(--radius-sm)}
+  /* Cantos aninhados (nested corners) */
+  .nc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;margin-top:11px}
+  .nc-demo{display:flex;flex-direction:column;gap:10px}
+  .nc-flag{font-size:12px;font-weight:600;display:inline-flex;align-items:center;gap:7px}
+  .nc-flag svg{width:15px;height:15px;flex:0 0 auto}
+  .nc-flag.ok{color:var(--success)}
+  .nc-flag.no{color:var(--danger)}
+  .nc-out{background:var(--card2);border:1px solid var(--line);padding:16px;border-radius:24px}
+  .nc-in{height:64px;background:var(--gold);border-radius:8px}
+  .nc-in.wrong{border-radius:24px}
+  [data-theme="light"] .nc-in{background:var(--bordo2)}
+  .nc-cap{font-size:11.5px;color:var(--mut);line-height:1.5}
+  .nc-cap b{color:var(--txt);font-weight:600}
+  .nc-tbl{width:100%;border-collapse:collapse;margin-top:11px;font-size:12.5px}
+  .nc-tbl th,.nc-tbl td{text-align:left;padding:9px 12px;border-top:1px solid var(--line)}
+  .nc-tbl th{font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut);font-weight:600}
+  .nc-tbl td{color:var(--txt);font-family:ui-monospace,monospace}
+  .nc-tbl td.muted{color:var(--mut)}
   @media(max-width:820px){.fund-grid{grid-template-columns:1fr}}
 
   @media(max-width:820px){
@@ -702,7 +720,7 @@
 <!-- 03 TIPOGRAFIA -->
 <section><div class="wrap">
   <div class="sec-title"><span class="num">04</span><h2>Tipografia</h2></div>
-  <p class="sec-note">Família única: <b class="hl">Silka</b>, fonte institucional do brandbook, instalada e disponível no Framer. (A SangBleu não é usada em ambiente online.) Pesos: 300 / 400 / 500 / 600 / 700.</p>
+  <p class="sec-note">Fonte institucional: <b class="hl">Silka</b> (do brandbook, disponível no Framer). <b class="hl">Fallback: Poppins</b> — quando a Silka não estiver disponível (outro projeto/ferramenta), use Poppins; só então cai em system-ui. Pesos: 300 / 400 / 500 / 600 / 700.</p>
 
   <div class="type-row">
     <div class="t-display">O inverno é a época ideal para tratar celulite.</div>
@@ -1011,6 +1029,37 @@
     <div class="elev-box" style="box-shadow:var(--elev-3)">elev-3</div>
     <div class="elev-box" style="box-shadow:var(--elev-4)">elev-4</div>
   </div>
+
+  <div class="group-lbl">Cantos aninhados (nested corners)</div>
+  <p class="sec-note" style="margin-bottom:0">Elemento arredondado dentro de outro: os cantos devem ser <b class="hl">concêntricos</b> (mesmo centro de arco). Regra — <b class="hl">raio interno = raio externo − padding</b> — pra o espaçamento ficar uniforme inclusive nos cantos.</p>
+  <div class="nc-grid">
+    <div class="nc-demo">
+      <span class="nc-flag ok"><svg aria-hidden="true"><use href="#i-check"/></svg> Faça · concêntrico</span>
+      <div class="nc-out"><div class="nc-in"></div></div>
+      <div class="nc-cap">Externo <b>r 24</b> · padding <b>16</b> → interno <b>r 8</b> (24 − 16). Gap uniforme.</div>
+    </div>
+    <div class="nc-demo">
+      <span class="nc-flag no"><svg aria-hidden="true"><use href="#ph-x"/></svg> Não faça · mesmo raio</span>
+      <div class="nc-out"><div class="nc-in wrong"></div></div>
+      <div class="nc-cap">Interno <b>r 24</b> (igual ao externo) → nos cantos o gap "estufa". Não concêntrico.</div>
+    </div>
+  </div>
+  <div class="group-lbl">Pares recomendados</div>
+  <table class="nc-tbl">
+    <thead><tr><th>Contexto</th><th>Externo</th><th>Padding</th><th>Interno</th></tr></thead>
+    <tbody>
+      <tr><td>Card grande</td><td>24</td><td>16</td><td>8</td></tr>
+      <tr><td>Card médio</td><td>16</td><td>8</td><td>8</td></tr>
+      <tr><td>Card pequeno / input</td><td>12</td><td>8</td><td>4</td></tr>
+      <tr><td>Tile compacto</td><td>8</td><td>8</td><td class="muted">0 · reto</td></tr>
+      <tr><td>Pill / botão</td><td class="muted">full</td><td class="muted">—</td><td class="muted">exceção</td></tr>
+    </tbody>
+  </table>
+  <div class="group-lbl">CSS · derive o interno com calc()</div>
+  <div class="code"><span class="c">/* raio interno = raio externo − padding (nunca negativo) */</span>
+.card{ <span class="k">--r</span>:24px; <span class="k">--pad</span>:16px; <span class="k">border-radius</span>:var(--r); <span class="k">padding</span>:var(--pad); }
+.card &gt; .inner{ <span class="k">border-radius</span>:max(0px, calc(var(--r) - var(--pad))); } <span class="c">/* 24 - 16 = 8 */</span></div>
+  <p class="sec-note" style="margin-top:14px"><b class="hl">Padding ≥ raio</b> → interno vira 0 (reto). <b class="hl">Borda/stroke</b> inverte: externo = interno + largura da borda. <b class="hl">Aninhamento profundo</b>: subtraia o padding de cada nível. <b class="hl">Pill</b> é exceção (não recalcula). Com <b class="hl">corner smoothing</b> (squircle iOS) a fórmula vira aproximação — iguale o smoothing em pai e filho.</p>
 </div></section>
 
 <!-- 09 TOKENS -->

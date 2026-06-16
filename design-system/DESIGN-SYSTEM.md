@@ -32,7 +32,7 @@ Sistema de design portátil para web (HTML/CSS, React, Framer). Dark por padrão
   <button class="cc-btn cc-fill">Assinar agora <svg class="cc-ico">…</svg></button>
 </body>
 ```
-A fonte **Silka** vem em `silka.css` (woff2 embutido, self-contained) — linke antes do CSS principal. Sem ela, cai em `system-ui` sem quebrar.
+A fonte **Silka** vem em `silka.css` (woff2 embutido, self-contained) — linke antes do CSS principal. Sem ela, cai em **Poppins** (fallback) e, por fim, `system-ui` — sem quebrar.
 
 ### 2. Qualquer stack — via tokens
 Importe `corporal-design-tokens.json` e gere variáveis no seu formato (CSS vars, JS, Tailwind theme, etc.). Regra de ouro: **componentes consomem tokens, nunca hex solto.**
@@ -67,6 +67,24 @@ No light, **dourado e rosa como texto** usam variantes `-ink` (`--gold-ink`, `--
 - **Z-index:** base 0 · raised 10 · sticky 40 · overlay 100 · toast 1000
 - **Motion:** fast .15s · base .2s · slow .4s · ease `cubic-bezier(.2,.8,.2,1)`
 - **Foco:** `--focus: 0 0 0 3px rgba(232,138,146,.55)`
+
+### Cantos aninhados (nested corners)
+Quando um elemento arredondado fica **dentro** de outro, os cantos devem ser **concêntricos** (mesmo centro de arco):
+
+```
+raio interno = raio externo − padding
+```
+
+Mantém o espaçamento uniforme inclusive nos cantos. Mesmo raio nos dois → o gap "estufa" nos cantos (efeito errado).
+
+```css
+.card{ --r:24px; --pad:16px; border-radius:var(--r); padding:var(--pad); }
+.card > .inner{ border-radius:max(0px, calc(var(--r) - var(--pad))); } /* 24 - 16 = 8 */
+```
+
+Pares: card grande 24/16→8 · médio 16/8→8 · pequeno 12/8→4 · tile 8/8→0 (reto).
+
+Regras: **padding ≥ raio** → interno 0 (reto); **borda/stroke** inverte (externo = interno + largura); **aninhamento profundo** subtrai o padding de cada nível; **pill** é exceção; com **corner smoothing/squircle** a fórmula vira aproximação (iguale o smoothing em pai e filho).
 
 ### Tipografia — Silka (escala responsiva)
 `size = Desktop / Tablet / Phone (px)`

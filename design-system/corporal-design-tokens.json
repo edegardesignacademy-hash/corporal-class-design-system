@@ -61,7 +61,7 @@
   "focus":  "0 0 0 3px rgba(232,138,146,.55)",
 
   "typography": {
-    "fontFamily": "'Silka', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+    "fontFamily": "'Silka', 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
     "weights": [300, 400, 500, 600, 700],
     "note": "size = [desktop, tablet, phone] (px). No CSS use clamp() entre o phone e o desktop. Body mínimo 16px no mobile (evita zoom no iOS).",
     "styles": {

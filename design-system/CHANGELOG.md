@@ -14,6 +14,15 @@ versionamento segue [SemVer](https://semver.org/lang/pt-BR/):
 
 _Nada pendente no momento._
 
+## [1.1.0] — 2026-06-16
+### Adicionado
+- Navegação por categorias (Marca · Componentes · Sistema) com menus suspensos, scrollspy e logo da marca.
+### Alterado
+- Conteúdo reordenado: parte visual primeiro, tokens no fim.
+- Dark mode: elevação por superfície (card mais claro que o fundo); removido o brilho colorido das sombras.
+- Cantos arredondados corrigidos no card com mídia.
+- Copy revisada (menos estrangeirismos desnecessários).
+
 ## [1.0.0] — 2026-06-16
 
 Primeira versão consolidada e documentada do sistema. Reúne fundações, camada

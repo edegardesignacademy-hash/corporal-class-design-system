@@ -55,8 +55,8 @@
     /* ===== Escala de elevação (sombras em camadas + matiz do brand) ===== */
     --elev-1:0 1px 2px rgba(0,0,0,.34), 0 2px 6px rgba(0,0,0,.30);
     --elev-2:0 2px 4px rgba(0,0,0,.34), 0 8px 18px rgba(0,0,0,.40);
-    --elev-3:0 4px 10px rgba(214,81,92,.30), 0 16px 36px rgba(214,81,92,.42);
-    --elev-4:0 8px 20px rgba(214,81,92,.34), 0 28px 60px rgba(214,81,92,.52);
+    --elev-3:0 4px 12px rgba(0,0,0,.45), 0 16px 36px rgba(0,0,0,.55);
+    --elev-4:0 10px 24px rgba(0,0,0,.5), 0 28px 64px rgba(0,0,0,.62);
     --elev-raised:var(--elev-1); --elev-overlay:var(--elev-3); --elev-modal:var(--elev-4);
     color-scheme:dark;
   }
@@ -85,47 +85,31 @@
   }
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--txt);-webkit-font-smoothing:antialiased;line-height:1.5;font-variant-numeric:tabular-nums}
-  .wrap{max-width:1100px;margin:0 auto;padding:0 clamp(20px,4vw,44px)}
-  .eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--coral);font-weight:600}
-  .hl{color:var(--coral)}
-  code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
-
-  /* Acessibilidade: foco visível + movimento reduzido */
-  .b:focus-visible,a:focus-visible,button:focus-visible{outline:2px solid var(--coral);outline-offset:2px;box-shadow:var(--focus)}
-  @media (forced-colors: active){.b:focus-visible,a:focus-visible,button:focus-visible{outline:2px solid Highlight;outline-offset:2px}}
-  @media (prefers-reduced-motion: reduce){
-    html{scroll-behavior:auto}
-    *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}
-  }
-
-  /* Toggle de tema (claro/escuro) */
-  .theme-toggle{position:relative;flex:0 0 auto;
-    display:inline-flex;align-items:center;gap:8px;
-    background:var(--card);border:1px solid var(--line);color:var(--txt);
-    font:inherit;font-size:13px;font-weight:600;padding:9px 15px 9px 13px;
-    border-radius:var(--radius-pill);cursor:pointer;
-    box-shadow:none;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
-    transition:transform var(--motion) var(--ease),border-color var(--motion),background var(--motion)}
-  .theme-toggle:hover{border-color:var(--coral);transform:translateY(-1px)}
-  .theme-toggle .ti{width:17px;height:17px;flex:0 0 auto}
-  .theme-toggle .moon{display:none}
-  [data-theme="light"] .theme-toggle .sun{display:none}
-  [data-theme="light"] .theme-toggle .moon{display:block}
-  .theme-toggle .lbl-d{display:none}
-  [data-theme="light"] .theme-toggle .lbl-l{display:none}
-  [data-theme="light"] .theme-toggle .lbl-d{display:inline}
-  html{scroll-behavior:smooth}
-  .topnav{position:sticky;top:0;z-index:var(--z-sticky);display:flex;align-items:center;gap:14px;padding:9px clamp(14px,4vw,40px);background:var(--card);border-bottom:1px solid var(--line);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
-  .tn-home{font-weight:600;font-size:14px;color:var(--txt);text-decoration:none;white-space:nowrap;flex:0 0 auto;letter-spacing:-.01em}
-  .tn-home:hover{color:var(--coral)}
-  .tn-links{display:flex;align-items:center;gap:2px;overflow-x:auto;flex:1 1 auto;scrollbar-width:none;-ms-overflow-style:none}
-  .tn-links::-webkit-scrollbar{display:none}
-  .tn-links a{font-size:13px;color:var(--mut);text-decoration:none;padding:7px 12px;border-radius:var(--radius-pill);white-space:nowrap;transition:color var(--motion) var(--ease),background var(--motion) var(--ease)}
-  .tn-links a:hover{color:var(--txt);background:var(--card2)}
-  .tn-links a.active{color:var(--txt);background:var(--card2);font-weight:600;box-shadow:inset 0 -2px 0 var(--coral)}
-  .tn-links a:focus-visible{outline:none;box-shadow:var(--focus)}
-  @media(max-width:560px){.tn-home{display:none}}
+  .topnav{position:sticky;top:0;z-index:var(--z-sticky);background:var(--card);border-bottom:1px solid var(--line)}
+  .tn-inner{display:flex;align-items:center;gap:16px;height:56px}
+  .tn-home{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:14.5px;color:var(--txt);text-decoration:none;white-space:nowrap;flex:0 0 auto;letter-spacing:-.01em}
+  .tn-home .tn-mark{width:21px;height:21px;flex:0 0 auto;color:var(--coral)}
+  .tn-home:hover{opacity:.78}
+  .tn-menus{display:flex;align-items:center;gap:4px;flex:1 1 auto}
+  .tn-group{position:relative}
+  .tn-cat{display:inline-flex;align-items:center;gap:6px;font:inherit;font-size:13.5px;font-weight:500;color:var(--mut);background:none;border:none;cursor:pointer;padding:8px 10px;white-space:nowrap;transition:color var(--motion) var(--ease)}
+  .tn-cat:hover{color:var(--txt)}
+  .tn-cat.active{color:var(--coral)}
+  .tn-cat .tn-car{width:13px;height:13px;opacity:.6;transition:transform var(--motion) var(--ease)}
+  .tn-cat.active .tn-car{opacity:1}
+  .tn-group:hover .tn-car,.tn-group.open .tn-car,.tn-group:focus-within .tn-car{transform:rotate(180deg)}
+  .tn-cat:focus-visible{outline:none;box-shadow:var(--focus);border-radius:8px}
+  .tn-menu{position:absolute;top:calc(100% - 1px);left:0;min-width:236px;background:var(--card);border:1px solid var(--line);border-radius:var(--radius-md);box-shadow:var(--elev-overlay);padding:6px;display:none;flex-direction:column;gap:1px}
+  .tn-group:last-child .tn-menu{left:auto;right:0}
+  @media(hover:hover){.tn-group:hover .tn-menu{display:flex}}
+  .tn-group.open .tn-menu,.tn-group:focus-within .tn-menu{display:flex}
+  .tn-menu a{display:flex;align-items:center;gap:9px;font-size:13.5px;color:var(--mut);text-decoration:none;padding:9px 11px;border-radius:8px;white-space:nowrap;transition:color var(--motion) var(--ease),background var(--motion) var(--ease)}
+  .tn-menu a::before{content:"";width:5px;height:5px;border-radius:50%;background:transparent;flex:0 0 auto}
+  .tn-menu a:hover{color:var(--txt);background:var(--card2)}
+  .tn-menu a.active{color:var(--txt);font-weight:600}
+  .tn-menu a.active::before{background:var(--coral)}
+  .tn-menu a:focus-visible{outline:none;box-shadow:var(--focus)}
+  @media(max-width:600px){.tn-home span{display:none}.tn-inner{gap:10px}.tn-menus{gap:0}.tn-cat{padding:8px 8px}}
   @media(max-width:560px){.theme-toggle .lbl{display:none}.theme-toggle{padding:13px;min-width:44px;min-height:44px;justify-content:center;border-radius:50%}}
 
   /* Click-to-copy (cores, valores, blocos de código) */
@@ -514,7 +498,7 @@
   .pager{display:flex;gap:6px;align-items:center}
   .pg{min-width:36px;height:36px;border-radius:var(--radius-sm);border:var(--bw-1) solid var(--line);background:var(--card);color:var(--txt);font:inherit;font-size:13px;display:inline-flex;align-items:center;justify-content:center;cursor:pointer}
   .pg.active{background:transparent;border-color:var(--coral);color:var(--coral);font-weight:600} .pg:disabled{opacity:var(--opacity-disabled);cursor:not-allowed} .pg:focus-visible{outline:none;box-shadow:var(--focus)}
-  .cardv{background:var(--card);border:var(--bw-1) solid var(--line);border-radius:var(--radius-lg);padding:18px}
+  .cardv{background:var(--card);border:var(--bw-1) solid var(--line);border-radius:var(--radius-lg);padding:18px;overflow:hidden}
   .cardv.inter{cursor:pointer;transition:transform .2s var(--ease),box-shadow .2s var(--ease)} .cardv.inter:hover{transform:translateY(-3px);box-shadow:var(--elev-overlay)}
   .cardv h4{font-size:16px;font-weight:500;color:var(--txt);margin-bottom:6px} .cardv p{font-size:13.5px;color:var(--mut);line-height:1.55}
   .cardv-media .media{height:92px;background:linear-gradient(120deg,var(--gold),var(--rose))} .cardv-media .body{padding:16px}
@@ -618,26 +602,43 @@
 </defs></svg>
 
 <nav class="topnav" aria-label="Seções do design system">
-  <a class="tn-home" href="#top">Corporal Class</a>
-  <div class="tn-links">
-    <a href="#nav-marca">Marca</a>
-    <a href="#nav-cores">Cores</a>
-    <a href="#nav-gradientes">Gradientes</a>
-    <a href="#nav-tipografia">Tipografia</a>
-    <a href="#nav-botoes">Botões</a>
-    <a href="#nav-icones">Ícones</a>
-    <a href="#nav-a11y">A11y</a>
-    <a href="#nav-sistema">Sistema</a>
-    <a href="#nav-tokens">Tokens</a>
-    <a href="#nav-feedback">Feedback</a>
-    <a href="#nav-estrutura">Estrutura</a>
-    <a href="#nav-processo">Processo</a>
+  <div class="wrap tn-inner">
+    <a class="tn-home" href="#top"><svg class="tn-mark" viewBox="0 0 320 320" aria-hidden="true"><use href="#logo-icon"/></svg><span>Corporal Class</span></a>
+    <div class="tn-menus">
+      <div class="tn-group">
+        <button class="tn-cat" type="button" aria-expanded="false" aria-haspopup="true">Marca <svg class="tn-car" aria-hidden="true"><use href="#ph-caret"/></svg></button>
+        <div class="tn-menu" role="menu">
+          <a role="menuitem" href="#nav-marca">Marca &amp; logo</a>
+          <a role="menuitem" href="#nav-cores">Cores</a>
+          <a role="menuitem" href="#nav-gradientes">Gradientes</a>
+          <a role="menuitem" href="#nav-tipografia">Tipografia</a>
+          <a role="menuitem" href="#nav-icones">Ícones</a>
+        </div>
+      </div>
+      <div class="tn-group">
+        <button class="tn-cat" type="button" aria-expanded="false" aria-haspopup="true">Componentes <svg class="tn-car" aria-hidden="true"><use href="#ph-caret"/></svg></button>
+        <div class="tn-menu" role="menu">
+          <a role="menuitem" href="#nav-botoes">Botões &amp; componentes</a>
+          <a role="menuitem" href="#nav-feedback">Feedback &amp; sobreposições</a>
+          <a role="menuitem" href="#nav-estrutura">Estrutura &amp; navegação</a>
+        </div>
+      </div>
+      <div class="tn-group">
+        <button class="tn-cat" type="button" aria-expanded="false" aria-haspopup="true">Sistema <svg class="tn-car" aria-hidden="true"><use href="#ph-caret"/></svg></button>
+        <div class="tn-menu" role="menu">
+          <a role="menuitem" href="#nav-a11y">Acessibilidade &amp; contraste</a>
+          <a role="menuitem" href="#nav-sistema">Fundamentos do sistema</a>
+          <a role="menuitem" href="#nav-processo">Princípios &amp; processo</a>
+          <a role="menuitem" href="#nav-tokens">Tokens</a>
+        </div>
+      </div>
+    </div>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Alternar tema claro e escuro" aria-pressed="false">
+      <svg class="ti sun" aria-hidden="true"><use href="#i-sun"/></svg>
+      <svg class="ti moon" aria-hidden="true"><use href="#i-moon"/></svg>
+      <span class="lbl"><span class="lbl-l">Claro</span><span class="lbl-d">Escuro</span></span>
+    </button>
   </div>
-<button class="theme-toggle" id="themeToggle" type="button" aria-label="Alternar tema claro e escuro" aria-pressed="false">
-  <svg class="ti sun" aria-hidden="true"><use href="#i-sun"/></svg>
-  <svg class="ti moon" aria-hidden="true"><use href="#i-moon"/></svg>
-  <span class="lbl"><span class="lbl-l">Claro</span><span class="lbl-d">Escuro</span></span>
-</button>
 </nav>
 
 <header id="top"><div class="wrap">
@@ -792,7 +793,7 @@
   <p class="sec-note" style="margin-top:16px">No tema light, dourado e rosa como <b class="hl">texto</b> usam variantes escurecidas (gold-ink #7A5A0E, rose #B04A5E); como <b class="hl">preenchimento</b> mantêm a cor institucional (#FFE4A4, #FFB1BD). A landing usa o tema dark por padrão.</p>
 </div></section>
 
-<!-- 02 GRADIENTES -->
+<!-- 03 GRADIENTES -->
 <section><div class="wrap">
   <div class="sec-title" id="nav-gradientes"><span class="num">03</span><h2>Gradientes</h2></div>
   <p class="sec-note">Biblioteca de gradientes, do funcional ao abstrato, montados só com cores do brand. Fundo de seção, card de destaque ou bloco hero.</p>
@@ -843,7 +844,7 @@
   </div>
 </div></section>
 
-<!-- 03 TIPOGRAFIA -->
+<!-- 04 TIPOGRAFIA -->
 <section><div class="wrap">
   <div class="sec-title" id="nav-tipografia"><span class="num">04</span><h2>Tipografia</h2></div>
   <p class="sec-note">Fonte institucional: <b class="hl">Silka</b> (do brandbook, disponível no Framer). <b class="hl">Fallback: Poppins</b> — quando a Silka não estiver disponível (outro projeto/ferramenta), use Poppins; só então cai em system-ui. Pesos: 300 / 400 / 500 / 600 / 700.</p>
@@ -917,111 +918,9 @@
   <p class="sec-note" style="margin-top:14px;font-size:12.5px">Os specimens acima já usam <code>clamp()</code> — redimensione a janela para ver a escala fluida entre Phone e Desktop. Body mínimo de <b class="hl">16px</b> no mobile evita o zoom automático do iOS.</p>
 </div></section>
 
-<!-- 04 BOTÕES & COMPONENTES -->
+<!-- 05 ÍCONES -->
 <section><div class="wrap">
-  <div class="sec-title" id="nav-botoes"><span class="num">05</span><h2>Botões &amp; componentes</h2></div>
-  <p class="sec-note">Um único componente de botão com variantes (preenchido, sólido, contorno, inline/texto, dourado e dourado contorno), tamanhos (sm/md/lg), ícone opcional (lado esquerdo ou direito) e estado desabilitado. Ícones: biblioteca <b class="hl">Phosphor</b> no Framer (aqui demonstrado com ArrowRight). Raio 30px.</p>
-
-  <div class="btn-tbl">
-    <div></div><div class="h">Ícone à direita</div><div class="h">Sem ícone</div>
-
-    <div class="rl">Preenchido</div>
-    <div class="cell"><button type="button" class="b md fill">Assinar a Corporal Class <svg class="ico"><use href="#i-arrow"/></svg></button></div>
-    <div class="cell"><button type="button" class="b md fill">Assinar a Corporal Class</button></div>
-
-    <div class="rl">Sólido</div>
-    <div class="cell"><button type="button" class="b md solid">Assinar agora <svg class="ico"><use href="#i-arrow"/></svg></button></div>
-    <div class="cell"><button type="button" class="b md solid">Assinar agora</button></div>
-
-    <div class="rl">Contorno</div>
-    <div class="cell"><button type="button" class="b md outline">Ver o que você aprende <svg class="ico"><use href="#i-arrow"/></svg></button></div>
-    <div class="cell"><button type="button" class="b md outline">Ver o que você aprende</button></div>
-
-    <div class="rl">Inline / texto</div>
-    <div class="cell"><button type="button" class="b md ghost">Falar com especialista <svg class="ico"><use href="#i-arrow"/></svg></button></div>
-    <div class="cell"><button type="button" class="b md ghost">Falar com especialista</button></div>
-
-    <div class="rl">Dourado (accent)</div>
-    <div class="cell"><button type="button" class="b md gold">Garantir o bônus <svg class="ico"><use href="#i-arrow"/></svg></button></div>
-    <div class="cell"><button type="button" class="b md gold">Garantir o bônus</button></div>
-
-    <div class="rl">Dourado contorno</div>
-    <div class="cell"><button type="button" class="b md gold-o">Quero o bônus <svg class="ico"><use href="#i-arrow"/></svg></button></div>
-    <div class="cell"><button type="button" class="b md gold-o">Quero o bônus</button></div>
-  </div>
-
-  <div class="group-lbl">Tamanhos (sm / md / lg)</div>
-  <div class="comp-row">
-    <button type="button" class="b sm fill">Small <svg class="ico"><use href="#i-arrow"/></svg></button>
-    <button type="button" class="b md fill">Medium <svg class="ico"><use href="#i-arrow"/></svg></button>
-    <button type="button" class="b lg fill">Large <svg class="ico"><use href="#i-arrow"/></svg></button>
-  </div>
-
-  <div class="group-lbl">Estados</div>
-  <div class="comp-row">
-    <button type="button" class="b md fill">Default</button>
-    <button type="button" class="b md fill" style="transform:translateY(-2px);box-shadow:0 16px 38px var(--sh-strong)">Hover</button>
-    <button type="button" class="b md fill" disabled>Desabilitado</button>
-  </div>
-
-  <div class="group-lbl">Botões · ícone à esquerda</div>
-  <div class="comp-row">
-    <button type="button" class="b md fill"><svg class="ico"><use href="#i-check"/></svg> Assinar agora</button>
-    <button type="button" class="b md outline"><svg class="ico"><use href="#i-check"/></svg> Falar com especialista</button>
-  </div>
-
-  <div class="group-lbl">Chips · sem ícone / ícone esquerda / ícone direita</div>
-  <div class="comp-row">
-    <span class="chip-d">Bioestimuladores corporais</span>
-    <span class="chip-d"><svg class="ico-s"><use href="#i-check"/></svg> Bioestimuladores corporais</span>
-    <span class="chip-d">Bioestimuladores corporais <svg class="ico-s"><use href="#i-arrow"/></svg></span>
-  </div>
-  <div class="group-lbl">Badges · sem ícone / ícone esquerda / ícone direita</div>
-  <div class="comp-row">
-    <span class="badge-gold">Bônus exclusivo</span>
-    <span class="badge-gold"><svg class="ico-s"><use href="#i-check"/></svg> Bônus exclusivo</span>
-    <span class="badge-gold">Bônus exclusivo <svg class="ico-s"><use href="#i-check"/></svg></span>
-  </div>
-  <div class="group-lbl">Inputs &amp; form fields · estados</div>
-  <div class="form-grid">
-    <div class="field"><label class="field-lbl" for="ff1">Nome completo</label><input class="input" id="ff1" type="text" placeholder="Como aparece no certificado"><span class="field-help">Texto de ajuda opcional.</span></div>
-    <div class="field"><label class="field-lbl" for="ff2">E-mail <span class="req">*</span></label><input class="input is-error" id="ff2" type="email" value="email-invalido" aria-invalid="true"><span class="field-help err">Digite um e-mail válido.</span></div>
-    <div class="field"><label class="field-lbl" for="ff3">Cupom</label><input class="input is-success" id="ff3" type="text" value="ALUNO10"><span class="field-help ok">Cupom aplicado.</span></div>
-    <div class="field"><label class="field-lbl" for="ff4">Plano</label><input class="input" id="ff4" type="text" value="Ouro · anual" disabled><span class="field-help">Campo desabilitado.</span></div>
-    <div class="field"><label class="field-lbl" for="ff5">Matrícula</label><input class="input" id="ff5" type="text" value="2026-000123" readonly><span class="field-help">Somente leitura.</span></div>
-    <div class="field"><label class="field-lbl" for="ff6">Especialidade</label><div class="select-wrap"><select class="select" id="ff6"><option>Selecione…</option><option>Opção A</option><option>Opção B</option></select><svg class="car" aria-hidden="true"><use href="#ph-caret"/></svg></div></div>
-  </div>
-  <div class="group-lbl">Textarea</div>
-  <div class="field" style="max-width:520px"><label class="field-lbl" for="ff7">Mensagem</label><textarea class="textarea" id="ff7" placeholder="Escreva aqui…"></textarea></div>
-  <div class="group-lbl">Checkbox · Radio · Toggle</div>
-  <div class="comp-row" style="gap:24px">
-    <label class="check"><input type="checkbox" checked> Aceito os termos</label>
-    <label class="check"><input type="checkbox"> Receber novidades</label>
-    <label class="check"><input type="checkbox" disabled> Desabilitada</label>
-    <label class="check"><input type="radio" name="ccr" checked> Plano A</label>
-    <label class="check"><input type="radio" name="ccr"> Plano B</label>
-    <label class="toggle"><input type="checkbox" checked> Tema escuro</label>
-    <label class="toggle"><input type="checkbox"> Notificações</label>
-  </div>
-  <div class="group-lbl">Matriz de estados interativos</div>
-  <p class="sec-note" style="margin-bottom:0">Os mesmos estados se aplicam a <b class="hl">todo</b> componente interativo (botão, input, link, toggle, aba…). Consistência de interação = DS maduro.</p>
-  <table class="states-tbl"><thead><tr><th>Estado</th><th>Sinal visual / regra</th></tr></thead><tbody>
-    <tr><td>default</td><td>Repouso — token base.</td></tr>
-    <tr><td>hover</td><td>Mudança leve (cor/elevação); só em ponteiro.</td></tr>
-    <tr><td>focus-visible</td><td><b>Obrigatório:</b> anel <code>--focus</code> (navegação por teclado).</td></tr>
-    <tr><td>active</td><td>Pressionado (translateY 1px / cor mais forte).</td></tr>
-    <tr><td>disabled</td><td><code>--opacity-disabled</code> + cursor not-allowed + não focável.</td></tr>
-    <tr><td>loading</td><td>Spinner + bloqueia interação; mantém a largura.</td></tr>
-    <tr><td>error</td><td>Borda/texto <code>--danger</code> + mensagem + <code>aria-invalid</code>.</td></tr>
-    <tr><td>success</td><td>Borda/texto <code>--success</code> + confirmação.</td></tr>
-    <tr><td>selected</td><td>Estado persistente (aba/opção ativa).</td></tr>
-    <tr><td>read-only</td><td>Fundo <code>--card2</code>, sem borda de edição, copiável.</td></tr>
-  </tbody></table>
-</div></section>
-
-<!-- 06 ÍCONES -->
-<section><div class="wrap">
-  <div class="sec-title" id="nav-icones"><span class="num">06</span><h2>Ícones</h2></div>
+  <div class="sec-title" id="nav-icones"><span class="num">05</span><h2>Ícones</h2></div>
   <p class="sec-note">Biblioteca única: <b class="hl">Phosphor</b> (disponível nativamente no Framer). Peso padrão <b class="hl">Thin</b> — traço de <b class="hl">1&nbsp;pt</b> (stroke 1 na grade de 24), pontas e junções arredondadas. Cor por <code>currentColor</code> (herda o texto / accent), então acompanha o tema. Nunca misture pesos diferentes na mesma tela e nunca use emoji como ícone.</p>
 
   <p class="sec-note" style="margin-top:-14px">Conjunto de sistema desenhado na grade 24. <b class="hl">Clique em qualquer ícone para copiar o SVG.</b> Para o catálogo completo, use o link da Phosphor no fim da seção.</p>
@@ -1123,9 +1022,160 @@
   <a class="ph-link" href="https://phosphoricons.com" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#ph-external"/></svg>Abrir biblioteca Phosphor<span class="host">phosphoricons.com</span></a>
 </div></section>
 
-<!-- 05 ACESSIBILIDADE -->
+<!-- 06 BOTÕES & COMPONENTES -->
 <section><div class="wrap">
-  <div class="sec-title" id="nav-a11y"><span class="num">07</span><h2>Acessibilidade &amp; contraste</h2></div>
+  <div class="sec-title" id="nav-botoes"><span class="num">06</span><h2>Botões &amp; componentes</h2></div>
+  <p class="sec-note">Um único componente de botão com variantes (preenchido, sólido, contorno, inline/texto, dourado e dourado contorno), tamanhos (sm/md/lg), ícone opcional (lado esquerdo ou direito) e estado desabilitado. Ícones: biblioteca <b class="hl">Phosphor</b> no Framer (aqui demonstrado com ArrowRight). Raio 30px.</p>
+
+  <div class="btn-tbl">
+    <div></div><div class="h">Ícone à direita</div><div class="h">Sem ícone</div>
+
+    <div class="rl">Preenchido</div>
+    <div class="cell"><button type="button" class="b md fill">Assinar a Corporal Class <svg class="ico"><use href="#i-arrow"/></svg></button></div>
+    <div class="cell"><button type="button" class="b md fill">Assinar a Corporal Class</button></div>
+
+    <div class="rl">Sólido</div>
+    <div class="cell"><button type="button" class="b md solid">Assinar agora <svg class="ico"><use href="#i-arrow"/></svg></button></div>
+    <div class="cell"><button type="button" class="b md solid">Assinar agora</button></div>
+
+    <div class="rl">Contorno</div>
+    <div class="cell"><button type="button" class="b md outline">Ver o que você aprende <svg class="ico"><use href="#i-arrow"/></svg></button></div>
+    <div class="cell"><button type="button" class="b md outline">Ver o que você aprende</button></div>
+
+    <div class="rl">Inline / texto</div>
+    <div class="cell"><button type="button" class="b md ghost">Falar com especialista <svg class="ico"><use href="#i-arrow"/></svg></button></div>
+    <div class="cell"><button type="button" class="b md ghost">Falar com especialista</button></div>
+
+    <div class="rl">Dourado (accent)</div>
+    <div class="cell"><button type="button" class="b md gold">Garantir o bônus <svg class="ico"><use href="#i-arrow"/></svg></button></div>
+    <div class="cell"><button type="button" class="b md gold">Garantir o bônus</button></div>
+
+    <div class="rl">Dourado contorno</div>
+    <div class="cell"><button type="button" class="b md gold-o">Quero o bônus <svg class="ico"><use href="#i-arrow"/></svg></button></div>
+    <div class="cell"><button type="button" class="b md gold-o">Quero o bônus</button></div>
+  </div>
+
+  <div class="group-lbl">Tamanhos (sm / md / lg)</div>
+  <div class="comp-row">
+    <button type="button" class="b sm fill">Small <svg class="ico"><use href="#i-arrow"/></svg></button>
+    <button type="button" class="b md fill">Medium <svg class="ico"><use href="#i-arrow"/></svg></button>
+    <button type="button" class="b lg fill">Large <svg class="ico"><use href="#i-arrow"/></svg></button>
+  </div>
+
+  <div class="group-lbl">Estados</div>
+  <div class="comp-row">
+    <button type="button" class="b md fill">Padrão</button>
+    <button type="button" class="b md fill" style="transform:translateY(-2px);box-shadow:0 16px 38px var(--sh-strong)">Hover</button>
+    <button type="button" class="b md fill" disabled>Desabilitado</button>
+  </div>
+
+  <div class="group-lbl">Botões · ícone à esquerda</div>
+  <div class="comp-row">
+    <button type="button" class="b md fill"><svg class="ico"><use href="#i-check"/></svg> Assinar agora</button>
+    <button type="button" class="b md outline"><svg class="ico"><use href="#i-check"/></svg> Falar com especialista</button>
+  </div>
+
+  <div class="group-lbl">Chips · sem ícone / ícone esquerda / ícone direita</div>
+  <div class="comp-row">
+    <span class="chip-d">Bioestimuladores corporais</span>
+    <span class="chip-d"><svg class="ico-s"><use href="#i-check"/></svg> Bioestimuladores corporais</span>
+    <span class="chip-d">Bioestimuladores corporais <svg class="ico-s"><use href="#i-arrow"/></svg></span>
+  </div>
+  <div class="group-lbl">Badges · sem ícone / ícone esquerda / ícone direita</div>
+  <div class="comp-row">
+    <span class="badge-gold">Bônus exclusivo</span>
+    <span class="badge-gold"><svg class="ico-s"><use href="#i-check"/></svg> Bônus exclusivo</span>
+    <span class="badge-gold">Bônus exclusivo <svg class="ico-s"><use href="#i-check"/></svg></span>
+  </div>
+  <div class="group-lbl">Inputs &amp; form fields · estados</div>
+  <div class="form-grid">
+    <div class="field"><label class="field-lbl" for="ff1">Nome completo</label><input class="input" id="ff1" type="text" placeholder="Como aparece no certificado"><span class="field-help">Texto de ajuda opcional.</span></div>
+    <div class="field"><label class="field-lbl" for="ff2">E-mail <span class="req">*</span></label><input class="input is-error" id="ff2" type="email" value="email-invalido" aria-invalid="true"><span class="field-help err">Digite um e-mail válido.</span></div>
+    <div class="field"><label class="field-lbl" for="ff3">Cupom</label><input class="input is-success" id="ff3" type="text" value="ALUNO10"><span class="field-help ok">Cupom aplicado.</span></div>
+    <div class="field"><label class="field-lbl" for="ff4">Plano</label><input class="input" id="ff4" type="text" value="Ouro · anual" disabled><span class="field-help">Campo desabilitado.</span></div>
+    <div class="field"><label class="field-lbl" for="ff5">Matrícula</label><input class="input" id="ff5" type="text" value="2026-000123" readonly><span class="field-help">Somente leitura.</span></div>
+    <div class="field"><label class="field-lbl" for="ff6">Especialidade</label><div class="select-wrap"><select class="select" id="ff6"><option>Selecione…</option><option>Opção A</option><option>Opção B</option></select><svg class="car" aria-hidden="true"><use href="#ph-caret"/></svg></div></div>
+  </div>
+  <div class="group-lbl">Textarea</div>
+  <div class="field" style="max-width:520px"><label class="field-lbl" for="ff7">Mensagem</label><textarea class="textarea" id="ff7" placeholder="Escreva aqui…"></textarea></div>
+  <div class="group-lbl">Checkbox · Radio · Toggle</div>
+  <div class="comp-row" style="gap:24px">
+    <label class="check"><input type="checkbox" checked> Aceito os termos</label>
+    <label class="check"><input type="checkbox"> Receber novidades</label>
+    <label class="check"><input type="checkbox" disabled> Desabilitada</label>
+    <label class="check"><input type="radio" name="ccr" checked> Plano A</label>
+    <label class="check"><input type="radio" name="ccr"> Plano B</label>
+    <label class="toggle"><input type="checkbox" checked> Tema escuro</label>
+    <label class="toggle"><input type="checkbox"> Notificações</label>
+  </div>
+  <div class="group-lbl">Matriz de estados interativos</div>
+  <p class="sec-note" style="margin-bottom:0">Os mesmos estados se aplicam a <b class="hl">todo</b> componente interativo (botão, input, link, toggle, aba…). Consistência de interação = DS maduro.</p>
+  <table class="states-tbl"><thead><tr><th>Estado</th><th>Sinal visual / regra</th></tr></thead><tbody>
+    <tr><td>default</td><td>Repouso — token base.</td></tr>
+    <tr><td>hover</td><td>Mudança leve (cor/elevação); só em ponteiro.</td></tr>
+    <tr><td>focus-visible</td><td><b>Obrigatório:</b> anel <code>--focus</code> (navegação por teclado).</td></tr>
+    <tr><td>active</td><td>Pressionado (translateY 1px / cor mais forte).</td></tr>
+    <tr><td>disabled</td><td><code>--opacity-disabled</code> + cursor not-allowed + não focável.</td></tr>
+    <tr><td>loading</td><td>Spinner + bloqueia interação; mantém a largura.</td></tr>
+    <tr><td>error</td><td>Borda/texto <code>--danger</code> + mensagem + <code>aria-invalid</code>.</td></tr>
+    <tr><td>success</td><td>Borda/texto <code>--success</code> + confirmação.</td></tr>
+    <tr><td>selected</td><td>Estado persistente (aba/opção ativa).</td></tr>
+    <tr><td>read-only</td><td>Fundo <code>--card2</code>, sem borda de edição, copiável.</td></tr>
+  </tbody></table>
+</div></section>
+
+<!-- 07 FEEDBACK & SOBREPOSIÇÕES -->
+<section id="sec-feedback"><div class="wrap">
+  <div class="sec-title" id="nav-feedback"><span class="num">07</span><h2>Feedback &amp; sobreposições</h2></div>
+  <p class="sec-note">Comunicação de estado: alertas inline, avisos transitórios (toasts), carregamento (spinner/skeleton), vazio e camadas sobrepostas (modal, tooltip, popover). Sempre ícone + texto, nunca cor sozinha.</p>
+  <div class="group-lbl">Alertas inline</div>
+  <div style="display:flex;flex-direction:column;gap:12px;max-width:560px">
+    <div class="alert ok"><svg aria-hidden="true"><use href="#ph-check"/></svg><div><b>Tudo certo.</b> Sua assinatura foi confirmada.</div></div>
+    <div class="alert info"><svg aria-hidden="true"><use href="#ph-info"/></svg><div><b>Dica.</b> Você pode trocar de plano quando quiser.</div></div>
+    <div class="alert warn"><svg aria-hidden="true"><use href="#ph-warn"/></svg><div><b>Atenção.</b> Seu cartão vence em 3 dias.</div></div>
+    <div class="alert err"><svg aria-hidden="true"><use href="#ph-x"/></svg><div><b>Erro.</b> Não foi possível processar o pagamento.</div></div>
+  </div>
+  <div class="group-lbl">Toast · Spinner · Skeleton</div>
+  <div class="comp-row" style="gap:30px;align-items:center">
+    <span class="toast"><svg aria-hidden="true"><use href="#i-check"/></svg> Salvo com sucesso</span>
+    <span class="spinner" role="status" aria-label="Carregando"></span>
+    <div class="skel-card"><div class="skel" style="height:60px"></div><div class="skel" style="height:12px;width:80%"></div><div class="skel" style="height:12px;width:55%"></div></div>
+  </div>
+  <div class="group-lbl">Estado vazio</div>
+  <div class="empty"><svg aria-hidden="true"><use href="#ph-folder"/></svg><h4>Nada por aqui ainda</h4><p>Quando você adicionar conteúdo, ele aparece nesta área.</p><button class="b sm fill">Adicionar</button></div>
+  <div class="group-lbl">Modal · Tooltip · Popover</div>
+  <div class="modal-demo"><div class="modal-scrim"></div><div class="modal"><h4>Confirmar cancelamento?</h4><p>Você perde o acesso ao final do período já pago — dá pra reativar depois.</p><div class="m-row"><button class="b sm outline">Voltar</button><button class="b sm fill">Confirmar</button></div></div></div>
+  <div class="comp-row" style="gap:36px;margin-top:18px;align-items:flex-start">
+    <span class="tip"><span class="bub">Dica rápida sobre o campo</span></span>
+    <div class="pop"><b>Filtrar por</b>Combine especialidade, nível e duração pra achar a aula certa.</div>
+  </div>
+</div></section>
+
+<!-- 08 ESTRUTURA & NAVEGAÇÃO -->
+<section id="sec-estrutura"><div class="wrap">
+  <div class="sec-title" id="nav-estrutura"><span class="num">08</span><h2>Estrutura &amp; navegação</h2></div>
+  <p class="sec-note">Organização e navegação: abas, acordeão, avatares, breadcrumb, paginação e variantes de card.</p>
+  <div class="group-lbl">Abas</div>
+  <div><div class="tabs"><button class="tab active">Visão geral</button><button class="tab">Aulas</button><button class="tab">Materiais</button></div><div class="tab-panel">Conteúdo da aba ativa. No produto: <code>aria-selected</code> + navegação por setas do teclado.</div></div>
+  <div class="group-lbl">Acordeão</div>
+  <div class="acc" style="max-width:560px"><details open><summary>O que está incluído? <svg aria-hidden="true"><use href="#ph-caret"/></svg></summary><div class="acc-body">Acesso a todas as aulas, materiais em PDF e certificado de conclusão.</div></details><details><summary>Posso cancelar? <svg aria-hidden="true"><use href="#ph-caret"/></svg></summary><div class="acc-body">Sim, dentro do período de garantia de 7 dias.</div></details></div>
+  <div class="group-lbl">Avatar</div>
+  <div class="comp-row" style="gap:18px;align-items:center"><span class="av">EJ</span><span class="av">AC<span class="dot"></span></span><span class="av-stack"><span class="av">A</span><span class="av">B</span><span class="av">C</span><span class="av">+5</span></span></div>
+  <div class="group-lbl">Breadcrumb · Paginação</div>
+  <nav class="crumb"><a href="#">Início</a><span class="sep">/</span><a href="#">Cursos</a><span class="sep">/</span><span class="cur">Celulite PRO</span></nav>
+  <div class="pager" style="margin-top:14px"><button class="pg" disabled aria-label="Anterior">‹</button><button class="pg active">1</button><button class="pg">2</button><button class="pg">3</button><button class="pg" aria-label="Próxima">›</button></div>
+  <div class="group-lbl">Card · variantes</div>
+  <div class="form-grid">
+    <div class="cardv"><h4>Card básico</h4><p>Superfície com borda e raio padrão.</p></div>
+    <div class="cardv inter"><h4>Card interativo</h4><p>Elevação ao passar o mouse.</p></div>
+    <div class="cardv cardv-media" style="padding:0"><div class="media"></div><div class="body"><h4>Card com mídia</h4><p>Imagem/gradiente no topo.</p></div></div>
+    <div class="cardv"><div class="card-h"><span class="thumb"></span><div><h4 style="margin:0 0 4px">Card horizontal</h4><p>Miniatura + texto.</p></div></div></div>
+  </div>
+</div></section>
+
+<!-- 09 ACESSIBILIDADE & CONTRASTE -->
+<section><div class="wrap">
+  <div class="sec-title" id="nav-a11y"><span class="num">09</span><h2>Acessibilidade &amp; contraste</h2></div>
   <p class="sec-note">Todas as combinações de texto/fundo atendem ao <b class="hl">WCAG 2.1 AA</b> (≥ 4.5:1 para texto normal; ≥ 3:1 para texto grande e elementos de UI). Razões medidas:</p>
   <div class="a11y">
     <div class="a11y-col">
@@ -1150,10 +1200,9 @@
   <p class="sec-note" style="margin-top:24px">No tema light, dourado e rosa como <b class="hl">texto</b> usam as variantes -ink (escurecidas) para garantir AA; como preenchimento mantêm a cor institucional. Mantenha foco visível (outline) nos interativos e alvos de toque ≥ 44px.</p>
 </div></section>
 
-<!-- 06 TOKENS -->
-<!-- 08 FUNDAMENTOS -->
+<!-- 10 FUNDAMENTOS DO SISTEMA -->
 <section><div class="wrap">
-  <div class="sec-title" id="nav-sistema"><span class="num">08</span><h2>Fundamentos do sistema</h2></div>
+  <div class="sec-title" id="nav-sistema"><span class="num">10</span><h2>Fundamentos do sistema</h2></div>
   <p class="sec-note">Espaçamento, raio, elevação e movimento — a base que mantém ritmo e profundidade consistentes. Todos estão nas CSS variables (seção 09) prontos para colar no Framer.</p>
   <div class="fund-grid">
     <div>
@@ -1248,9 +1297,24 @@
   <p class="sec-note" style="margin-top:14px"><b class="hl">Padding ≥ raio</b> → interno vira 0 (reto). <b class="hl">Borda/stroke</b> inverte: externo = interno + largura da borda. <b class="hl">Aninhamento profundo</b>: subtraia o padding de cada nível. <b class="hl">Pill</b> é exceção (não recalcula). Com <b class="hl">corner smoothing</b> (squircle iOS) a fórmula vira aproximação — iguale o smoothing em pai e filho.</p>
 </div></section>
 
-<!-- 09 TOKENS -->
+<!-- 11 PRINCÍPIOS & PROCESSO -->
+<section id="sec-processo"><div class="wrap">
+  <div class="sec-title" id="nav-processo"><span class="num">11</span><h2>Princípios &amp; processo</h2></div>
+  <p class="sec-note">A camada de maturidade: como o sistema é pensado, versionado e mantido — o que separa um kit de um sistema vivo.</p>
+  <div class="group-lbl">Arquitetura de tokens (3 camadas)</div>
+  <p class="sec-note" style="margin-bottom:10px">Tokens fluem em <b class="hl">primitive → semantic/intent → component</b>. Regra de ouro: <b class="hl">o token semântico nunca sugere valor</b> (<code>--btn-bg</code>, não <code>--azul-500</code>); o de componente referencia o semântico, nunca o primitivo direto. É o que torna theming e rebrand triviais.</p>
+  <table class="states-tbl" style="max-width:620px"><thead><tr><th>Camada</th><th>Exemplo</th><th>Papel</th></tr></thead><tbody><tr><td>primitive</td><td>#hex · 16px</td><td>Valor cru, sem contexto.</td></tr><tr><td>semantic</td><td>--accent · --space-4</td><td>Intenção / uso.</td></tr><tr><td>component</td><td>--btn-bg</td><td>Aplicação no componente.</td></tr></tbody></table>
+  <div class="group-lbl">Princípios de movimento</div>
+  <p class="sec-note" style="margin-bottom:0">Anime com <b class="hl">propósito</b> (feedback, orientação, continuidade) — nunca decorativo. Durações nos tokens (<code>--motion-fast .15 · --motion .2 · --motion-slow .4</code>), curva <code>--ease</code>. Respeite <code>prefers-reduced-motion</code> (já no reset). Não anime: deslocamento de layout nem texto de leitura.</p>
+  <div class="group-lbl">Versionamento &amp; contribuição</div>
+  <p class="sec-note" style="margin-bottom:0"><b class="hl">SemVer</b> (MAJOR.MINOR.PATCH) + <code>CHANGELOG.md</code> + política de depreciação. Contribuição: <b class="hl">regra das 3 equipes</b> (só vira padrão o que serve 3+ usos) + revisão antes de virar componente. Ver <code>CONTRIBUTING.md</code> no pacote.</p>
+  <div class="group-lbl">Faça / Não faça</div>
+  <div class="logo-rules"><div class="lr ok"><b>Faça</b><ul><li>Consumir tokens (nunca hex solto).</li><li>Dark + light em paridade, contraste WCAG AA.</li><li>Ícone + texto nos estados (cor nunca sozinha).</li><li>Foco visível em tudo que é focável.</li></ul></div><div class="lr no"><b>Não faça</b><ul><li>Cor / raio / sombra fora dos tokens.</li><li>Texto claro sem contraste no light.</li><li>Animar sem propósito ou ignorar reduced-motion.</li><li>Botão <code>&lt;a&gt;</code> sem href.</li></ul></div></div>
+</div></section>
+
+<!-- 12 TOKENS PARA COPIAR -->
 <section style="border-bottom:none"><div class="wrap">
-  <div class="sec-title" id="nav-tokens"><span class="num">09</span><h2>Tokens para copiar</h2></div>
+  <div class="sec-title" id="nav-tokens"><span class="num">12</span><h2>Tokens para copiar</h2></div>
   <p class="sec-note">Cole as CSS variables em um Code Component / override do Framer, ou use a tabela JSON para criar os Color Styles e Text Styles manualmente. Inclui os dois temas: <b class="hl">dark</b> (padrão) e <b class="hl">light</b> (classe <code>.light</code>).</p>
 
   <div class="group-lbl">CSS variables</div>
@@ -1355,7 +1419,7 @@
   <p class="sec-note" style="margin-top:0">No Framer, crie cada cor como um <b class="hl">Color Style</b> com um valor de <b class="hl">Light</b> e um de <b class="hl">Dark</b>. O site publicado segue a aparência do sistema do visitante automaticamente (<code>prefers-color-scheme</code>); dá pra adicionar um toggle e lembrar a escolha do visitante. Atalho no canvas: Ctrl+Cmd+N. Valores por estilo:</p>
   <div class="fr">
     <div class="fr-row head"><div>Color Style</div><div>Light</div><div>Dark</div></div>
-    <div class="fr-row"><div class="nm">bg / Background</div><div class="val"><span class="fr-sw" style="background:#FFFFFF"></span>#FFFFFF</div><div class="val"><span class="fr-sw" style="background:#0E0708"></span>#0E0708</div></div>
+    <div class="fr-row"><div class="nm">bg / Fundo</div><div class="val"><span class="fr-sw" style="background:#FFFFFF"></span>#FFFFFF</div><div class="val"><span class="fr-sw" style="background:#0E0708"></span>#0E0708</div></div>
     <div class="fr-row"><div class="nm">bg / Surface</div><div class="val"><span class="fr-sw" style="background:#FBF3F3"></span>#FBF3F3</div><div class="val"><span class="fr-sw" style="background:#1A1012"></span>#1A1012</div></div>
     <div class="fr-row"><div class="nm">bg / Card</div><div class="val"><span class="fr-sw" style="background:#FEF8F8"></span>#FEF8F8</div><div class="val"><span class="fr-sw" style="background:#241619"></span>#241619</div></div>
     <div class="fr-row"><div class="nm">line / Border</div><div class="val"><span class="fr-sw" style="background:rgba(214,81,92,.16)"></span>rgba(214,81,92,.16)</div><div class="val"><span class="fr-sw" style="background:rgba(232,138,146,.14)"></span>rgba(232,138,146,.14)</div></div>
@@ -1371,67 +1435,6 @@
     <div class="fr-row"><div class="nm">chrome / Legal text</div><div class="val"><span class="fr-sw" style="background:#8B656B"></span>#8B656B</div><div class="val"><span class="fr-sw" style="background:#A07B82"></span>#A07B82</div></div>
   </div>
   <p class="sec-note" style="margin-top:16px;font-size:12.5px">Refs Framer: <a href="https://www.framer.com/help/articles/light-and-dark-mode-options/" style="color:var(--coral)">Light and dark mode options</a> &middot; <a href="https://www.framer.com/academy/lessons/light-dark-mode" style="color:var(--coral)">Academy: Light &amp; Dark Mode</a></p>
-</div></section>
-
-<section id="sec-feedback"><div class="wrap">
-  <div class="sec-title" id="nav-feedback"><span class="num">10</span><h2>Feedback &amp; overlays</h2></div>
-  <p class="sec-note">Comunicação de estado: alerts inline, toasts transitórios, carregamento (spinner/skeleton), vazio e camadas sobrepostas (modal, tooltip, popover). Sempre ícone + texto, nunca cor sozinha.</p>
-  <div class="group-lbl">Alerts (inline)</div>
-  <div style="display:flex;flex-direction:column;gap:12px;max-width:560px">
-    <div class="alert ok"><svg aria-hidden="true"><use href="#ph-check"/></svg><div><b>Tudo certo.</b> Sua assinatura foi confirmada.</div></div>
-    <div class="alert info"><svg aria-hidden="true"><use href="#ph-info"/></svg><div><b>Dica.</b> Você pode trocar de plano quando quiser.</div></div>
-    <div class="alert warn"><svg aria-hidden="true"><use href="#ph-warn"/></svg><div><b>Atenção.</b> Seu cartão vence em 3 dias.</div></div>
-    <div class="alert err"><svg aria-hidden="true"><use href="#ph-x"/></svg><div><b>Erro.</b> Não foi possível processar o pagamento.</div></div>
-  </div>
-  <div class="group-lbl">Toast · Spinner · Skeleton</div>
-  <div class="comp-row" style="gap:30px;align-items:center">
-    <span class="toast"><svg aria-hidden="true"><use href="#i-check"/></svg> Salvo com sucesso</span>
-    <span class="spinner" role="status" aria-label="Carregando"></span>
-    <div class="skel-card"><div class="skel" style="height:60px"></div><div class="skel" style="height:12px;width:80%"></div><div class="skel" style="height:12px;width:55%"></div></div>
-  </div>
-  <div class="group-lbl">Empty state</div>
-  <div class="empty"><svg aria-hidden="true"><use href="#ph-folder"/></svg><h4>Nada por aqui ainda</h4><p>Quando você adicionar conteúdo, ele aparece nesta área.</p><button class="b sm fill">Adicionar</button></div>
-  <div class="group-lbl">Modal · Tooltip · Popover</div>
-  <div class="modal-demo"><div class="modal-scrim"></div><div class="modal"><h4>Confirmar cancelamento?</h4><p>Você perde o acesso ao final do período já pago — dá pra reativar depois.</p><div class="m-row"><button class="b sm outline">Voltar</button><button class="b sm fill">Confirmar</button></div></div></div>
-  <div class="comp-row" style="gap:36px;margin-top:18px;align-items:flex-start">
-    <span class="tip"><span class="bub">Dica rápida sobre o campo</span></span>
-    <div class="pop"><b>Filtrar por</b>Combine especialidade, nível e duração pra achar a aula certa.</div>
-  </div>
-</div></section>
-
-<section id="sec-estrutura"><div class="wrap">
-  <div class="sec-title" id="nav-estrutura"><span class="num">11</span><h2>Estrutura &amp; navegação</h2></div>
-  <p class="sec-note">Organização e navegação: abas, acordeão, avatares, breadcrumb, paginação e variantes de card.</p>
-  <div class="group-lbl">Tabs</div>
-  <div><div class="tabs"><button class="tab active">Visão geral</button><button class="tab">Aulas</button><button class="tab">Materiais</button></div><div class="tab-panel">Conteúdo da aba ativa. No produto: <code>aria-selected</code> + navegação por setas do teclado.</div></div>
-  <div class="group-lbl">Accordion</div>
-  <div class="acc" style="max-width:560px"><details open><summary>O que está incluído? <svg aria-hidden="true"><use href="#ph-caret"/></svg></summary><div class="acc-body">Acesso a todas as aulas, materiais em PDF e certificado de conclusão.</div></details><details><summary>Posso cancelar? <svg aria-hidden="true"><use href="#ph-caret"/></svg></summary><div class="acc-body">Sim, dentro do período de garantia de 7 dias.</div></details></div>
-  <div class="group-lbl">Avatar</div>
-  <div class="comp-row" style="gap:18px;align-items:center"><span class="av">EJ</span><span class="av">AC<span class="dot"></span></span><span class="av-stack"><span class="av">A</span><span class="av">B</span><span class="av">C</span><span class="av">+5</span></span></div>
-  <div class="group-lbl">Breadcrumb · Paginação</div>
-  <nav class="crumb"><a href="#">Início</a><span class="sep">/</span><a href="#">Cursos</a><span class="sep">/</span><span class="cur">Celulite PRO</span></nav>
-  <div class="pager" style="margin-top:14px"><button class="pg" disabled aria-label="Anterior">‹</button><button class="pg active">1</button><button class="pg">2</button><button class="pg">3</button><button class="pg" aria-label="Próxima">›</button></div>
-  <div class="group-lbl">Card · variantes</div>
-  <div class="form-grid">
-    <div class="cardv"><h4>Card básico</h4><p>Superfície com borda e raio padrão.</p></div>
-    <div class="cardv inter"><h4>Card interativo</h4><p>Hover com elevação — passe o mouse.</p></div>
-    <div class="cardv cardv-media" style="padding:0"><div class="media"></div><div class="body"><h4>Card com mídia</h4><p>Imagem/gradiente no topo.</p></div></div>
-    <div class="cardv"><div class="card-h"><span class="thumb"></span><div><h4 style="margin:0 0 4px">Card horizontal</h4><p>Thumb + texto.</p></div></div></div>
-  </div>
-</div></section>
-
-<section id="sec-processo"><div class="wrap">
-  <div class="sec-title" id="nav-processo"><span class="num">12</span><h2>Princípios &amp; processo</h2></div>
-  <p class="sec-note">A camada de maturidade: como o sistema é pensado, versionado e mantido — o que separa um kit de um sistema vivo.</p>
-  <div class="group-lbl">Arquitetura de tokens (3 camadas)</div>
-  <p class="sec-note" style="margin-bottom:10px">Tokens fluem em <b class="hl">primitive → semantic/intent → component</b>. Regra de ouro: <b class="hl">o token semântico nunca sugere valor</b> (<code>--btn-bg</code>, não <code>--azul-500</code>); o de componente referencia o semântico, nunca o primitivo direto. É o que torna theming e rebrand triviais.</p>
-  <table class="states-tbl" style="max-width:620px"><thead><tr><th>Camada</th><th>Exemplo</th><th>Papel</th></tr></thead><tbody><tr><td>primitive</td><td>#hex · 16px</td><td>Valor cru, sem contexto.</td></tr><tr><td>semantic</td><td>--accent · --space-4</td><td>Intenção / uso.</td></tr><tr><td>component</td><td>--btn-bg</td><td>Aplicação no componente.</td></tr></tbody></table>
-  <div class="group-lbl">Princípios de motion</div>
-  <p class="sec-note" style="margin-bottom:0">Anime com <b class="hl">propósito</b> (feedback, orientação, continuidade) — nunca decorativo. Durações nos tokens (<code>--motion-fast .15 · --motion .2 · --motion-slow .4</code>), curva <code>--ease</code>. Respeite <code>prefers-reduced-motion</code> (já no reset). Não anime: layout shift nem texto de leitura.</p>
-  <div class="group-lbl">Versionamento &amp; contribuição</div>
-  <p class="sec-note" style="margin-bottom:0"><b class="hl">SemVer</b> (MAJOR.MINOR.PATCH) + <code>CHANGELOG.md</code> + política de depreciação. Contribuição: <b class="hl">regra das 3 equipes</b> (só vira padrão o que serve 3+ usos) + revisão antes de virar componente. Ver <code>CONTRIBUTING.md</code> no pacote.</p>
-  <div class="group-lbl">Faça / Não faça</div>
-  <div class="logo-rules"><div class="lr ok"><b>Faça</b><ul><li>Consumir tokens (nunca hex solto).</li><li>Dark + light em paridade, contraste WCAG AA.</li><li>Ícone + texto nos estados (cor nunca sozinha).</li><li>Foco visível em tudo que é focável.</li></ul></div><div class="lr no"><b>Não faça</b><ul><li>Cor / raio / sombra fora dos tokens.</li><li>Texto claro sem contraste no light.</li><li>Animar sem propósito ou ignorar reduced-motion.</li><li>Botão <code>&lt;a&gt;</code> sem href.</li></ul></div></div>
 </div></section>
 
 <footer><div class="wrap">Corporal Class · Design System · <b class="hl">desenvolvido por Edegar Junior</b>. Cores derivadas do brandbook Corporal Academy (Studio Bah, 07/2022). Tipografia: Silka (fallback system-ui).</div></footer>
@@ -1549,19 +1552,30 @@
 
 <script>
 (function(){
-  var links=[].slice.call(document.querySelectorAll(".tn-links a"));
-  if(!links.length)return;
-  var map={};links.forEach(function(a){map[a.getAttribute("href").slice(1)]=a});
-  var cont=document.querySelector(".tn-links");
+  var groups=[].slice.call(document.querySelectorAll(".tn-group"));
+  if(!groups.length)return;
+  var items=[].slice.call(document.querySelectorAll(".tn-menu a"));
+  var byId={},catOf={};
+  function closeAll(){groups.forEach(function(g){g.classList.remove("open");g.querySelector(".tn-cat").setAttribute("aria-expanded","false");});}
+  groups.forEach(function(g){
+    var cat=g.querySelector(".tn-cat");
+    g.querySelectorAll(".tn-menu a").forEach(function(a){byId[a.getAttribute("href").slice(1)]=a;catOf[a.getAttribute("href").slice(1)]=cat;});
+    cat.addEventListener("click",function(){var was=g.classList.contains("open");closeAll();if(!was){g.classList.add("open");cat.setAttribute("aria-expanded","true");}});
+  });
+  document.addEventListener("click",function(e){if(!e.target.closest(".tn-group"))closeAll();});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape")closeAll();});
+  items.forEach(function(a){a.addEventListener("click",closeAll);});
   var io=new IntersectionObserver(function(es){
     es.forEach(function(e){
       if(!e.isIntersecting)return;
-      links.forEach(function(x){x.classList.remove("active")});
-      var a=map[e.target.id];
-      if(a){a.classList.add("active");var ar=a.getBoundingClientRect(),cr=cont.getBoundingClientRect();cont.scrollLeft+=(ar.left-cr.left)-60;}
+      items.forEach(function(x){x.classList.remove("active");});
+      groups.forEach(function(g){g.querySelector(".tn-cat").classList.remove("active");});
+      var a=byId[e.target.id];if(a)a.classList.add("active");
+      var c=catOf[e.target.id];if(c)c.classList.add("active");
     });
   },{rootMargin:"-78px 0px -68% 0px",threshold:0});
-  Object.keys(map).forEach(function(id){var t=document.getElementById(id);if(t)io.observe(t)});
+  Object.keys(byId).forEach(function(id){var t=document.getElementById(id);if(t)io.observe(t);});
 })();
 </script>
 </body></html>
+

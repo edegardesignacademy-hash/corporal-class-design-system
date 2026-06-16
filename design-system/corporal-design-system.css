@@ -31,7 +31,7 @@
   /* Bordô / coral / texto */
   --bordo:#5A2730; --bordo2:var(--brand-bordo); --bordo-bright:#E0727A;
   --coral:var(--brand-coral); --coral-soft:#F0A6AD;
-  --txt:#FAF7F8; --mut:#B0898E; --legal-mut:#A07B82;
+  --txt:#FAF7F8; --mut:#CBBDBF; --legal-mut:#A07B82;
 
   /* Accent quente (-ink = variante de texto; -line = variante de borda) */
   --gold:var(--brand-amarelo); --gold-deep:#D6C08A; --gold-ink:#FFE4A4; --gold-line:rgba(255,228,164,.42);

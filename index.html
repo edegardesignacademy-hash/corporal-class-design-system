@@ -119,7 +119,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
   .topnav{position:sticky;top:0;z-index:var(--z-sticky);background:var(--card);border-bottom:1px solid var(--line)}
   .tn-inner{display:flex;align-items:center;gap:16px;height:56px}
   .tn-home{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:14.5px;color:var(--txt);text-decoration:none;white-space:nowrap;flex:0 0 auto;letter-spacing:-.01em}
-  .tn-home .tn-mark{width:21px;height:21px;flex:0 0 auto;color:var(--coral)}
+  .tn-home .tn-logo{height:24px;width:auto;flex:0 0 auto;color:var(--logo);display:block}
   .tn-home:hover{opacity:.78}
   .tn-menus{display:flex;align-items:center;gap:4px;flex:1 1 auto}
   .tn-group{position:relative}
@@ -139,8 +139,27 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
   .tn-menu a:hover{color:var(--txt);background:var(--card2)}
   .tn-menu a.active{color:var(--txt);font-weight:600}
   .tn-menu a.active::before{background:var(--coral)}
+  .tn-burger{display:none;align-items:center;justify-content:center;width:42px;height:42px;background:none;border:none;color:var(--txt);cursor:pointer;flex:0 0 auto;border-radius:8px}
+  .tn-burger:hover{background:var(--card2)}
+  .tn-burger:focus-visible{outline:none;box-shadow:var(--focus)}
+  .tn-burger .bi{width:24px;height:24px;flex:0 0 auto}
+  .tn-burger .bi-x{display:none}
+  .topnav.nav-open .tn-burger .bi-menu{display:none}
+  .topnav.nav-open .tn-burger .bi-x{display:block}
   .tn-menu a:focus-visible{outline:none;box-shadow:var(--focus)}
-  @media(max-width:600px){.tn-home span{display:none}.tn-inner{gap:8px}.tn-menus{gap:0}.tn-cat{padding:8px 6px;font-size:13px}.tn-cat .tn-car{display:none}}
+  @media(max-width:600px){
+  .tn-inner{gap:8px}
+  .tn-burger{display:inline-flex}
+  .theme-toggle{margin-left:auto}
+  .tn-logo{height:22px}
+  .tn-menus{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:2px;background:var(--card);border-bottom:1px solid var(--line);box-shadow:var(--elev-overlay);padding:8px 16px 18px;max-height:calc(100dvh - 57px);overflow-y:auto;display:none}
+  .topnav.nav-open .tn-menus{display:flex}
+  .tn-group{position:static}
+  .tn-cat{width:100%;justify-content:space-between;padding:14px 6px;font-size:15px}
+  .tn-cat .tn-car{width:16px;height:16px}
+  .tn-menu{position:static;min-width:0;background:none;border:none;border-radius:0;box-shadow:none;padding:0 0 8px 10px}
+  .tn-menu a{padding:11px 8px;font-size:14px}
+  }
   @media(max-width:560px){.theme-toggle .lbl{display:none}.theme-toggle{padding:13px;min-width:44px;min-height:44px;justify-content:center;border-radius:50%}}
 
   /* Click-to-copy (cores, valores, blocos de código) */
@@ -634,12 +653,12 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
 
 <nav class="topnav" aria-label="Seções do design system">
   <div class="wrap tn-inner">
-    <a class="tn-home" href="#top"><svg class="tn-mark" viewBox="0 0 320 320" aria-hidden="true"><use href="#logo-icon"/></svg><span>Corporal Class</span></a>
-    <div class="tn-menus">
+    <a class="tn-home" href="#top" aria-label="Corporal Class"><svg class="tn-logo" viewBox="0 0 720 140" aria-hidden="true"><use href="#logo-hor"/></svg></a>
+    <div class="tn-menus" id="tn-menus">
       <div class="tn-group">
         <button class="tn-cat" type="button" aria-expanded="false" aria-haspopup="true">Marca <svg class="tn-car" aria-hidden="true"><use href="#ph-caret"/></svg></button>
         <div class="tn-menu" role="menu">
-          <a role="menuitem" href="#nav-marca">Marca &amp; logo</a>
+          <a role="menuitem" href="#nav-marca">Marca e logo</a>
           <a role="menuitem" href="#nav-cores">Cores</a>
           <a role="menuitem" href="#nav-gradientes">Gradientes</a>
           <a role="menuitem" href="#nav-tipografia">Tipografia</a>
@@ -649,17 +668,17 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
       <div class="tn-group">
         <button class="tn-cat" type="button" aria-expanded="false" aria-haspopup="true">Componentes <svg class="tn-car" aria-hidden="true"><use href="#ph-caret"/></svg></button>
         <div class="tn-menu" role="menu">
-          <a role="menuitem" href="#nav-botoes">Botões &amp; componentes</a>
-          <a role="menuitem" href="#nav-feedback">Feedback &amp; sobreposições</a>
-          <a role="menuitem" href="#nav-estrutura">Estrutura &amp; navegação</a>
+          <a role="menuitem" href="#nav-botoes">Botões e componentes</a>
+          <a role="menuitem" href="#nav-feedback">Feedback e sobreposições</a>
+          <a role="menuitem" href="#nav-estrutura">Estrutura e navegação</a>
         </div>
       </div>
       <div class="tn-group">
         <button class="tn-cat" type="button" aria-expanded="false" aria-haspopup="true">Sistema <svg class="tn-car" aria-hidden="true"><use href="#ph-caret"/></svg></button>
         <div class="tn-menu" role="menu">
-          <a role="menuitem" href="#nav-a11y">Acessibilidade &amp; contraste</a>
+          <a role="menuitem" href="#nav-a11y">Acessibilidade e contraste</a>
           <a role="menuitem" href="#nav-sistema">Fundamentos do sistema</a>
-          <a role="menuitem" href="#nav-processo">Princípios &amp; processo</a>
+          <a role="menuitem" href="#nav-processo">Princípios e processo</a>
           <a role="menuitem" href="#nav-tokens">Tokens</a>
         </div>
       </div>
@@ -669,6 +688,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
       <svg class="ti moon" aria-hidden="true"><use href="#i-moon"/></svg>
       <span class="lbl"><span class="lbl-l">Claro</span><span class="lbl-d">Escuro</span></span>
     </button>
+    <button class="tn-burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="tn-menus"><svg class="bi bi-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><svg class="bi bi-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6 18 18M18 6 6 18"/></svg></button>
   </div>
 </nav>
 
@@ -681,7 +701,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
 
 <!-- 01 MARCA & LOGO -->
 <section><div class="wrap">
-  <div class="sec-title" id="nav-marca"><span class="num">01</span><h2>Marca &amp; logo</h2></div>
+  <div class="sec-title" id="nav-marca"><span class="num">01</span><h2>Marca e logo</h2></div>
   <p class="sec-note">Quatro composições oficiais — horizontal, vertical, tipografia e ícone — em três cores (branco, preto, bordô). No site, a marca troca sozinha com o tema: <b class="hl">branca</b> sobre fundo escuro, <b class="hl">bordô</b> sobre fundo claro. Use sempre o SVG e nunca recolora fora destas três opções.</p>
 
   <div class="group-lbl">Composições</div>
@@ -796,7 +816,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
   </div>
   <p class="sec-note" style="margin-top:14px">Verde, âmbar e vermelho saem da paleta institucional de propósito — são <b class="hl">funcionais</b> (sucesso, atenção, erro). No tema light usam variantes escurecidas para manter AA. Acompanhe sempre de ícone + texto, nunca cor sozinha.</p>
 
-  <div class="group-lbl">Temas · dark &amp; light</div>
+  <div class="group-lbl">Temas · dark e light</div>
   <div class="themes-grid">
     <div class="tcard dark">
       <div class="bar"><span>Dark · padrão da landing</span><span class="dot"></span></div>
@@ -857,7 +877,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
     <div class="grad g-glow-edge"><span>Glow de borda inferior</span></div>
     <div class="grad g-ribbon"><span>Fitas diagonais</span></div>
   </div>
-  <div class="group-lbl">Light · suaves &amp; pastel</div>
+  <div class="group-lbl">Light · suaves e pastel</div>
   <div class="grad-grid">
     <div class="grad gl-wash on-light"><span>Wash coral claro</span></div>
     <div class="grad gl-aurora on-light"><span>Aurora light</span></div>
@@ -956,7 +976,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
 
   <p class="sec-note" style="margin-top:-14px">Conjunto de sistema desenhado na grade 24. <b class="hl">Clique em qualquer ícone para copiar o SVG.</b> Para o catálogo completo, use o link da Phosphor no fim da seção.</p>
 
-  <div class="group-lbl">Domínio · saúde &amp; curso</div>
+  <div class="group-lbl">Domínio · saúde e curso</div>
   <div class="icon-grid">
     <button class="icell" type="button" data-icon="ph-shield" aria-label="Copiar SVG · ShieldCheck"><span class="ic-copy" aria-hidden="true"><svg><use href="#i-copy"/></svg></span><svg aria-hidden="true"><use href="#ph-shield"/></svg><span class="inm">ShieldCheck</span></button>
     <button class="icell" type="button" data-icon="ph-firstaid" aria-label="Copiar SVG · FirstAidKit"><span class="ic-copy" aria-hidden="true"><svg><use href="#i-copy"/></svg></span><svg aria-hidden="true"><use href="#ph-firstaid"/></svg><span class="inm">FirstAidKit</span></button>
@@ -988,7 +1008,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
     <button class="icell" type="button" data-icon="ph-dots" aria-label="Copiar SVG · DotsThree"><span class="ic-copy" aria-hidden="true"><svg><use href="#i-copy"/></svg></span><svg aria-hidden="true"><use href="#ph-dots"/></svg><span class="inm">DotsThree</span></button>
   </div>
 
-  <div class="group-lbl">Ação &amp; conteúdo</div>
+  <div class="group-lbl">Ação e conteúdo</div>
   <div class="icon-grid">
     <button class="icell" type="button" data-icon="ph-pencil" aria-label="Copiar SVG · PencilSimple"><span class="ic-copy" aria-hidden="true"><svg><use href="#i-copy"/></svg></span><svg aria-hidden="true"><use href="#ph-pencil"/></svg><span class="inm">PencilSimple</span></button>
     <button class="icell" type="button" data-icon="ph-trash" aria-label="Copiar SVG · Trash"><span class="ic-copy" aria-hidden="true"><svg><use href="#i-copy"/></svg></span><svg aria-hidden="true"><use href="#ph-trash"/></svg><span class="inm">Trash</span></button>
@@ -1008,7 +1028,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
     <button class="icell" type="button" data-icon="ph-chart" aria-label="Copiar SVG · ChartBar"><span class="ic-copy" aria-hidden="true"><svg><use href="#i-copy"/></svg></span><svg aria-hidden="true"><use href="#ph-chart"/></svg><span class="inm">ChartBar</span></button>
   </div>
 
-  <div class="group-lbl">Comunicação &amp; mídia</div>
+  <div class="group-lbl">Comunicação e mídia</div>
   <div class="icon-grid">
     <button class="icell" type="button" data-icon="ph-envelope" aria-label="Copiar SVG · Envelope"><span class="ic-copy" aria-hidden="true"><svg><use href="#i-copy"/></svg></span><svg aria-hidden="true"><use href="#ph-envelope"/></svg><span class="inm">Envelope</span></button>
     <button class="icell" type="button" data-icon="ph-phone" aria-label="Copiar SVG · Phone"><span class="ic-copy" aria-hidden="true"><svg><use href="#i-copy"/></svg></span><svg aria-hidden="true"><use href="#ph-phone"/></svg><span class="inm">Phone</span></button>
@@ -1021,7 +1041,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
     <button class="icell" type="button" data-icon="ph-folder" aria-label="Copiar SVG · Folder"><span class="ic-copy" aria-hidden="true"><svg><use href="#i-copy"/></svg></span><svg aria-hidden="true"><use href="#ph-folder"/></svg><span class="inm">Folder</span></button>
   </div>
 
-  <div class="group-lbl">Status &amp; conta</div>
+  <div class="group-lbl">Status e conta</div>
   <div class="icon-grid">
     <button class="icell" type="button" data-icon="ph-info" aria-label="Copiar SVG · Info"><span class="ic-copy" aria-hidden="true"><svg><use href="#i-copy"/></svg></span><svg aria-hidden="true"><use href="#ph-info"/></svg><span class="inm">Info</span></button>
     <button class="icell" type="button" data-icon="ph-warn" aria-label="Copiar SVG · Warning"><span class="ic-copy" aria-hidden="true"><svg><use href="#i-copy"/></svg></span><svg aria-hidden="true"><use href="#ph-warn"/></svg><span class="inm">Warning</span></button>
@@ -1055,7 +1075,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
 
 <!-- 06 BOTÕES & COMPONENTES -->
 <section><div class="wrap">
-  <div class="sec-title" id="nav-botoes"><span class="num">06</span><h2>Botões &amp; componentes</h2></div>
+  <div class="sec-title" id="nav-botoes"><span class="num">06</span><h2>Botões e componentes</h2></div>
   <p class="sec-note">Um único componente de botão com variantes (preenchido, sólido, contorno, inline/texto, dourado e dourado contorno), tamanhos (sm/md/lg), ícone opcional (lado esquerdo ou direito) e estado desabilitado. Ícones: biblioteca <b class="hl">Phosphor</b> no Framer (aqui demonstrado com ArrowRight). Raio 30px.</p>
 
   <div class="btn-tbl">
@@ -1118,7 +1138,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
     <span class="badge-gold"><svg class="ico-s"><use href="#i-check"/></svg> Bônus exclusivo</span>
     <span class="badge-gold">Bônus exclusivo <svg class="ico-s"><use href="#i-check"/></svg></span>
   </div>
-  <div class="group-lbl">Inputs &amp; form fields · estados</div>
+  <div class="group-lbl">Inputs e form fields · estados</div>
   <div class="form-grid">
     <div class="field"><label class="field-lbl" for="ff1">Nome completo</label><input class="input" id="ff1" type="text" placeholder="Como aparece no certificado"><span class="field-help">Texto de ajuda opcional.</span></div>
     <div class="field"><label class="field-lbl" for="ff2">E-mail <span class="req">*</span></label><input class="input is-error" id="ff2" type="email" value="email-invalido" aria-invalid="true"><span class="field-help err">Digite um e-mail válido.</span></div>
@@ -1157,7 +1177,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
 
 <!-- 07 FEEDBACK & SOBREPOSIÇÕES -->
 <section id="sec-feedback"><div class="wrap">
-  <div class="sec-title" id="nav-feedback"><span class="num">07</span><h2>Feedback &amp; sobreposições</h2></div>
+  <div class="sec-title" id="nav-feedback"><span class="num">07</span><h2>Feedback e sobreposições</h2></div>
   <p class="sec-note">Comunicação de estado: alertas inline, avisos transitórios (toasts), carregamento (spinner/skeleton), vazio e camadas sobrepostas (modal, tooltip, popover). Sempre ícone + texto, nunca cor sozinha.</p>
   <div class="group-lbl">Alertas inline</div>
   <div style="display:flex;flex-direction:column;gap:12px;max-width:560px">
@@ -1184,7 +1204,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
 
 <!-- 08 ESTRUTURA & NAVEGAÇÃO -->
 <section id="sec-estrutura"><div class="wrap">
-  <div class="sec-title" id="nav-estrutura"><span class="num">08</span><h2>Estrutura &amp; navegação</h2></div>
+  <div class="sec-title" id="nav-estrutura"><span class="num">08</span><h2>Estrutura e navegação</h2></div>
   <p class="sec-note">Organização e navegação: abas, acordeão, avatares, breadcrumb, paginação e variantes de card.</p>
   <div class="group-lbl">Abas</div>
   <div><div class="tabs"><button class="tab active">Visão geral</button><button class="tab">Aulas</button><button class="tab">Materiais</button></div><div class="tab-panel">Conteúdo da aba ativa. No produto: <code>aria-selected</code> + navegação por setas do teclado.</div></div>
@@ -1206,7 +1226,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
 
 <!-- 09 ACESSIBILIDADE & CONTRASTE -->
 <section><div class="wrap">
-  <div class="sec-title" id="nav-a11y"><span class="num">09</span><h2>Acessibilidade &amp; contraste</h2></div>
+  <div class="sec-title" id="nav-a11y"><span class="num">09</span><h2>Acessibilidade e contraste</h2></div>
   <p class="sec-note">Todas as combinações de texto/fundo atendem ao <b class="hl">WCAG 2.1 AA</b> (≥ 4.5:1 para texto normal; ≥ 3:1 para texto grande e elementos de UI). Razões medidas:</p>
   <div class="a11y">
     <div class="a11y-col">
@@ -1330,14 +1350,14 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
 
 <!-- 11 PRINCÍPIOS & PROCESSO -->
 <section id="sec-processo"><div class="wrap">
-  <div class="sec-title" id="nav-processo"><span class="num">11</span><h2>Princípios &amp; processo</h2></div>
+  <div class="sec-title" id="nav-processo"><span class="num">11</span><h2>Princípios e processo</h2></div>
   <p class="sec-note">A camada de maturidade: como o sistema é pensado, versionado e mantido — o que separa um kit de um sistema vivo.</p>
   <div class="group-lbl">Arquitetura de tokens (3 camadas)</div>
   <p class="sec-note" style="margin-bottom:10px">Tokens fluem em <b class="hl">primitive → semantic/intent → component</b>. Regra de ouro: <b class="hl">o token semântico nunca sugere valor</b> (<code>--btn-bg</code>, não <code>--azul-500</code>); o de componente referencia o semântico, nunca o primitivo direto. É o que torna theming e rebrand triviais.</p>
   <table class="states-tbl" style="max-width:620px"><thead><tr><th>Camada</th><th>Exemplo</th><th>Papel</th></tr></thead><tbody><tr><td>primitive</td><td>#hex · 16px</td><td>Valor cru, sem contexto.</td></tr><tr><td>semantic</td><td>--accent · --space-4</td><td>Intenção / uso.</td></tr><tr><td>component</td><td>--btn-bg</td><td>Aplicação no componente.</td></tr></tbody></table>
   <div class="group-lbl">Princípios de movimento</div>
   <p class="sec-note" style="margin-bottom:0">Anime com <b class="hl">propósito</b> (feedback, orientação, continuidade) — nunca decorativo. Durações nos tokens (<code>--motion-fast .15 · --motion .2 · --motion-slow .4</code>), curva <code>--ease</code>. Respeite <code>prefers-reduced-motion</code> (já no reset). Não anime: deslocamento de layout nem texto de leitura.</p>
-  <div class="group-lbl">Versionamento &amp; contribuição</div>
+  <div class="group-lbl">Versionamento e contribuição</div>
   <p class="sec-note" style="margin-bottom:0"><b class="hl">SemVer</b> (MAJOR.MINOR.PATCH) + <code>CHANGELOG.md</code> + política de depreciação. Contribuição: <b class="hl">regra das 3 equipes</b> (só vira padrão o que serve 3+ usos) + revisão antes de virar componente. Ver <code>CONTRIBUTING.md</code> no pacote.</p>
   <div class="group-lbl">Faça / Não faça</div>
   <div class="logo-rules"><div class="lr ok"><b>Faça</b><ul><li>Consumir tokens (nunca hex solto).</li><li>Dark + light em paridade, contraste WCAG AA.</li><li>Ícone + texto nos estados (cor nunca sozinha).</li><li>Foco visível em tudo que é focável.</li></ul></div><div class="lr no"><b>Não faça</b><ul><li>Cor / raio / sombra fora dos tokens.</li><li>Texto claro sem contraste no light.</li><li>Animar sem propósito ou ignorar reduced-motion.</li><li>Botão <code>&lt;a&gt;</code> sem href.</li></ul></div></div>
@@ -1465,7 +1485,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
     <div class="fr-row"><div class="nm">chrome / Legal bg</div><div class="val"><span class="fr-sw" style="background:#FAEDED"></span>#FAEDED</div><div class="val"><span class="fr-sw" style="background:#0A0606"></span>#0A0606</div></div>
     <div class="fr-row"><div class="nm">chrome / Legal text</div><div class="val"><span class="fr-sw" style="background:#8B656B"></span>#8B656B</div><div class="val"><span class="fr-sw" style="background:#A07B82"></span>#A07B82</div></div>
   </div>
-  <p class="sec-note" style="margin-top:16px;font-size:12.5px">Refs Framer: <a href="https://www.framer.com/help/articles/light-and-dark-mode-options/" style="color:var(--coral)">Light and dark mode options</a> &middot; <a href="https://www.framer.com/academy/lessons/light-dark-mode" style="color:var(--coral)">Academy: Light &amp; Dark Mode</a></p>
+  <p class="sec-note" style="margin-top:16px;font-size:12.5px">Refs Framer: <a href="https://www.framer.com/help/articles/light-and-dark-mode-options/" style="color:var(--coral)">Light and dark mode options</a> &middot; <a href="https://www.framer.com/academy/lessons/light-dark-mode" style="color:var(--coral)">Academy: Light e Dark Mode</a></p>
 </div></section>
 
 <footer><div class="wrap">Corporal Class · Design System · <b class="hl">desenvolvido por Edegar Junior</b>. Cores derivadas do brandbook Corporal Academy (Studio Bah, 07/2022). Tipografia: Silka (fallback system-ui).</div></footer>
@@ -1583,19 +1603,23 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
 
 <script>
 (function(){
+  var topnav=document.querySelector(".topnav");
   var groups=[].slice.call(document.querySelectorAll(".tn-group"));
   if(!groups.length)return;
   var items=[].slice.call(document.querySelectorAll(".tn-menu a"));
+  var burger=document.querySelector(".tn-burger");
   var byId={},catOf={};
-  function closeAll(){groups.forEach(function(g){g.classList.remove("open");g.querySelector(".tn-cat").setAttribute("aria-expanded","false");});}
+  function closeGroups(){groups.forEach(function(g){g.classList.remove("open");g.querySelector(".tn-cat").setAttribute("aria-expanded","false");});}
+  function closeNav(){closeGroups();if(topnav)topnav.classList.remove("nav-open");if(burger)burger.setAttribute("aria-expanded","false");}
   groups.forEach(function(g){
     var cat=g.querySelector(".tn-cat");
     g.querySelectorAll(".tn-menu a").forEach(function(a){byId[a.getAttribute("href").slice(1)]=a;catOf[a.getAttribute("href").slice(1)]=cat;});
-    cat.addEventListener("click",function(){var was=g.classList.contains("open");closeAll();if(!was){g.classList.add("open");cat.setAttribute("aria-expanded","true");}});
+    cat.addEventListener("click",function(){var was=g.classList.contains("open");closeGroups();if(!was){g.classList.add("open");cat.setAttribute("aria-expanded","true");}else{cat.blur();}});
   });
-  document.addEventListener("click",function(e){if(!e.target.closest(".tn-group"))closeAll();});
-  document.addEventListener("keydown",function(e){if(e.key==="Escape")closeAll();});
-  items.forEach(function(a){a.addEventListener("click",closeAll);});
+  if(burger){burger.addEventListener("click",function(e){e.stopPropagation();var open=topnav.classList.toggle("nav-open");burger.setAttribute("aria-expanded",String(open));if(!open)closeGroups();});}
+  document.addEventListener("click",function(e){if(!e.target.closest(".topnav"))closeNav();});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape")closeNav();});
+  items.forEach(function(a){a.addEventListener("click",closeNav);});
   var io=new IntersectionObserver(function(es){
     es.forEach(function(e){
       if(!e.isIntersecting)return;

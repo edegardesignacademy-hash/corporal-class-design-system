@@ -50,8 +50,8 @@
     --logo:#FFFFFF;        /* marca: branca sobre escuro */
 
     /* ===== Cores semânticas (feedback) ===== */
-    --success:#45C08A; --warning:#E8B53D; --danger:#FF7D93; --info:#E88A92;
-    --success-bg:rgba(69,192,138,.14); --warning-bg:rgba(232,181,61,.14); --danger-bg:rgba(255,125,147,.14); --info-bg:rgba(232,138,146,.14);
+    --success:#45C08A; --warning:#E8B53D; --danger:#FF7D93; --info:#74C0D8;
+    --success-bg:rgba(69,192,138,.14); --warning-bg:rgba(232,181,61,.14); --danger-bg:rgba(255,125,147,.14); --info-bg:rgba(116,192,216,.14);
     /* ===== Escala de elevação (sombras em camadas + matiz do brand) ===== */
     --elev-1:0 1px 2px rgba(0,0,0,.34), 0 2px 6px rgba(0,0,0,.30);
     --elev-2:0 2px 4px rgba(0,0,0,.34), 0 8px 18px rgba(0,0,0,.40);
@@ -74,8 +74,8 @@
     --sh:rgba(214,81,92,.18); --sh-strong:rgba(214,81,92,.26);
     --logo:#D6515C;        /* marca: bordô institucional sobre claro */
     /* semânticas (variantes -ink p/ contraste no claro) */
-    --success:#147A45; --warning:#8A5A00; --danger:#C72F49; --info:#8A4550;
-    --success-bg:rgba(31,138,91,.10); --warning-bg:rgba(138,90,0,.10); --danger-bg:rgba(199,47,73,.10); --info-bg:rgba(138,69,80,.10);
+    --success:#147A45; --warning:#8A5A00; --danger:#C72F49; --info:#2A7286;
+    --success-bg:rgba(31,138,91,.10); --warning-bg:rgba(138,90,0,.10); --danger-bg:rgba(199,47,73,.10); --info-bg:rgba(42,114,134,.10);
     /* elevação no claro: sombras bordôs sutis */
     --elev-1:0 1px 2px rgba(214,81,92,.10), 0 2px 6px rgba(214,81,92,.08);
     --elev-2:0 2px 4px rgba(214,81,92,.10), 0 8px 16px rgba(214,81,92,.12);
@@ -119,7 +119,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
   .topnav{position:sticky;top:0;z-index:var(--z-sticky);background:var(--card);border-bottom:1px solid var(--line)}
   .tn-inner{display:flex;align-items:center;gap:16px;height:56px}
   .tn-home{display:inline-flex;align-items:center;gap:9px;font-weight:600;font-size:14.5px;color:var(--txt);text-decoration:none;white-space:nowrap;flex:0 0 auto;letter-spacing:-.01em}
-  .tn-home .tn-logo{height:24px;width:auto;flex:0 0 auto;color:var(--logo);display:block}
+  .tn-home .tn-logo{height:30px;width:auto;flex:0 0 auto;color:var(--logo);display:block}
   .tn-home:hover{opacity:.78}
   .tn-menus{display:flex;align-items:center;gap:4px;flex:1 1 auto}
   .tn-group{position:relative}
@@ -151,7 +151,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
   .tn-inner{gap:8px}
   .tn-burger{display:inline-flex}
   .theme-toggle{margin-left:auto}
-  .tn-logo{height:22px}
+  .tn-logo{height:26px}
   .tn-menus{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:2px;background:var(--card);border-bottom:1px solid var(--line);box-shadow:var(--elev-overlay);padding:8px 16px 18px;max-height:calc(100dvh - 57px);overflow-y:auto;display:none}
   .topnav.nav-open .tn-menus{display:flex}
   .tn-group{position:static}
@@ -695,14 +695,14 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
 <header id="top"><div class="wrap">
   <a class="logo" href="https://www.corporalacademy.com.br" aria-label="Corporal Class"><svg class="logo-mark" viewBox="0 0 1780 300" aria-hidden="true"><use href="#logo-hor"/></svg></a>
   <span class="eyebrow" style="display:block;margin-top:30px">Design system · derivado do brandbook Corporal Academy 2022</span>
-  <h1>O design system da <span class="hl">Corporal Class</span>.</h1>
-  <p>A fonte única da verdade da marca: tokens, cores institucionais, tipografia Silka, ícones, componentes e acessibilidade — em tema claro e escuro, prontos para a web e o Framer. Tudo aqui deriva do brandbook da Corporal Academy, para que o que você construir seja, sem esforço, da Corporal Class. <b class="hl">Clique em qualquer cor, valor (hex/rgba) ou bloco de código para copiar.</b></p>
+  <h1>Pare de improvisar a <span class="hl">marca</span>.</h1>
+  <p>O mesmo rigor da Corporal Academy, agora no que você constrói: a fonte única da verdade da Corporal Class reúne tokens, cores institucionais, tipografia Silka, ícones, componentes e padrões de acessibilidade, em tema claro e escuro, prontos para a web e o Framer. Cada peça deriva do brandbook, para que nada saia do tom. <b class="hl">Clique em qualquer cor, valor (hex/rgba) ou bloco de código para copiar.</b></p>
 </div></header>
 
 <!-- 01 MARCA & LOGO -->
 <section><div class="wrap">
   <div class="sec-title" id="nav-marca"><span class="num">01</span><h2>Marca e logo</h2></div>
-  <p class="sec-note">Quatro composições oficiais — horizontal, vertical, tipografia e ícone — em três cores (branco, preto, bordô). No site, a marca troca sozinha com o tema: <b class="hl">branca</b> sobre fundo escuro, <b class="hl">bordô</b> sobre fundo claro. Use sempre o SVG e nunca recolora fora destas três opções.</p>
+  <p class="sec-note">Quatro composições oficiais (horizontal, vertical, tipografia e ícone) em três cores (branco, preto, bordô). No site, a marca troca sozinha com o tema: <b class="hl">branca</b> sobre fundo escuro, <b class="hl">bordô</b> sobre fundo claro. Use sempre o SVG e nunca recolora fora destas três opções.</p>
 
   <div class="group-lbl">Composições</div>
   <div class="logo-grid">
@@ -749,7 +749,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
 
   <div class="group-lbl">Uso</div>
   <div class="logo-rules">
-    <div class="lr ok"><b>Faça</b><ul><li>Mantenha o espaço livre ao redor ≥ a altura do ícone.</li><li>Tamanho mínimo: ícone 24px · horizontal 120px de largura.</li><li>Use o SVG vetorial — escala sem perder nitidez e segue o tema.</li></ul></div>
+    <div class="lr ok"><b>Faça</b><ul><li>Mantenha o espaço livre ao redor ≥ a altura do ícone.</li><li>Tamanho mínimo: ícone 24px · horizontal 120px de largura.</li><li>Use o SVG vetorial: escala sem perder nitidez e segue o tema.</li></ul></div>
     <div class="lr no"><b>Não faça</b><ul><li>Recolorir fora de branco / preto / bordô.</li><li>Distorcer, rotacionar, inclinar ou aplicar sombra.</li><li>Usar a versão branca sobre fundo claro (some no fundo).</li></ul></div>
   </div>
 </div></section>
@@ -814,7 +814,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
     <span class="status s-warning"><svg><use href="#ph-warn"/></svg> Atenção</span>
     <span class="status s-danger"><svg><use href="#ph-x"/></svg> Erro</span>
   </div>
-  <p class="sec-note" style="margin-top:14px">Verde, âmbar e vermelho saem da paleta institucional de propósito — são <b class="hl">funcionais</b> (sucesso, atenção, erro). No tema light usam variantes escurecidas para manter AA. Acompanhe sempre de ícone + texto, nunca cor sozinha.</p>
+  <p class="sec-note" style="margin-top:14px">Verde, âmbar e vermelho saem da paleta institucional de propósito: são <b class="hl">funcionais</b> (sucesso, atenção, erro). No tema light usam variantes escurecidas para manter AA. Acompanhe sempre de ícone + texto, nunca cor sozinha.</p>
 
   <div class="group-lbl">Temas · dark e light</div>
   <div class="themes-grid">
@@ -898,7 +898,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
 <!-- 04 TIPOGRAFIA -->
 <section><div class="wrap">
   <div class="sec-title" id="nav-tipografia"><span class="num">04</span><h2>Tipografia</h2></div>
-  <p class="sec-note">Fonte institucional: <b class="hl">Silka</b> (do brandbook, disponível no Framer). <b class="hl">Fallback: Poppins</b> — quando a Silka não estiver disponível (outro projeto/ferramenta), use Poppins; só então cai em system-ui. Pesos: 300 / 400 / 500 / 600 / 700.</p>
+  <p class="sec-note">Fonte institucional: <b class="hl">Silka</b> (do brandbook, disponível no Framer). <b class="hl">Fallback: Poppins</b>. Quando a Silka não estiver disponível (outro projeto/ferramenta), use Poppins; só então cai em system-ui. Pesos: 300 / 400 / 500 / 600 / 700.</p>
 
   <div class="type-row">
     <div class="t-display">O inverno é a época ideal para tratar celulite.</div>
@@ -966,13 +966,13 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
     <div class="tscale-row"><div class="nm">Numeral / Preço</div><div class="v"><b>44</b> <small>lh 1</small></div><div class="v">38</div><div class="v">32</div></div>
     <div class="tscale-row"><div class="nm">Legal</div><div class="v"><b>12</b></div><div class="v">11</div><div class="v">11</div></div>
   </div>
-  <p class="sec-note" style="margin-top:14px;font-size:12.5px">Os specimens acima já usam <code>clamp()</code> — redimensione a janela para ver a escala fluida entre Phone e Desktop. Body mínimo de <b class="hl">16px</b> no mobile evita o zoom automático do iOS.</p>
+  <p class="sec-note" style="margin-top:14px;font-size:12.5px">Os specimens acima já usam <code>clamp()</code>: redimensione a janela para ver a escala fluida entre Phone e Desktop. Body mínimo de <b class="hl">16px</b> no mobile evita o zoom automático do iOS.</p>
 </div></section>
 
 <!-- 05 ÍCONES -->
 <section><div class="wrap">
   <div class="sec-title" id="nav-icones"><span class="num">05</span><h2>Ícones</h2></div>
-  <p class="sec-note">Biblioteca única: <b class="hl">Phosphor</b> (disponível nativamente no Framer). Peso padrão <b class="hl">Thin</b> — traço de <b class="hl">1&nbsp;pt</b> (stroke 1 na grade de 24), pontas e junções arredondadas. Cor por <code>currentColor</code> (herda o texto / accent), então acompanha o tema. Nunca misture pesos diferentes na mesma tela e nunca use emoji como ícone.</p>
+  <p class="sec-note">Biblioteca única: <b class="hl">Phosphor</b> (disponível nativamente no Framer). Peso padrão <b class="hl">Thin</b>: traço de <b class="hl">1&nbsp;pt</b> (stroke 1 na grade de 24), pontas e junções arredondadas. Cor por <code>currentColor</code> (herda o texto / accent), então acompanha o tema. Nunca misture pesos diferentes na mesma tela e nunca use emoji como ícone.</p>
 
   <p class="sec-note" style="margin-top:-14px">Conjunto de sistema desenhado na grade 24. <b class="hl">Clique em qualquer ícone para copiar o SVG.</b> Para o catálogo completo, use o link da Phosphor no fim da seção.</p>
 
@@ -1069,7 +1069,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
   <p class="sec-note" style="margin-top:22px">No Framer: insira o ícone Phosphor, defina <b class="hl">Weight = Thin</b> e a cor como Color Style (texto/accent). Em botões, o ícone alinha à baseline do texto com gap de 8&nbsp;px; alvo de toque mínimo de 44&nbsp;px mesmo quando o glifo é menor.</p>
 
   <div class="group-lbl">Biblioteca completa</div>
-  <p class="sec-note" style="margin-bottom:0">Os ícones acima são um recorte de sistema desenhado na grade 24. Para qualquer outro glifo, use a biblioteca oficial — <b class="hl">9.000+ ícones em 6 pesos</b>, todos disponíveis nativamente no Framer.</p>
+  <p class="sec-note" style="margin-bottom:0">Os ícones acima são um recorte de sistema desenhado na grade 24. Para qualquer outro glifo, use a biblioteca oficial: <b class="hl">9.000+ ícones em 6 pesos</b>, todos disponíveis nativamente no Framer.</p>
   <a class="ph-link" href="https://phosphoricons.com" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#ph-external"/></svg>Abrir biblioteca Phosphor<span class="host">phosphoricons.com</span></a>
 </div></section>
 
@@ -1162,7 +1162,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
   <div class="group-lbl">Matriz de estados interativos</div>
   <p class="sec-note" style="margin-bottom:0">Os mesmos estados se aplicam a <b class="hl">todo</b> componente interativo (botão, input, link, toggle, aba…). Consistência de interação = DS maduro.</p>
   <table class="states-tbl"><thead><tr><th>Estado</th><th>Sinal visual / regra</th></tr></thead><tbody>
-    <tr><td>default</td><td>Repouso — token base.</td></tr>
+    <tr><td>default</td><td>Repouso: token base.</td></tr>
     <tr><td>hover</td><td>Mudança leve (cor/elevação); só em ponteiro.</td></tr>
     <tr><td>focus-visible</td><td><b>Obrigatório:</b> anel <code>--focus</code> (navegação por teclado).</td></tr>
     <tr><td>active</td><td>Pressionado (translateY 1px / cor mais forte).</td></tr>
@@ -1195,7 +1195,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
   <div class="group-lbl">Estado vazio</div>
   <div class="empty"><svg aria-hidden="true"><use href="#ph-folder"/></svg><h4>Nada por aqui ainda</h4><p>Quando você adicionar conteúdo, ele aparece nesta área.</p><button class="b sm fill">Adicionar</button></div>
   <div class="group-lbl">Modal · Tooltip · Popover</div>
-  <div class="modal-demo"><div class="modal-scrim"></div><div class="modal"><h4>Confirmar cancelamento?</h4><p>Você perde o acesso ao final do período já pago — dá pra reativar depois.</p><div class="m-row"><button class="b sm outline">Voltar</button><button class="b sm fill">Confirmar</button></div></div></div>
+  <div class="modal-demo"><div class="modal-scrim"></div><div class="modal"><h4>Confirmar cancelamento?</h4><p>Você perde o acesso ao final do período já pago, mas dá pra reativar depois.</p><div class="m-row"><button class="b sm outline">Voltar</button><button class="b sm fill">Confirmar</button></div></div></div>
   <div class="comp-row" style="gap:36px;margin-top:18px;align-items:flex-start">
     <span class="tip"><span class="bub">Dica rápida sobre o campo</span></span>
     <div class="pop"><b>Filtrar por</b>Combine especialidade, nível e duração pra achar a aula certa.</div>
@@ -1254,7 +1254,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
 <!-- 10 FUNDAMENTOS DO SISTEMA -->
 <section><div class="wrap">
   <div class="sec-title" id="nav-sistema"><span class="num">10</span><h2>Fundamentos do sistema</h2></div>
-  <p class="sec-note">Espaçamento, raio, elevação e movimento — a base que mantém ritmo e profundidade consistentes. Todos estão nas CSS variables (seção 09) prontos para colar no Framer.</p>
+  <p class="sec-note">Espaçamento, raio, elevação e movimento: a base que mantém ritmo e profundidade consistentes. Todos estão nas CSS variables (seção 09) prontos para colar no Framer.</p>
   <div class="fund-grid">
     <div>
       <div class="group-lbl" style="margin-top:0">Espaçamento · base 4 / 8</div>
@@ -1317,7 +1317,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
   <p class="sec-note" style="margin:6px 0 0">Papéis mapeados na escala de sombra: <b class="hl">raised</b> = elev-1 · <b class="hl">overlay</b> = elev-3 · <b class="hl">modal</b> = elev-4. Use o papel (`--elev-raised/overlay/modal`), não o número. Sombras agora em <b class="hl">camadas + matiz do brand</b> (não preto puro).</p>
 
   <div class="group-lbl">Cantos aninhados (nested corners)</div>
-  <p class="sec-note" style="margin-bottom:0">Elemento arredondado dentro de outro: os cantos devem ser <b class="hl">concêntricos</b> (mesmo centro de arco). Regra — <b class="hl">raio interno = raio externo − padding</b> — pra o espaçamento ficar uniforme inclusive nos cantos.</p>
+  <p class="sec-note" style="margin-bottom:0">Elemento arredondado dentro de outro: os cantos devem ser <b class="hl">concêntricos</b> (mesmo centro de arco). Regra: <b class="hl">raio interno = raio externo − padding</b>, pra o espaçamento ficar uniforme inclusive nos cantos.</p>
   <div class="nc-grid">
     <div class="nc-demo">
       <span class="nc-flag ok"><svg aria-hidden="true"><use href="#i-check"/></svg> Faça · concêntrico</span>
@@ -1345,18 +1345,18 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
   <div class="code"><span class="c">/* raio interno = raio externo − padding (nunca negativo) */</span>
 .card{ <span class="k">--r</span>:24px; <span class="k">--pad</span>:16px; <span class="k">border-radius</span>:var(--r); <span class="k">padding</span>:var(--pad); }
 .card &gt; .inner{ <span class="k">border-radius</span>:max(0px, calc(var(--r) - var(--pad))); } <span class="c">/* 24 - 16 = 8 */</span></div>
-  <p class="sec-note" style="margin-top:14px"><b class="hl">Padding ≥ raio</b> → interno vira 0 (reto). <b class="hl">Borda/stroke</b> inverte: externo = interno + largura da borda. <b class="hl">Aninhamento profundo</b>: subtraia o padding de cada nível. <b class="hl">Pill</b> é exceção (não recalcula). Com <b class="hl">corner smoothing</b> (squircle iOS) a fórmula vira aproximação — iguale o smoothing em pai e filho.</p>
+  <p class="sec-note" style="margin-top:14px"><b class="hl">Padding ≥ raio</b> → interno vira 0 (reto). <b class="hl">Borda/stroke</b> inverte: externo = interno + largura da borda. <b class="hl">Aninhamento profundo</b>: subtraia o padding de cada nível. <b class="hl">Pill</b> é exceção (não recalcula). Com <b class="hl">corner smoothing</b> (squircle iOS) a fórmula vira aproximação: iguale o smoothing em pai e filho.</p>
 </div></section>
 
 <!-- 11 PRINCÍPIOS & PROCESSO -->
 <section id="sec-processo"><div class="wrap">
   <div class="sec-title" id="nav-processo"><span class="num">11</span><h2>Princípios e processo</h2></div>
-  <p class="sec-note">A camada de maturidade: como o sistema é pensado, versionado e mantido — o que separa um kit de um sistema vivo.</p>
+  <p class="sec-note">A camada de maturidade: como o sistema é pensado, versionado e mantido: o que separa um kit de um sistema vivo.</p>
   <div class="group-lbl">Arquitetura de tokens (3 camadas)</div>
   <p class="sec-note" style="margin-bottom:10px">Tokens fluem em <b class="hl">primitive → semantic/intent → component</b>. Regra de ouro: <b class="hl">o token semântico nunca sugere valor</b> (<code>--btn-bg</code>, não <code>--azul-500</code>); o de componente referencia o semântico, nunca o primitivo direto. É o que torna theming e rebrand triviais.</p>
   <table class="states-tbl" style="max-width:620px"><thead><tr><th>Camada</th><th>Exemplo</th><th>Papel</th></tr></thead><tbody><tr><td>primitive</td><td>#hex · 16px</td><td>Valor cru, sem contexto.</td></tr><tr><td>semantic</td><td>--accent · --space-4</td><td>Intenção / uso.</td></tr><tr><td>component</td><td>--btn-bg</td><td>Aplicação no componente.</td></tr></tbody></table>
   <div class="group-lbl">Princípios de movimento</div>
-  <p class="sec-note" style="margin-bottom:0">Anime com <b class="hl">propósito</b> (feedback, orientação, continuidade) — nunca decorativo. Durações nos tokens (<code>--motion-fast .15 · --motion .2 · --motion-slow .4</code>), curva <code>--ease</code>. Respeite <code>prefers-reduced-motion</code> (já no reset). Não anime: deslocamento de layout nem texto de leitura.</p>
+  <p class="sec-note" style="margin-bottom:0">Anime com <b class="hl">propósito</b> (feedback, orientação, continuidade), nunca decorativo. Durações nos tokens (<code>--motion-fast .15 · --motion .2 · --motion-slow .4</code>), curva <code>--ease</code>. Respeite <code>prefers-reduced-motion</code> (já no reset). Não anime: deslocamento de layout nem texto de leitura.</p>
   <div class="group-lbl">Versionamento e contribuição</div>
   <p class="sec-note" style="margin-bottom:0"><b class="hl">SemVer</b> (MAJOR.MINOR.PATCH) + <code>CHANGELOG.md</code> + política de depreciação. Contribuição: <b class="hl">regra das 3 equipes</b> (só vira padrão o que serve 3+ usos) + revisão antes de virar componente. Ver <code>CONTRIBUTING.md</code> no pacote.</p>
   <div class="group-lbl">Faça / Não faça</div>

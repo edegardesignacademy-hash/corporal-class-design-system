@@ -104,7 +104,7 @@ Regras: **padding ≥ raio** → interno 0 (reto); **borda/stroke** inverte (ext
 | Numeral / Preço | 44 / 38 / 32 | 700 | 1 · tabular-nums |
 | Legal | 12 / 11 / 11 | 300 | 1.5 |
 
-No CSS use `clamp()` entre Phone e Desktop. Body **≥16px no mobile** (evita zoom no iOS).
+No CSS use `clamp()` entre Phone e Desktop. Body **≥16px no mobile** (evita zoom no iOS). **Numerais sempre com `tabular-nums`** — ativado globalmente no `body` (dígitos de largura fixa, não encavalam: preços, stats, tabelas, contadores).
 
 #### Framer — Text Styles responsivos (L / M / S, desktop-first)
 

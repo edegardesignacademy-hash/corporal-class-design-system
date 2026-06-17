@@ -14,6 +14,16 @@ versionamento segue [SemVer](https://semver.org/lang/pt-BR/):
 
 _Nada pendente no momento._
 
+## [1.3.0] — 2026-06-17
+### Adicionado
+- Copy de produto integrada (deck do time de copy) nas demos: alertas, estado vazio, confirmação destrutiva, dica e balão, abas, acordeão, trilha de navegação, tabela de dados (5 linhas, status Publicada/Rascunho/Em revisão), seletor de data, app nav (6 itens) e paleta de comandos (3 grupos).
+- Guia de copy generalista `voz-e-tom.md` (voz, faça/não faça, estrangeirismos, separação de domínio, acessibilidade). Vale para todas as marcas.
+- Glossário de domínio da marca `glossario-marca.md` (termos exclusivos; não cruzam para outro DS).
+- `copy-deck.corporal.json` no pacote como fonte canônica das strings.
+### Alterado
+- Termos das demos normalizados para o pt-BR do DS (ex.: data table → tabela de dados, status → estado).
+- Nota de Fundamentos: referência das CSS variables corrigida para a seção 13.
+
 ## [1.2.1] — 2026-06-17
 ### Alterado
 - Copy 100% em pt-BR: componentes, gradientes, escala tipográfica e tabela de Color Styles do Framer (mantidos nomes de marca, tokens/código e features do Framer).

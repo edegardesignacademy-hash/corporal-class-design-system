@@ -1271,10 +1271,10 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
   <p class="sec-note">Comunicação de estado: alertas inline, notificações transitórias, carregamento (indicador e esqueleto), vazio e camadas sobrepostas (janela modal, dica, balão). Sempre ícone + texto, nunca cor sozinha.</p>
   <div class="group-lbl">Alertas inline</div>
   <div style="display:flex;flex-direction:column;gap:12px;max-width:560px">
-    <div class="alert ok"><svg aria-hidden="true"><use href="#ph-check"/></svg><div><b>Tudo certo.</b> Sua assinatura foi confirmada.</div></div>
-    <div class="alert info"><svg aria-hidden="true"><use href="#ph-info"/></svg><div><b>Dica.</b> Você pode trocar de plano quando quiser.</div></div>
-    <div class="alert warn"><svg aria-hidden="true"><use href="#ph-warn"/></svg><div><b>Atenção.</b> Seu cartão vence em 3 dias.</div></div>
-    <div class="alert err"><svg aria-hidden="true"><use href="#ph-x"/></svg><div><b>Erro.</b> Não foi possível processar o pagamento.</div></div>
+    <div class="alert ok"><svg aria-hidden="true"><use href="#ph-check"/></svg><div><b>Protocolo salvo.</b> Suas alterações já estão na trilha.</div></div>
+    <div class="alert info"><svg aria-hidden="true"><use href="#ph-info"/></svg><div><b>Aula nova esta semana.</b> Entrou conteúdo novo no módulo de gordura localizada. Confira quando quiser.</div></div>
+    <div class="alert warn"><svg aria-hidden="true"><use href="#ph-warn"/></svg><div><b>Sessão expira em breve.</b> Salve o protocolo antes de continuar para não perder o que você escreveu.</div></div>
+    <div class="alert err"><svg aria-hidden="true"><use href="#ph-x"/></svg><div><b>Falha ao salvar.</b> Não foi possível salvar agora. Verifique a conexão e tente de novo.</div></div>
   </div>
   <div class="group-lbl">Notificação · Indicador de carregamento · Esqueleto</div>
   <div class="comp-row" style="gap:30px;align-items:center">
@@ -1283,12 +1283,12 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
     <div class="skel-card"><div class="skel" style="height:60px"></div><div class="skel" style="height:12px;width:80%"></div><div class="skel" style="height:12px;width:55%"></div></div>
   </div>
   <div class="group-lbl">Estado vazio</div>
-  <div class="empty"><svg aria-hidden="true"><use href="#ph-folder"/></svg><h4>Nada por aqui ainda</h4><p>Quando você adicionar conteúdo, ele aparece nesta área.</p><button class="b sm fill">Adicionar</button></div>
+  <div class="empty"><svg aria-hidden="true"><use href="#ph-folder"/></svg><h4>Nenhuma aula ainda</h4><p>Crie a primeira aula da sua trilha de estética corporal.</p><button class="b sm fill">Criar aula</button></div>
   <div class="group-lbl">Janela modal · Dica · Balão</div>
-  <div class="modal-demo"><div class="modal-scrim"></div><div class="modal"><h4>Confirmar cancelamento?</h4><p>Você perde o acesso ao final do período já pago, mas dá pra reativar depois.</p><div class="m-row"><button class="b sm outline">Voltar</button><button class="b sm fill">Confirmar</button></div></div></div>
+  <div class="modal-demo"><div class="modal-scrim"></div><div class="modal"><h4>Remover protocolo?</h4><p>Essa ação não tem volta. O protocolo sai da sua trilha e não dá para recuperar.</p><div class="m-row"><button class="b sm outline">Voltar</button><button class="b sm fill">Remover</button></div></div></div>
   <div class="comp-row" style="gap:36px;margin-top:18px;align-items:flex-start">
-    <span class="tip"><span class="bub">Dica rápida sobre o campo</span></span>
-    <div class="pop"><b>Filtrar por</b>Combine especialidade, nível e duração pra achar a aula certa.</div>
+    <span class="tip"><span class="bub">Duplica o protocolo para você editar sem perder o original.</span></span>
+    <div class="pop"><b>Filtrar por</b>Área do corpo e tecnologia.</div>
   </div>
 </div></section>
 
@@ -1297,13 +1297,13 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
   <div class="sec-title" id="nav-estrutura"><span class="num">08</span><h2>Estrutura e navegação</h2></div>
   <p class="sec-note">Organização e navegação: abas, acordeão, avatares, trilha de navegação, paginação e variantes de cartão.</p>
   <div class="group-lbl">Abas</div>
-  <div><div class="tabs"><button class="tab active">Visão geral</button><button class="tab">Aulas</button><button class="tab">Materiais</button></div><div class="tab-panel">Conteúdo da aba ativa. No produto: <code>aria-selected</code> + navegação por setas do teclado.</div></div>
+  <div><div class="tabs"><button class="tab active">Visão geral</button><button class="tab">Aulas</button><button class="tab">Protocolos</button><button class="tab">Materiais</button></div><div class="tab-panel">Conteúdo da aba ativa. No produto: <code>aria-selected</code> + navegação por setas do teclado.</div></div>
   <div class="group-lbl">Acordeão</div>
-  <div class="acc" style="max-width:560px"><details open><summary>O que está incluído? <svg aria-hidden="true"><use href="#ph-caret"/></svg></summary><div class="acc-body">Acesso a todas as aulas, materiais em PDF e certificado de conclusão.</div></details><details><summary>Posso cancelar? <svg aria-hidden="true"><use href="#ph-caret"/></svg></summary><div class="acc-body">Sim, dentro do período de garantia de 7 dias.</div></details></div>
+  <div class="acc" style="max-width:560px"><details open><summary>Com que frequência entram aulas novas? <svg aria-hidden="true"><use href="#ph-caret"/></svg></summary><div class="acc-body">Toda semana entra conteúdo novo na plataforma, organizado por módulo.</div></details><details><summary>As aulas têm certificado? <svg aria-hidden="true"><use href="#ph-caret"/></svg></summary><div class="acc-body">Os cursos completos emitem certificado ao final. As aulas avulsas servem para atualização contínua.</div></details></div>
   <div class="group-lbl">Avatar</div>
   <div class="comp-row" style="gap:18px;align-items:center"><span class="av">EJ</span><span class="av">AC<span class="dot"></span></span><span class="av-stack"><span class="av">A</span><span class="av">B</span><span class="av">C</span><span class="av">+5</span></span></div>
   <div class="group-lbl">Trilha de navegação · Paginação</div>
-  <nav class="crumb"><a href="#">Início</a><span class="sep">/</span><a href="#">Cursos</a><span class="sep">/</span><span class="cur">Celulite PRO</span></nav>
+  <nav class="crumb"><a href="#">Início</a><span class="sep">/</span><a href="#">Trilhas</a><span class="sep">/</span><span class="cur">Celulite</span></nav>
   <div class="pager" style="margin-top:14px"><button class="pg" disabled aria-label="Anterior">‹</button><button class="pg active">1</button><button class="pg">2</button><button class="pg">3</button><button class="pg" aria-label="Próxima">›</button></div>
   <div class="group-lbl">Cartão · variantes</div>
   <div class="form-grid">
@@ -1321,31 +1321,33 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
   <div class="group-lbl">Tabela de dados</div>
   <div class="dtable-wrap">
     <div class="dtable-tools">
-      <input class="input" type="search" placeholder="Buscar protocolo" aria-label="Buscar protocolo">
+      <input class="input" type="search" placeholder="Buscar aula" aria-label="Buscar aula">
       <span class="sp"></span>
       <label class="toggle" style="font-size:13px;color:var(--mut)"><input type="checkbox" data-density=".dtbl"> Densidade compacta</label>
     </div>
     <div class="dtbl-x">
-    <table class="dtbl" aria-label="Protocolos por área">
+    <table class="dtbl" aria-label="Aulas do módulo de estética corporal">
       <thead><tr>
       <th class="col-ck"><label class="check"><input type="checkbox" data-selall=".dtbl" aria-label="Selecionar tudo"></label></th>
-      <th aria-sort="ascending"><button class="ths">Protocolo <svg aria-hidden="true"><use href="#ph-caret"/></svg></button></th>
-      <th><button class="ths">Área <svg aria-hidden="true"><use href="#ph-caret"/></svg></button></th>
-      <th><button class="ths">Sessões <svg aria-hidden="true"><use href="#ph-caret"/></svg></button></th>
+      <th aria-sort="ascending"><button class="ths">Aula <svg aria-hidden="true"><use href="#ph-caret"/></svg></button></th>
+      <th><button class="ths">Módulo <svg aria-hidden="true"><use href="#ph-caret"/></svg></button></th>
+      <th><button class="ths">Duração <svg aria-hidden="true"><use href="#ph-caret"/></svg></button></th>
       <th>Estado</th>
       </tr></thead>
       <tbody>
-      <tr class="is-sel"><td class="col-ck"><label class="check"><input type="checkbox" checked aria-label="Selecionar linha"></label></td><td>Celulite grau 2</td><td>Glúteos</td><td>8</td><td><span class="st ok"><i></i>Ativo</span></td></tr>
-      <tr><td class="col-ck"><label class="check"><input type="checkbox" aria-label="Selecionar linha"></label></td><td>Gordura localizada</td><td>Abdômen</td><td>10</td><td><span class="st ok"><i></i>Ativo</span></td></tr>
-      <tr><td class="col-ck"><label class="check"><input type="checkbox" aria-label="Selecionar linha"></label></td><td>Flacidez</td><td>Coxas</td><td>6</td><td><span class="st off"><i></i>Pausado</span></td></tr>
+      <tr class="is-sel"><td class="col-ck"><label class="check"><input type="checkbox" checked aria-label="Selecionar linha"></label></td><td>Celulite: graus e avaliação</td><td>Celulite</td><td>40 min</td><td><span class="st ok"><i></i>Publicada</span></td></tr>
+      <tr><td class="col-ck"><label class="check"><input type="checkbox" aria-label="Selecionar linha"></label></td><td>Gordura localizada: protocolos</td><td>Gordura localizada</td><td>45 min</td><td><span class="st warn"><i></i>Rascunho</span></td></tr>
+      <tr><td class="col-ck"><label class="check"><input type="checkbox" aria-label="Selecionar linha"></label></td><td>Drenagem linfática manual</td><td>Drenagem</td><td>36 min</td><td><span class="st ok"><i></i>Publicada</span></td></tr>
+      <tr><td class="col-ck"><label class="check"><input type="checkbox" aria-label="Selecionar linha"></label></td><td>Flacidez de glúteos e coxas</td><td>Flacidez</td><td>33 min</td><td><span class="st off"><i></i>Em revisão</span></td></tr>
+      <tr><td class="col-ck"><label class="check"><input type="checkbox" aria-label="Selecionar linha"></label></td><td>Intradermoterapia: diluição</td><td>Intradermoterapia</td><td>28 min</td><td><span class="st ok"><i></i>Publicada</span></td></tr>
       </tbody>
     </table>
     </div>
-    <div class="dtable-foot"><span>3 de 18 protocolos</span><div class="pager" style="margin:0"><button class="pg" disabled aria-label="Anterior">‹</button><button class="pg active">1</button><button class="pg">2</button><button class="pg">3</button><button class="pg" aria-label="Próxima">›</button></div></div>
+    <div class="dtable-foot"><span>5 de 24 aulas</span><div class="pager" style="margin:0"><button class="pg" disabled aria-label="Anterior">‹</button><button class="pg active">1</button><button class="pg">2</button><button class="pg">3</button><button class="pg" aria-label="Próxima">›</button></div></div>
   </div>
   <div class="group-lbl">Seletor de data</div>
   <div class="dpick">
-    <label class="dpick-lbl">Agendar sessão</label>
+    <label class="dpick-lbl">Data da turma presencial</label>
     <div class="dpick-field" role="button" tabindex="0" aria-haspopup="dialog" aria-expanded="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="16" rx="2"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/></svg><span class="v">17/06/2026 a 20/06/2026</span></div>
     <div class="cal" role="dialog" aria-label="Selecionar datas">
       <div class="cal-head"><span class="m">Junho 2026</span><span class="cal-nav"><button type="button" aria-label="Mês anterior">‹</button><button type="button" aria-label="Próximo mês">›</button></span></div>
@@ -1395,16 +1397,17 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
     <nav class="appside" aria-label="Navegação do produto">
       <div class="ab-brand"><svg viewBox="0 0 320 320" aria-hidden="true"><use href="#logo-icon"/></svg><span>Corporal Class</span></div>
       <div class="navgroup-lbl">Menu</div>
-          <a class="navitem is-active" href="#nav-avancados" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h11"/></svg><span class="lbl">Protocolos</span></a>
+          <a class="navitem" href="#nav-avancados"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-6 8 6"/><path d="M6 10v9h12v-9"/></svg><span class="lbl">Início</span></a>
+          <a class="navitem is-active" href="#nav-avancados" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h11"/></svg><span class="lbl">Trilhas</span></a>
           <a class="navitem" href="#nav-avancados"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M10.5 9l4.5 3-4.5 3z"/></svg><span class="lbl">Aulas</span></a>
-          <a class="navitem" href="#nav-avancados"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9" r="5"/><path d="M8.5 13L7 21l5-2.5L17 21l-1.5-8"/></svg><span class="lbl">Certificados</span></a>
+          <a class="navitem" href="#nav-avancados"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 3h10l3 3v15H7z"/><path d="M9.5 12h6M9.5 16h6"/></svg><span class="lbl">Protocolos</span></a>
           <a class="navitem" href="#nav-avancados"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="9" r="3"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><path d="M16 6.5a3 3 0 0 1 0 6"/><path d="M20 19a5.5 5.5 0 0 0-3.5-5"/></svg><span class="lbl">Comunidade</span></a>
-          <a class="navitem" href="#nav-avancados"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h9M17 8h3M4 16h3M11 16h9"/><circle cx="15" cy="8" r="2.3"/><circle cx="9" cy="16" r="2.3"/></svg><span class="lbl">Configurações</span></a>
+          <a class="navitem" href="#nav-avancados"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></svg><span class="lbl">Conta</span></a>
       <div class="side-foot"><span class="av">AC</span><span><span class="un">Ana C.</span><br><span class="ur">Instrutora</span></span></div>
     </nav>
     <div class="appmain">
-      <div class="appbar"><h4>Protocolos</h4><span class="sp"></span><span class="ab-s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>Buscar</span><span class="av">AC</span></div>
-      <div class="appbody"><h4>Seus protocolos</h4><p>Selecione um protocolo para ver as sessões e o progresso dos alunos.</p></div>
+      <div class="appbar"><h4>Minhas trilhas</h4><span class="sp"></span><span class="ab-s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>Buscar</span><span class="av">AC</span></div>
+      <div class="appbody"><h4>Suas trilhas</h4><p>Selecione uma trilha para ver as aulas e o progresso dos alunos.</p></div>
     </div>
   </div>
   </div>
@@ -1412,16 +1415,19 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
   <div class="cmdk-demo">
     <div class="cmdk-scrim"></div>
     <div class="cmdk" role="dialog" aria-modal="true" aria-label="Paleta de comandos">
-      <div class="cmdk-in"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><input type="text" placeholder="Buscar protocolo ou ação" aria-label="Buscar protocolo ou ação" role="combobox" aria-expanded="true" aria-controls="cmdk-list-co"></div>
+      <div class="cmdk-in"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg><input type="text" placeholder="Busque aulas, protocolos ou comandos" aria-label="Busque aulas, protocolos ou comandos" role="combobox" aria-expanded="true" aria-controls="cmdk-list-co"></div>
       <div class="cmdk-list" id="cmdk-list-co" role="listbox">
         <div class="cmdk-grp">Ações</div>
-          <div class="cmdk-item is-active" role="option" aria-selected="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span class="lbl">Novo protocolo</span><span class="kbd">↵</span></div>
-          <div class="cmdk-item" role="option"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></svg><span class="lbl">Convidar aluno</span></div>
+          <div class="cmdk-item is-active" role="option" aria-selected="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg><span class="lbl">Criar protocolo</span><span class="kbd">↵</span></div>
+          <div class="cmdk-item" role="option"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8.5v7M8.5 12h7"/></svg><span class="lbl">Adicionar aula</span></div>
+          <div class="cmdk-item" role="option"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v10M8 11l4 4 4-4"/><path d="M5 19h14"/></svg><span class="lbl">Exportar trilha em PDF</span></div>
         <div class="cmdk-grp">Navegação</div>
-          <div class="cmdk-item" role="option"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="lbl">Ir para Aulas</span></div>
-          <div class="cmdk-item" role="option"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="lbl">Ir para Certificados</span></div>
+          <div class="cmdk-item" role="option"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="lbl">Ir para Trilhas</span></div>
+          <div class="cmdk-item" role="option"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="lbl">Ir para Comunidade</span></div>
+          <div class="cmdk-item" role="option"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20a7 7 0 0 1 14 0"/></svg><span class="lbl">Abrir minha conta</span></div>
         <div class="cmdk-grp">Recentes</div>
-          <div class="cmdk-item" role="option"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 1.8"/></svg><span class="lbl">Celulite grau 2</span></div>
+          <div class="cmdk-item" role="option"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 1.8"/></svg><span class="lbl">Celulite: graus e avaliação</span></div>
+          <div class="cmdk-item" role="option"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 1.8"/></svg><span class="lbl">Drenagem linfática manual</span></div>
       </div>
       <div class="cmdk-foot"><span class="k"><span class="kbd">↑</span><span class="kbd">↓</span> navegar</span><span class="k"><span class="kbd">↵</span> abrir</span><span class="k"><span class="kbd">esc</span> fechar</span></div>
     </div>
@@ -1458,7 +1464,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
 <!-- 10 FUNDAMENTOS DO SISTEMA -->
 <section><div class="wrap">
   <div class="sec-title" id="nav-sistema"><span class="num">11</span><h2>Fundamentos do sistema</h2></div>
-  <p class="sec-note">Espaçamento, raio, elevação e movimento: a base que mantém ritmo e profundidade consistentes. Todos estão nas CSS variables (seção 09) prontos para colar no Framer.</p>
+  <p class="sec-note">Espaçamento, raio, elevação e movimento: a base que mantém ritmo e profundidade consistentes. Todos estão nas CSS variables (seção 13) prontos para colar no Framer.</p>
   <div class="fund-grid">
     <div>
       <div class="group-lbl" style="margin-top:0">Espaçamento · base 4 / 8</div>

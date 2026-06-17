@@ -16,6 +16,9 @@ Sistema de design portátil para web (HTML/CSS, React, Framer). Dark por padrão
 | `DESIGN-SYSTEM.md` | Este documento (spec + como usar + prompt para IA). |
 | `CHANGELOG.md` | Histórico de versões (Keep a Changelog + SemVer). |
 | `CONTRIBUTING.md` | Governança: como o sistema evolui (regra das 3 equipes, gate de pronto, SemVer, depreciação). |
+| `voz-e-tom.md` | **Guia de copy generalista** (voz, faça/não faça, estrangeirismos, separação de domínio, acessibilidade). Vale para todas as marcas. |
+| `glossario-marca.md` | **Glossário de domínio desta marca** (termos exclusivos, regras de produto). Não cruza para outro DS. |
+| `copy-deck.corporal.json` | Deck de copy do produto (hero, notas, microcopy, demos) usado no showcase. Fonte canônica das strings. |
 | `../index.html` | Showcase visual navegável (todas as cores, gradientes, tipografia, ícones e componentes ao vivo, com click-to-copy). |
 
 ---

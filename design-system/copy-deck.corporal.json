@@ -1,0 +1,105 @@
+{
+  "meta": { "brand": "corporal", "lang": "pt-BR", "version": "1.0" },
+  "sections": {
+    "hero": {
+      "h1": "Pare de construir no escuro.",
+      "body": "O Design System da **Corporal Class**: tokens, tipografia Silka, componentes e acessibilidade prontos para você montar telas com consistência e parar de improvisar a cada tela nova. A decisão fica no token, não no achismo."
+    },
+    "marca": { "note": "A marca da Corporal Class no digital: logo, assinatura e uso correto sobre fundo claro e escuro. Mantém leitura e contraste nos dois temas." },
+    "cores": { "note": "Paleta institucional e seus derivados em tokens de tema, claro e escuro. O componente consome token, nunca cor fixa." },
+    "gradientes": { "note": "Gradientes da marca em malhas (mesh) e lineares. Sem cônico, sem blob, sem halo." },
+    "tipografia": { "note": "Silka em escala responsiva por breakpoint. Corpo com no mínimo 16px no mobile para evitar o zoom no iOS." },
+    "icones": { "note": "Biblioteca Phosphor, peso Thin, traço de 1pt, herdando a cor por currentColor. O ícone nunca substitui o rótulo." },
+    "botoes": { "note": "Variantes e tamanhos com altura mínima de 44px e raio pill. O rótulo sempre diz a ação (Salvar protocolo, não Enviar)." },
+    "feedback": { "note": "Alerts, toasts e status nos quatro tons. Sempre ícone e texto juntos: a cor não comunica sozinha." },
+    "avancados": { "note": "Componentes de aplicação: data table, command palette, date picker e navegação. Conteúdo de exemplo do domínio de estética corporal." },
+    "acessibilidade": { "note": "Contraste WCAG AA, foco visível, alvo de toque de 44px e respeito a movimento reduzido. A mensagem de erro diz o que houve e como resolver." },
+    "fundamentos": { "note": "Cores, tipografia, espaçamento e raio: a base que todo componente consome via token." },
+    "principios": { "note": "Consistência por token, paridade entre claro e escuro, acessibilidade por padrão. Decida uma vez, reaplique em todo lugar." },
+    "tokens": { "note": "Valores legíveis por máquina para tema, espaçamento, raio, elevação e movimento. O componente lê o token, não o valor solto." }
+  },
+  "microcopy": {
+    "buttons": {
+      "salvar": "Salvar protocolo",
+      "cancelar": "Cancelar",
+      "confirmar": "Confirmar",
+      "adicionar": "Adicionar aula",
+      "remover": "Remover",
+      "editar": "Editar protocolo",
+      "assinar": "Assinar agora"
+    },
+    "empty_states": [
+      { "context": "lista de aulas vazia", "title": "Nenhuma aula ainda", "body": "Crie a primeira aula da sua trilha de estética corporal.", "action": "Criar aula" },
+      { "context": "busca sem resultado", "title": "Sem resultados", "body": "Nenhuma aula corresponde a esse termo. Ajuste a busca ou limpe os filtros.", "action": "Limpar filtros" },
+      { "context": "área nova sem protocolos", "title": "Nenhum protocolo salvo", "body": "Monte seu primeiro protocolo corporal e ele aparece aqui.", "action": "Novo protocolo" },
+      { "context": "favoritos vazios", "title": "Nada salvo ainda", "body": "Toque no marcador para guardar aulas e revisar antes do atendimento.", "action": "Explorar aulas" }
+    ],
+    "alerts": {
+      "success": { "title": "Protocolo salvo", "body": "Suas alterações já estão na trilha." },
+      "info": { "title": "Aula nova esta semana", "body": "Entrou conteúdo novo no módulo de gordura localizada. Confira quando quiser." },
+      "warning": { "title": "Sessão expira em breve", "body": "Salve o protocolo antes de continuar para não perder o que você escreveu." },
+      "error": { "title": "Falha ao salvar", "body": "Não foi possível salvar agora. Verifique a conexão e tente de novo." }
+    },
+    "form_validation": {
+      "required": "Campo obrigatório. Preencha para continuar.",
+      "email": "E-mail inválido. Use o formato nome@dominio.com.",
+      "senha_fraca": "Senha fraca. Use ao menos 8 caracteres, com número e letra.",
+      "enviado": "Cadastro enviado. Você recebe o acesso por e-mail.",
+      "erro_envio": "Não foi possível enviar. Verifique a conexão e tente de novo."
+    },
+    "confirm_destructive": {
+      "title": "Remover protocolo?",
+      "body": "Essa ação não tem volta. O protocolo sai da sua trilha e não dá para recuperar.",
+      "confirm": "Remover",
+      "cancel": "Voltar"
+    },
+    "tooltips": [
+      "Duplica o protocolo para você editar sem perder o original.",
+      "Filtra as aulas por área do corpo e tecnologia.",
+      "Exporta a trilha em PDF para estudar sem internet."
+    ]
+  },
+  "components": {
+    "data_table": {
+      "columns": ["Aula", "Módulo", "Duração", "Status"],
+      "rows": [
+        ["Celulite: graus e avaliação", "Celulite", "40 min", "Publicada"],
+        ["Gordura localizada: protocolos", "Gordura localizada", "45 min", "Rascunho"],
+        ["Drenagem linfática manual", "Drenagem", "36 min", "Publicada"],
+        ["Flacidez de glúteos e coxas", "Flacidez", "33 min", "Em revisão"],
+        ["Intradermoterapia: diluição", "Intradermoterapia", "28 min", "Publicada"]
+      ],
+      "empty": "Nenhuma aula por aqui ainda. Crie a primeira para sua trilha.",
+      "caption": "Aulas do módulo de estética corporal"
+    },
+    "date_picker": {
+      "label": "Data da turma presencial",
+      "help": "Escolha a data da aula prática. As vagas por turma são limitadas."
+    },
+    "app_nav": {
+      "page_title": "Minhas trilhas",
+      "user_initials": "AC",
+      "items": ["Início", "Trilhas", "Aulas", "Protocolos", "Comunidade", "Conta"]
+    },
+    "command_palette": {
+      "placeholder": "Busque aulas, protocolos ou comandos",
+      "groups": [
+        { "label": "Ações", "items": ["Criar protocolo", "Adicionar aula", "Exportar trilha em PDF"] },
+        { "label": "Navegação", "items": ["Ir para Trilhas", "Ir para Comunidade", "Abrir minha conta"] },
+        { "label": "Recentes", "items": ["Celulite: graus e avaliação", "Drenagem linfática manual"] }
+      ]
+    },
+    "tabs": ["Visão geral", "Aulas", "Protocolos", "Materiais"],
+    "accordion": [
+      { "q": "Com que frequência entram aulas novas?", "a": "Toda semana entra conteúdo novo na plataforma, organizado por módulo." },
+      { "q": "As aulas têm certificado?", "a": "Os cursos completos emitem certificado ao final. As aulas avulsas servem para atualização contínua." }
+    ],
+    "breadcrumb": ["Início", "Trilhas", "Celulite"],
+    "cards": [
+      { "title": "Celulite", "desc": "Avaliação por graus e protocolos de tratamento por área." },
+      { "title": "Gordura localizada", "desc": "Tecnologias e injetáveis para redução, do plano à execução." },
+      { "title": "Drenagem linfática", "desc": "Manobras, sequência e indicações por região do corpo." },
+      { "title": "Flacidez", "desc": "Bioestimulação e tecnologias para firmeza de pele e tônus." }
+    ]
+  }
+}

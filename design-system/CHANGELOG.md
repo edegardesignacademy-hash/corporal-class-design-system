@@ -14,6 +14,12 @@ versionamento segue [SemVer](https://semver.org/lang/pt-BR/):
 
 _Nada pendente no momento._
 
+## [1.2.1] — 2026-06-17
+### Alterado
+- Copy 100% em pt-BR: componentes, gradientes, escala tipográfica e tabela de Color Styles do Framer (mantidos nomes de marca, tokens/código e features do Framer).
+- Scrim dos demos (modal, paleta de comandos) usa tom da marca em vez de cinza.
+- Export de gradiente em PNG passou para 4K (3840×2160).
+
 ## [1.2.0] — 2026-06-17
 ### Adicionado
 - Seção "Componentes avançados" com 4 componentes de produto:

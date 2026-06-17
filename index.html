@@ -272,7 +272,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
   .t-legal{font-size:clamp(11px,1.2vw,12px);font-weight:300;color:var(--legal-mut);line-height:1.5}
   .t-num{font-size:clamp(32px,4.6vw,44px);font-weight:700;line-height:1;font-variant-numeric:tabular-nums;font-feature-settings:"tnum" 1}
 
-  /* Escala responsiva (breakpoints do Framer) */
+  /* Escala responsiva (pontos de quebra do Framer) */
   .tscale{margin-top:14px;border:1px solid var(--line);border-radius:var(--radius-md);overflow-x:auto}
   .tscale-row{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;border-top:1px solid var(--line);min-width:560px}
   .tscale-row:first-child{border-top:none}
@@ -447,7 +447,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
   .elev-box{width:98px;height:74px;background:var(--card2);border:1px solid var(--line);border-radius:var(--radius-md);display:flex;align-items:flex-end;justify-content:center;padding:8px;font-size:10.5px;color:var(--mut);font-family:ui-monospace,monospace}
   .motion-row{display:flex;flex-wrap:wrap;gap:14px;margin-top:11px}
   .motion-chip{font-size:12px;color:var(--coral-soft);font-family:ui-monospace,monospace;background:var(--card);border:1px solid var(--line);padding:9px 14px;border-radius:var(--radius-sm)}
-  /* Cantos aninhados (nested corners) */
+  /* Cantos aninhados */
   .nc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:18px;margin-top:11px}
   .nc-demo{display:flex;flex-direction:column;gap:10px}
   .nc-flag{font-size:12px;font-weight:600;display:inline-flex;align-items:center;gap:7px}
@@ -523,7 +523,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
   .empty{text-align:center;max-width:340px;display:flex;flex-direction:column;align-items:center;gap:11px;padding:30px 20px;border:1px dashed var(--line);border-radius:var(--radius-lg)}
   .empty svg{width:38px;height:38px;color:var(--mut)} .empty h4{font-size:17px;font-weight:500;color:var(--txt)} .empty p{font-size:13.5px;color:var(--mut);line-height:1.5}
   .modal-demo{position:relative;border-radius:var(--radius-lg);overflow:hidden;border:var(--bw-1) solid var(--line);min-height:230px;background:var(--bg2);display:flex;align-items:center;justify-content:center;padding:24px}
-  .modal-scrim{position:absolute;inset:0;background:rgba(0,0,0,var(--opacity-overlay));-webkit-backdrop-filter:blur(var(--blur-sm));backdrop-filter:blur(var(--blur-sm))}
+  .modal-scrim{position:absolute;inset:0;background:radial-gradient(130% 100% at 50% -20%,rgba(232,138,146,.30) 0,transparent 58%),rgba(90,39,48,.55);-webkit-backdrop-filter:blur(var(--blur-sm));backdrop-filter:blur(var(--blur-sm))}
   .modal{position:relative;width:min(380px,100%);background:var(--card);border:var(--bw-1) solid var(--line);border-radius:var(--radius-lg);box-shadow:var(--elev-modal);padding:22px}
   .modal h4{font-size:18px;font-weight:500;color:var(--txt);margin-bottom:8px} .modal p{font-size:14px;color:var(--mut);line-height:1.55;margin-bottom:18px}
   .modal .m-row{display:flex;gap:10px;justify-content:flex-end}
@@ -579,7 +579,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
   .st.ok i{background:var(--success)} .st.warn i{background:var(--warning)} .st.off i{background:var(--mut)}
   .dtable-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:11px 14px;border-top:var(--bw-1) solid var(--line);background:var(--card);font-size:12.5px;color:var(--mut);flex-wrap:wrap}
   .cmdk-demo{position:relative;border-radius:var(--radius-lg);overflow:hidden;border:var(--bw-1) solid var(--line);min-height:360px;background:var(--bg2);display:flex;align-items:flex-start;justify-content:center;padding:38px 22px}
-  .cmdk-scrim{position:absolute;inset:0;background:rgba(0,0,0,var(--opacity-overlay));-webkit-backdrop-filter:blur(var(--blur-sm));backdrop-filter:blur(var(--blur-sm))}
+  .cmdk-scrim{position:absolute;inset:0;background:radial-gradient(130% 100% at 50% -20%,rgba(232,138,146,.30) 0,transparent 58%),rgba(90,39,48,.55);-webkit-backdrop-filter:blur(var(--blur-sm));backdrop-filter:blur(var(--blur-sm))}
   .cmdk{position:relative;width:min(520px,100%);background:var(--card);border:var(--bw-1) solid var(--line);border-radius:var(--radius-lg);box-shadow:var(--elev-modal);overflow:hidden}
   .cmdk-in{display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:var(--bw-1) solid var(--line)}
   .cmdk-in svg{width:18px;height:18px;color:var(--mut);flex:0 0 auto}
@@ -847,7 +847,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
 <!-- 02 CORES -->
 <section><div class="wrap">
   <div class="sec-title" id="nav-cores"><span class="num">02</span><h2>Cores</h2></div>
-  <p class="sec-note">As 5 cores institucionais são a base. Tudo o que aparece na landing deriva delas. Nenhuma cor é inventada fora deste conjunto.</p>
+  <p class="sec-note">As 5 cores institucionais são a base. Tudo o que aparece no site deriva delas. Nenhuma cor é inventada fora deste conjunto.</p>
 
   <div class="group-lbl">Institucionais (brandbook §3.6)</div>
   <div class="sw-grid">
@@ -862,39 +862,39 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
   <div class="sw-grid">
     <div class="sw bordered"><div class="chip" style="background:#0E0708"></div><div class="meta"><div class="nm">BG</div><div class="hex">#0E0708</div><div class="role">Fundo principal.</div></div></div>
     <div class="sw bordered"><div class="chip" style="background:#1A1012"></div><div class="meta"><div class="nm">BG 2</div><div class="hex">#1A1012</div><div class="role">Faixas alternadas.</div></div></div>
-    <div class="sw bordered"><div class="chip" style="background:#241619"></div><div class="meta"><div class="nm">Card</div><div class="hex">#241619</div><div class="role">Cartões e blocos.</div></div></div>
-    <div class="sw bordered"><div class="chip" style="background:#2E1B1F"></div><div class="meta"><div class="nm">Card 2</div><div class="hex">#2E1B1F</div><div class="role">Elevação extra.</div></div></div>
+    <div class="sw bordered"><div class="chip" style="background:#241619"></div><div class="meta"><div class="nm">Cartão</div><div class="hex">#241619</div><div class="role">Cartões e blocos.</div></div></div>
+    <div class="sw bordered"><div class="chip" style="background:#2E1B1F"></div><div class="meta"><div class="nm">Cartão 2</div><div class="hex">#2E1B1F</div><div class="role">Elevação extra.</div></div></div>
   </div>
 
   <div class="group-lbl">Bordô · escala de uso</div>
   <div class="sw-grid">
-    <div class="sw"><div class="chip" style="background:#5A2730"></div><div class="meta"><div class="nm">Bordô deep</div><div class="hex">#5A2730</div><div class="role">Fim de gradiente, fundo de CTA do nav.</div></div></div>
+    <div class="sw"><div class="chip" style="background:#5A2730"></div><div class="meta"><div class="nm">Bordô profundo</div><div class="hex">#5A2730</div><div class="role">Fim de gradiente, fundo de CTA do nav.</div></div></div>
     <div class="sw"><div class="chip" style="background:#D6515C"></div><div class="meta"><div class="nm">Bordô base</div><div class="hex">#D6515C</div><div class="role">Institucional. Início de gradiente, sombras.</div></div></div>
-    <div class="sw"><div class="chip" style="background:#E0727A"></div><div class="meta"><div class="nm">Bordô bright</div><div class="hex">#E0727A</div><div class="role">Hover de botões/links.</div></div></div>
+    <div class="sw"><div class="chip" style="background:#E0727A"></div><div class="meta"><div class="nm">Bordô brilhante</div><div class="hex">#E0727A</div><div class="role">Ao passar o cursor em botões e links.</div></div></div>
     <div class="sw"><div class="chip" style="background:#E88A92"></div><div class="meta"><div class="nm">Coral claro</div><div class="hex">#E88A92</div><div class="role">Accent principal sobre escuro.</div></div></div>
   </div>
 
   <div class="group-lbl">Texto</div>
   <div class="sw-grid">
     <div class="sw bordered"><div class="chip" style="background:#FAF7F8"></div><div class="meta"><div class="nm">Texto</div><div class="hex">#FAF7F8</div><div class="role">Títulos e corpo principal.</div></div></div>
-    <div class="sw"><div class="chip" style="background:#B0898E"></div><div class="meta"><div class="nm">Muted</div><div class="hex">#B0898E</div><div class="role">Texto secundário, leads.</div></div></div>
-    <div class="sw"><div class="chip" style="background:#F0A6AD"></div><div class="meta"><div class="nm">Coral soft</div><div class="hex">#F0A6AD</div><div class="role">Texto sobre fundo escuro com leveza.</div></div></div>
-    <div class="sw"><div class="chip" style="background:#A07B82"></div><div class="meta"><div class="nm">Legal muted</div><div class="hex">#A07B82</div><div class="role">Aviso legal, rodapé.</div></div></div>
+    <div class="sw"><div class="chip" style="background:#B0898E"></div><div class="meta"><div class="nm">Secundário</div><div class="hex">#B0898E</div><div class="role">Texto secundário, leads.</div></div></div>
+    <div class="sw"><div class="chip" style="background:#F0A6AD"></div><div class="meta"><div class="nm">Coral suave</div><div class="hex">#F0A6AD</div><div class="role">Texto sobre fundo escuro com leveza.</div></div></div>
+    <div class="sw"><div class="chip" style="background:#A07B82"></div><div class="meta"><div class="nm">Aviso legal secundário</div><div class="hex">#A07B82</div><div class="role">Aviso legal, rodapé.</div></div></div>
   </div>
 
-  <div class="group-lbl">Accent quente (do brand)</div>
+  <div class="group-lbl">Cor de destaque quente (da marca)</div>
   <div class="sw-grid">
-    <div class="sw"><div class="chip" style="background:#FFE4A4"></div><div class="meta"><div class="nm">Gold</div><div class="hex">#FFE4A4</div><div class="role">Destaque dourado: bônus e selos.</div></div></div>
-    <div class="sw"><div class="chip" style="background:#D6C08A"></div><div class="meta"><div class="nm">Gold deep</div><div class="hex">#D6C08A</div><div class="role">Hover/borda do dourado.</div></div></div>
-    <div class="sw"><div class="chip" style="background:#FFB1BD"></div><div class="meta"><div class="nm">Rose</div><div class="hex">#FFB1BD</div><div class="role">Detalhes quentes, âncora de preço.</div></div></div>
-    <div class="sw"><div class="chip" style="background:#FFCA9B"></div><div class="meta"><div class="nm">Peach</div><div class="hex">#FFCA9B</div><div class="role">Calor em gradientes de fundo.</div></div></div>
+    <div class="sw"><div class="chip" style="background:#FFE4A4"></div><div class="meta"><div class="nm">Dourado</div><div class="hex">#FFE4A4</div><div class="role">Destaque dourado: bônus e selos.</div></div></div>
+    <div class="sw"><div class="chip" style="background:#D6C08A"></div><div class="meta"><div class="nm">Dourado profundo</div><div class="hex">#D6C08A</div><div class="role">Ao passar o cursor, borda do dourado.</div></div></div>
+    <div class="sw"><div class="chip" style="background:#FFB1BD"></div><div class="meta"><div class="nm">Rosa</div><div class="hex">#FFB1BD</div><div class="role">Detalhes quentes, âncora de preço.</div></div></div>
+    <div class="sw"><div class="chip" style="background:#FFCA9B"></div><div class="meta"><div class="nm">Pêssego</div><div class="hex">#FFCA9B</div><div class="role">Calor em gradientes de fundo.</div></div></div>
   </div>
 
-  <div class="group-lbl">Linha & sombras</div>
+  <div class="group-lbl">Linha e sombras</div>
   <div class="sw-grid">
     <div class="sw"><div class="chip" style="background:rgba(232,138,146,.14)"></div><div class="meta"><div class="nm">Linha</div><div class="hex">rgba(232,138,146,.14)</div><div class="role">Bordas e divisores (coral claro @14%).</div></div></div>
     <div class="sw"><div class="chip" style="background:#0E0708;box-shadow:0 10px 30px rgba(214,81,92,.40) inset"></div><div class="meta"><div class="nm">Sombra</div><div class="hex">rgba(214,81,92,.40)</div><div class="role">Elevação de botões (bordô @40%).</div></div></div>
-    <div class="sw"><div class="chip" style="background:#0E0708;box-shadow:0 10px 30px rgba(214,81,92,.50) inset"></div><div class="meta"><div class="nm">Sombra forte</div><div class="hex">rgba(214,81,92,.50)</div><div class="role">Hover de botões (bordô @50%).</div></div></div>
+    <div class="sw"><div class="chip" style="background:#0E0708;box-shadow:0 10px 30px rgba(214,81,92,.50) inset"></div><div class="meta"><div class="nm">Sombra forte</div><div class="hex">rgba(214,81,92,.50)</div><div class="role">Ao passar o cursor em botões (bordô @50%).</div></div></div>
   </div>
 
   <div class="group-lbl">Semânticas · feedback (sempre com ícone, nunca só cor)</div>
@@ -906,10 +906,10 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
   </div>
   <p class="sec-note" style="margin-top:14px">Verde, âmbar e vermelho saem da paleta institucional de propósito: são <b class="hl">funcionais</b> (sucesso, atenção, erro). No tema light usam variantes escurecidas para manter AA. Acompanhe sempre de ícone + texto, nunca cor sozinha.</p>
 
-  <div class="group-lbl">Temas · dark e light</div>
+  <div class="group-lbl">Temas · escuro e claro</div>
   <div class="themes-grid">
     <div class="tcard dark">
-      <div class="bar"><span>Dark · padrão da landing</span><span class="dot"></span></div>
+      <div class="bar"><span>Escuro · padrão do site</span><span class="dot"></span></div>
       <div class="body">
         <div class="eb">O contexto clínico</div>
         <h3>Cada caso, a resposta técnica certa.</h3>
@@ -920,7 +920,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
       </div>
     </div>
     <div class="tcard light">
-      <div class="bar"><span>Light · fundo branco</span><span class="dot"></span></div>
+      <div class="bar"><span>Claro · fundo claro</span><span class="dot"></span></div>
       <div class="body">
         <div class="eb">O contexto clínico</div>
         <h3>Cada caso, a resposta técnica certa.</h3>
@@ -931,57 +931,57 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
       </div>
     </div>
   </div>
-  <p class="sec-note" style="margin-top:16px">No tema light, dourado e rosa como <b class="hl">texto</b> usam variantes escurecidas (gold-ink #7A5A0E, rose #B04A5E); como <b class="hl">preenchimento</b> mantêm a cor institucional (#FFE4A4, #FFB1BD). A landing usa o tema dark por padrão.</p>
+  <p class="sec-note" style="margin-top:16px">No tema light, dourado e rosa como <b class="hl">texto</b> usam variantes escurecidas (gold-ink #7A5A0E, rose #B04A5E); como <b class="hl">preenchimento</b> mantêm a cor institucional (#FFE4A4, #FFB1BD). O site usa o tema escuro por padrão.</p>
 </div></section>
 
 <!-- 03 GRADIENTES -->
 <section><div class="wrap">
   <div class="sec-title" id="nav-gradientes"><span class="num">03</span><h2>Gradientes</h2></div>
-  <p class="sec-note">Biblioteca de gradientes, do funcional ao abstrato, montados só com cores do brand. Fundo de seção, card de destaque ou bloco hero.</p>
-  <div class="group-lbl">Dark · funcionais</div>
+  <p class="sec-note">Biblioteca de gradientes, do funcional ao abstrato, montados só com cores do brand. Fundo de seção, cartão de destaque ou bloco principal.</p>
+  <div class="group-lbl">Escuros · funcionais</div>
   <div class="grad-grid">
-    <div class="grad g-prim"><span>Primário · linear bordô → deep</span></div>
-    <div class="grad g-aurora"><span>Aurora · radial bordô + peach</span></div>
-    <div class="grad g-mesh1"><span>Mesh de imagem · bordô + peach</span></div>
+    <div class="grad g-prim"><span>Primário · linear bordô → profundo</span></div>
+    <div class="grad g-aurora"><span>Aurora · radial bordô + pêssego</span></div>
+    <div class="grad g-mesh1"><span>Malha de imagem · bordô + pêssego</span></div>
   </div>
-  <div class="group-lbl">Dark · vibrantes</div>
+  <div class="group-lbl">Escuros · vibrantes</div>
   <div class="grad-grid">
     <div class="grad g-vibe"><span>Bordô → Coral claro</span></div>
-    <div class="grad g-sunset"><span>Sunset · bordô → vermelho</span></div>
+    <div class="grad g-sunset"><span>Pôr do sol · bordô → vermelho</span></div>
     <div class="grad g-warm"><span>Coral claro → Amarelado</span></div>
     <div class="grad g-spot"><span>Spotlight coral claro</span></div>
-    <div class="grad g-duotone"><span>Duotone bordô → preto</span></div>
+    <div class="grad g-duotone"><span>Bicolor bordô → preto</span></div>
   </div>
-  <div class="group-lbl">Dark · meshes</div>
+  <div class="group-lbl">Escuros · malhas</div>
   <div class="grad-grid">
     <div class="grad g-nebula"><span>Nebulosa · 4 pontos</span></div>
-    <div class="grad g-mesh3"><span>Mesh bordô profundo</span></div>
-    <div class="grad g-mesh4"><span>Mesh quente · 4 pontos</span></div>
-    <div class="grad g-mesh5"><span>Mesh topo coral claro</span></div>
-    <div class="grad g-mesh6"><span>Mesh centro-base</span></div>
+    <div class="grad g-mesh3"><span>Malha bordô profundo</span></div>
+    <div class="grad g-mesh4"><span>Malha quente · 4 pontos</span></div>
+    <div class="grad g-mesh5"><span>Malha topo coral claro</span></div>
+    <div class="grad g-mesh6"><span>Malha centro-base</span></div>
   </div>
-  <div class="group-lbl">Dark · abstratos</div>
+  <div class="group-lbl">Escuros · abstratos</div>
   <div class="grad-grid">
     <div class="grad g-spectral"><span>Espectro · bordô → pêssego</span></div>
     <div class="grad g-aurora2"><span>Aurora vertical</span></div>
-    <div class="grad g-glow-edge"><span>Glow de borda inferior</span></div>
+    <div class="grad g-glow-edge"><span>Brilho de borda inferior</span></div>
     <div class="grad g-ribbon"><span>Fitas diagonais</span></div>
   </div>
-  <div class="group-lbl">Light · suaves e pastel</div>
+  <div class="group-lbl">Claros · suaves e pastel</div>
   <div class="grad-grid">
-    <div class="grad gl-wash on-light"><span>Wash coral claro</span></div>
-    <div class="grad gl-aurora on-light"><span>Aurora light</span></div>
-    <div class="grad gl-pastel on-light"><span>Mesh pastel</span></div>
+    <div class="grad gl-wash on-light"><span>Suave coral claro</span></div>
+    <div class="grad gl-aurora on-light"><span>Aurora claro</span></div>
+    <div class="grad gl-pastel on-light"><span>Malha pastel</span></div>
     <div class="grad gl-lilac on-light"><span>Coral claro suave</span></div>
     <div class="grad gl-peach on-light"><span>Pêssego</span></div>
     <div class="grad gl-spectral on-light"><span>Espectro pastel</span></div>
   </div>
-  <div class="group-lbl">Light · meshes</div>
+  <div class="group-lbl">Claros · malhas</div>
   <div class="grad-grid">
-    <div class="grad gl-mesh2 on-light"><span>Mesh pastel · 3 pontos</span></div>
-    <div class="grad gl-mesh3 on-light"><span>Mesh pastel · 4 pontos</span></div>
-    <div class="grad gl-mesh4 on-light"><span>Mesh quente claro</span></div>
-    <div class="grad gl-mesh5 on-light"><span>Mesh topo coral claro</span></div>
+    <div class="grad gl-mesh2 on-light"><span>Malha pastel · 3 pontos</span></div>
+    <div class="grad gl-mesh3 on-light"><span>Malha pastel · 4 pontos</span></div>
+    <div class="grad gl-mesh4 on-light"><span>Malha quente claro</span></div>
+    <div class="grad gl-mesh5 on-light"><span>Malha topo coral claro</span></div>
   </div>
 </div></section>
 
@@ -992,43 +992,43 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
 
   <div class="type-row">
     <div class="t-display">O inverno é a época ideal para tratar celulite.</div>
-    <div class="type-spec"><b>Display / H1</b><br>Silka · clamp(34-60px)<br>peso 500 · entrelinha 1.03<br>tracking -0.025em</div>
+    <div class="type-spec"><b>Destaque / H1</b><br>Silka · clamp(34-60px)<br>peso 500 · entrelinha 1.03<br>espaçamento -0.025em</div>
   </div>
   <div class="type-row">
     <div class="t-h2">Celulite é multifatorial. Uma técnica não basta.</div>
-    <div class="type-spec"><b>Heading / H2</b><br>Silka · clamp(26-38px)<br>peso 500 · entrelinha 1.12<br>tracking -0.02em</div>
+    <div class="type-spec"><b>Título / H2</b><br>Silka · clamp(26-38px)<br>peso 500 · entrelinha 1.12<br>espaçamento -0.02em</div>
   </div>
   <div class="type-row">
     <div class="t-h3">Domine as técnicas e atue com confiança.</div>
-    <div class="type-spec"><b>Subheading / H3</b><br>Silka · 24px<br>peso 500 · entrelinha 1.2</div>
+    <div class="type-spec"><b>Subtítulo / H3</b><br>Silka · 24px<br>peso 500 · entrelinha 1.2</div>
   </div>
   <div class="type-row">
     <div class="t-h4">O Curso Celulite PRO cobre cada ponto.</div>
-    <div class="type-spec"><b>Subheading / H4</b><br>Silka · 20px<br>peso 500 · entrelinha 1.25</div>
+    <div class="type-spec"><b>Subtítulo / H4</b><br>Silka · 20px<br>peso 500 · entrelinha 1.25</div>
   </div>
   <div class="type-row">
     <div class="t-h5">O que está incluído no plano.</div>
-    <div class="type-spec"><b>Subheading / H5</b><br>Silka · 17px<br>peso 500 · entrelinha 1.3</div>
+    <div class="type-spec"><b>Subtítulo / H5</b><br>Silka · 17px<br>peso 500 · entrelinha 1.3</div>
   </div>
   <div class="type-row">
     <div class="t-h6">Detalhe de seção / rótulo</div>
-    <div class="type-spec"><b>Subheading / H6</b><br>Silka · 15px<br>peso 500 · entrelinha 1.35</div>
+    <div class="type-spec"><b>Subtítulo / H6</b><br>Silka · 15px<br>peso 500 · entrelinha 1.35</div>
   </div>
   <div class="type-row">
     <div class="eyebrow">A maior plataforma de estética corporal da América Latina</div>
-    <div class="type-spec"><b>Eyebrow / Overline</b><br>Silka · 12px · peso 600<br>tracking 0.18em · UPPERCASE<br>cor: Coral claro</div>
+    <div class="type-spec"><b>Rótulo / Sobrelinha</b><br>Silka · 12px · peso 600<br>espaçamento 0.18em · UPPERCASE<br>cor: Coral claro</div>
   </div>
   <div class="type-row">
     <div class="t-lead">Avaliação precisa, mescla certa e subcisão na indicação correta.</div>
-    <div class="type-spec"><b>Lead</b><br>Silka · 17-18px<br>peso 300 · entrelinha 1.5<br>cor: Muted</div>
+    <div class="type-spec"><b>Texto de abertura</b><br>Silka · 17-18px<br>peso 300 · entrelinha 1.5<br>cor: Secundário</div>
   </div>
   <div class="type-row">
     <div class="t-body">O Curso Celulite PRO vai da fisiopatologia ao protocolo combinado, para que cada caso tenha a resposta técnica que merece.</div>
-    <div class="type-spec"><b>Body</b><br>Silka · 16px<br>peso 300 · entrelinha 1.65</div>
+    <div class="type-spec"><b>Corpo</b><br>Silka · 16px<br>peso 300 · entrelinha 1.65</div>
   </div>
   <div class="type-row">
     <div class="t-small">Profissionais de estética corporal de todo o Brasil.</div>
-    <div class="type-spec"><b>Body small</b><br>Silka · 14px (desktop) / 13px (mobile)<br>peso 300 · entrelinha 1.6<br>cor: Muted</div>
+    <div class="type-spec"><b>Corpo pequeno</b><br>Silka · 14px (computador) / 13px (celular)<br>peso 300 · entrelinha 1.6<br>cor: Secundário</div>
   </div>
   <div class="type-row">
     <div class="t-num">R$ 149,94</div>
@@ -1036,33 +1036,33 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
   </div>
   <div class="type-row">
     <div class="t-legal">AVISO LEGAL: Curso livre de capacitação profissional. NÃO confere habilitação em Conselho de Classe.</div>
-    <div class="type-spec"><b>Caption / Legal</b><br>Silka · 11px<br>peso 300 · entrelinha 1.5<br>cor: Legal muted</div>
+    <div class="type-spec"><b>Legenda / Aviso legal</b><br>Silka · 11px<br>peso 300 · entrelinha 1.5<br>cor: Aviso legal secundário</div>
   </div>
 
-  <div class="group-lbl">Escala responsiva · breakpoints do Framer</div>
+  <div class="group-lbl">Escala responsiva · pontos de quebra do Framer</div>
   <p class="sec-note" style="margin-bottom:0">No Framer, cada Text Style aceita override por breakpoint. Defina o valor no <b class="hl">Desktop</b> e ajuste em <b class="hl">Tablet</b> e <b class="hl">Phone</b>. Valores recomendados (px):</p>
   <div class="tscale">
     <div class="tscale-row head"><div>Estilo</div><div>Desktop ≥1200</div><div>Tablet ≤810</div><div>Phone ≤390</div></div>
-    <div class="tscale-row"><div class="nm">Display / H1</div><div class="v"><b>60</b> <small>lh 1.03</small></div><div class="v">44</div><div class="v">34</div></div>
-    <div class="tscale-row"><div class="nm">Heading / H2</div><div class="v"><b>38</b> <small>lh 1.12</small></div><div class="v">32</div><div class="v">26</div></div>
-    <div class="tscale-row"><div class="nm">Sub / H3</div><div class="v"><b>24</b> <small>lh 1.2</small></div><div class="v">22</div><div class="v">20</div></div>
-    <div class="tscale-row"><div class="nm">Sub / H4</div><div class="v"><b>20</b> <small>lh 1.25</small></div><div class="v">19</div><div class="v">18</div></div>
-    <div class="tscale-row"><div class="nm">Sub / H5</div><div class="v"><b>17</b> <small>lh 1.3</small></div><div class="v">16</div><div class="v">16</div></div>
-    <div class="tscale-row"><div class="nm">Sub / H6</div><div class="v"><b>15</b> <small>lh 1.35</small></div><div class="v">14</div><div class="v">14</div></div>
-    <div class="tscale-row"><div class="nm">Eyebrow</div><div class="v"><b>12</b></div><div class="v">12</div><div class="v">11</div></div>
-    <div class="tscale-row"><div class="nm">Lead</div><div class="v"><b>18</b> <small>lh 1.5</small></div><div class="v">17</div><div class="v">16</div></div>
-    <div class="tscale-row"><div class="nm">Body</div><div class="v"><b>16</b> <small>lh 1.65</small></div><div class="v">16</div><div class="v">16</div></div>
-    <div class="tscale-row"><div class="nm">Body small</div><div class="v"><b>14</b></div><div class="v">13</div><div class="v">13</div></div>
+    <div class="tscale-row"><div class="nm">Destaque / H1</div><div class="v"><b>60</b> <small>lh 1.03</small></div><div class="v">44</div><div class="v">34</div></div>
+    <div class="tscale-row"><div class="nm">Título / H2</div><div class="v"><b>38</b> <small>lh 1.12</small></div><div class="v">32</div><div class="v">26</div></div>
+    <div class="tscale-row"><div class="nm">Subtítulo / H3</div><div class="v"><b>24</b> <small>lh 1.2</small></div><div class="v">22</div><div class="v">20</div></div>
+    <div class="tscale-row"><div class="nm">Subtítulo / H4</div><div class="v"><b>20</b> <small>lh 1.25</small></div><div class="v">19</div><div class="v">18</div></div>
+    <div class="tscale-row"><div class="nm">Subtítulo / H5</div><div class="v"><b>17</b> <small>lh 1.3</small></div><div class="v">16</div><div class="v">16</div></div>
+    <div class="tscale-row"><div class="nm">Subtítulo / H6</div><div class="v"><b>15</b> <small>lh 1.35</small></div><div class="v">14</div><div class="v">14</div></div>
+    <div class="tscale-row"><div class="nm">Rótulo</div><div class="v"><b>12</b></div><div class="v">12</div><div class="v">11</div></div>
+    <div class="tscale-row"><div class="nm">Texto de abertura</div><div class="v"><b>18</b> <small>lh 1.5</small></div><div class="v">17</div><div class="v">16</div></div>
+    <div class="tscale-row"><div class="nm">Corpo</div><div class="v"><b>16</b> <small>lh 1.65</small></div><div class="v">16</div><div class="v">16</div></div>
+    <div class="tscale-row"><div class="nm">Corpo pequeno</div><div class="v"><b>14</b></div><div class="v">13</div><div class="v">13</div></div>
     <div class="tscale-row"><div class="nm">Numeral / Preço</div><div class="v"><b>44</b> <small>lh 1</small></div><div class="v">38</div><div class="v">32</div></div>
-    <div class="tscale-row"><div class="nm">Legal</div><div class="v"><b>12</b></div><div class="v">11</div><div class="v">11</div></div>
+    <div class="tscale-row"><div class="nm">Aviso legal</div><div class="v"><b>12</b></div><div class="v">11</div><div class="v">11</div></div>
   </div>
-  <p class="sec-note" style="margin-top:14px;font-size:12.5px">Os specimens acima já usam <code>clamp()</code>: redimensione a janela para ver a escala fluida entre Phone e Desktop. Body mínimo de <b class="hl">16px</b> no mobile evita o zoom automático do iOS.</p>
+  <p class="sec-note" style="margin-top:14px;font-size:12.5px">As amostras acima já usam <code>clamp()</code>: redimensione a janela para ver a escala fluida entre Phone e Desktop. Corpo mínimo de <b class="hl">16px</b> no celular evita o zoom automático do iOS.</p>
 </div></section>
 
 <!-- 05 ÍCONES -->
 <section><div class="wrap">
   <div class="sec-title" id="nav-icones"><span class="num">05</span><h2>Ícones</h2></div>
-  <p class="sec-note">Biblioteca única: <b class="hl">Phosphor</b> (disponível nativamente no Framer). Peso padrão <b class="hl">Thin</b>: traço de <b class="hl">1&nbsp;pt</b> (stroke 1 na grade de 24), pontas e junções arredondadas. Cor por <code>currentColor</code> (herda o texto / accent), então acompanha o tema. Nunca misture pesos diferentes na mesma tela e nunca use emoji como ícone.</p>
+  <p class="sec-note">Biblioteca única: <b class="hl">Phosphor</b> (disponível nativamente no Framer). Peso padrão <b class="hl">Thin</b>: traço de <b class="hl">1&nbsp;pt</b> (traço 1 na grade de 24), pontas e junções arredondadas. Cor por <code>currentColor</code> (herda o texto / accent), então acompanha o tema. Nunca misture pesos diferentes na mesma tela e nunca use emoji como ícone.</p>
 
   <p class="sec-note" style="margin-top:-14px">Conjunto de sistema desenhado na grade 24. <b class="hl">Clique em qualquer ícone para copiar o SVG.</b> Para o catálogo completo, use o link da Phosphor no fim da seção.</p>
 
@@ -1131,7 +1131,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
     <button class="icell" type="button" data-icon="ph-folder" aria-label="Copiar SVG · Folder"><span class="ic-copy" aria-hidden="true"><svg><use href="#i-copy"/></svg></span><svg aria-hidden="true"><use href="#ph-folder"/></svg><span class="inm">Folder</span></button>
   </div>
 
-  <div class="group-lbl">Status e conta</div>
+  <div class="group-lbl">Estado e conta</div>
   <div class="icon-grid">
     <button class="icell" type="button" data-icon="ph-info" aria-label="Copiar SVG · Info"><span class="ic-copy" aria-hidden="true"><svg><use href="#i-copy"/></svg></span><svg aria-hidden="true"><use href="#ph-info"/></svg><span class="inm">Info</span></button>
     <button class="icell" type="button" data-icon="ph-warn" aria-label="Copiar SVG · Warning"><span class="ic-copy" aria-hidden="true"><svg><use href="#i-copy"/></svg></span><svg aria-hidden="true"><use href="#ph-warn"/></svg><span class="inm">Warning</span></button>
@@ -1206,7 +1206,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
   <div class="group-lbl">Estados</div>
   <div class="comp-row">
     <button type="button" class="b md fill">Padrão</button>
-    <button type="button" class="b md fill" style="transform:translateY(-2px);box-shadow:0 16px 38px var(--sh-strong)">Hover</button>
+    <button type="button" class="b md fill" style="transform:translateY(-2px);box-shadow:0 16px 38px var(--sh-strong)">Cursor sobre</button>
     <button type="button" class="b md fill" disabled>Desabilitado</button>
   </div>
 
@@ -1216,19 +1216,19 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
     <button type="button" class="b md outline"><svg class="ico"><use href="#i-check"/></svg> Falar com especialista</button>
   </div>
 
-  <div class="group-lbl">Chips · sem ícone / ícone esquerda / ícone direita</div>
+  <div class="group-lbl">Etiquetas · sem ícone / ícone esquerda / ícone direita</div>
   <div class="comp-row">
     <span class="chip-d">Bioestimuladores corporais</span>
     <span class="chip-d"><svg class="ico-s"><use href="#i-check"/></svg> Bioestimuladores corporais</span>
     <span class="chip-d">Bioestimuladores corporais <svg class="ico-s"><use href="#i-arrow"/></svg></span>
   </div>
-  <div class="group-lbl">Badges · sem ícone / ícone esquerda / ícone direita</div>
+  <div class="group-lbl">Selos · sem ícone / ícone esquerda / ícone direita</div>
   <div class="comp-row">
     <span class="badge-gold">Bônus exclusivo</span>
     <span class="badge-gold"><svg class="ico-s"><use href="#i-check"/></svg> Bônus exclusivo</span>
     <span class="badge-gold">Bônus exclusivo <svg class="ico-s"><use href="#i-check"/></svg></span>
   </div>
-  <div class="group-lbl">Inputs e form fields · estados</div>
+  <div class="group-lbl">Campos de formulário · estados</div>
   <div class="form-grid">
     <div class="field"><label class="field-lbl" for="ff1">Nome completo</label><input class="input" id="ff1" type="text" placeholder="Como aparece no certificado"><span class="field-help">Texto de ajuda opcional.</span></div>
     <div class="field"><label class="field-lbl" for="ff2">E-mail <span class="req">*</span></label><input class="input is-error" id="ff2" type="email" value="email-invalido" aria-invalid="true"><span class="field-help err">Digite um e-mail válido.</span></div>
@@ -1237,9 +1237,9 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
     <div class="field"><label class="field-lbl" for="ff5">Matrícula</label><input class="input" id="ff5" type="text" value="2026-000123" readonly><span class="field-help">Somente leitura.</span></div>
     <div class="field"><label class="field-lbl" for="ff6">Especialidade</label><div class="select-wrap"><select class="select" id="ff6"><option>Selecione…</option><option>Opção A</option><option>Opção B</option></select><svg class="car" aria-hidden="true"><use href="#ph-caret"/></svg></div></div>
   </div>
-  <div class="group-lbl">Textarea</div>
+  <div class="group-lbl">Área de texto</div>
   <div class="field" style="max-width:520px"><label class="field-lbl" for="ff7">Mensagem</label><textarea class="textarea" id="ff7" placeholder="Escreva aqui…"></textarea></div>
-  <div class="group-lbl">Checkbox · Radio · Toggle</div>
+  <div class="group-lbl">Caixa de seleção · Botão de opção · Alternador</div>
   <div class="comp-row" style="gap:24px">
     <label class="check"><input type="checkbox" checked> Aceito os termos</label>
     <label class="check"><input type="checkbox"> Receber novidades</label>
@@ -1250,14 +1250,14 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
     <label class="toggle"><input type="checkbox"> Notificações</label>
   </div>
   <div class="group-lbl">Matriz de estados interativos</div>
-  <p class="sec-note" style="margin-bottom:0">Os mesmos estados se aplicam a <b class="hl">todo</b> componente interativo (botão, input, link, toggle, aba…). Consistência de interação = DS maduro.</p>
+  <p class="sec-note" style="margin-bottom:0">Os mesmos estados se aplicam a <b class="hl">todo</b> componente interativo (botão, campo, link, alternador, aba…). Consistência de interação = DS maduro.</p>
   <table class="states-tbl"><thead><tr><th>Estado</th><th>Sinal visual / regra</th></tr></thead><tbody>
     <tr><td>default</td><td>Repouso: token base.</td></tr>
     <tr><td>hover</td><td>Mudança leve (cor/elevação); só em ponteiro.</td></tr>
     <tr><td>focus-visible</td><td><b>Obrigatório:</b> anel <code>--focus</code> (navegação por teclado).</td></tr>
     <tr><td>active</td><td>Pressionado (translateY 1px / cor mais forte).</td></tr>
     <tr><td>disabled</td><td><code>--opacity-disabled</code> + cursor not-allowed + não focável.</td></tr>
-    <tr><td>loading</td><td>Spinner + bloqueia interação; mantém a largura.</td></tr>
+    <tr><td>loading</td><td>Indicador + bloqueia interação; mantém a largura.</td></tr>
     <tr><td>error</td><td>Borda/texto <code>--danger</code> + mensagem + <code>aria-invalid</code>.</td></tr>
     <tr><td>success</td><td>Borda/texto <code>--success</code> + confirmação.</td></tr>
     <tr><td>selected</td><td>Estado persistente (aba/opção ativa).</td></tr>
@@ -1268,7 +1268,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
 <!-- 07 FEEDBACK & SOBREPOSIÇÕES -->
 <section id="sec-feedback"><div class="wrap">
   <div class="sec-title" id="nav-feedback"><span class="num">07</span><h2>Feedback e sobreposições</h2></div>
-  <p class="sec-note">Comunicação de estado: alertas inline, avisos transitórios (toasts), carregamento (spinner/skeleton), vazio e camadas sobrepostas (modal, tooltip, popover). Sempre ícone + texto, nunca cor sozinha.</p>
+  <p class="sec-note">Comunicação de estado: alertas inline, notificações transitórias, carregamento (indicador e esqueleto), vazio e camadas sobrepostas (janela modal, dica, balão). Sempre ícone + texto, nunca cor sozinha.</p>
   <div class="group-lbl">Alertas inline</div>
   <div style="display:flex;flex-direction:column;gap:12px;max-width:560px">
     <div class="alert ok"><svg aria-hidden="true"><use href="#ph-check"/></svg><div><b>Tudo certo.</b> Sua assinatura foi confirmada.</div></div>
@@ -1276,7 +1276,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
     <div class="alert warn"><svg aria-hidden="true"><use href="#ph-warn"/></svg><div><b>Atenção.</b> Seu cartão vence em 3 dias.</div></div>
     <div class="alert err"><svg aria-hidden="true"><use href="#ph-x"/></svg><div><b>Erro.</b> Não foi possível processar o pagamento.</div></div>
   </div>
-  <div class="group-lbl">Toast · Spinner · Skeleton</div>
+  <div class="group-lbl">Notificação · Indicador de carregamento · Esqueleto</div>
   <div class="comp-row" style="gap:30px;align-items:center">
     <span class="toast"><svg aria-hidden="true"><use href="#i-check"/></svg> Salvo com sucesso</span>
     <span class="spinner" role="status" aria-label="Carregando"></span>
@@ -1284,7 +1284,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
   </div>
   <div class="group-lbl">Estado vazio</div>
   <div class="empty"><svg aria-hidden="true"><use href="#ph-folder"/></svg><h4>Nada por aqui ainda</h4><p>Quando você adicionar conteúdo, ele aparece nesta área.</p><button class="b sm fill">Adicionar</button></div>
-  <div class="group-lbl">Modal · Tooltip · Popover</div>
+  <div class="group-lbl">Janela modal · Dica · Balão</div>
   <div class="modal-demo"><div class="modal-scrim"></div><div class="modal"><h4>Confirmar cancelamento?</h4><p>Você perde o acesso ao final do período já pago, mas dá pra reativar depois.</p><div class="m-row"><button class="b sm outline">Voltar</button><button class="b sm fill">Confirmar</button></div></div></div>
   <div class="comp-row" style="gap:36px;margin-top:18px;align-items:flex-start">
     <span class="tip"><span class="bub">Dica rápida sobre o campo</span></span>
@@ -1295,30 +1295,30 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
 <!-- 08 ESTRUTURA & NAVEGAÇÃO -->
 <section id="sec-estrutura"><div class="wrap">
   <div class="sec-title" id="nav-estrutura"><span class="num">08</span><h2>Estrutura e navegação</h2></div>
-  <p class="sec-note">Organização e navegação: abas, acordeão, avatares, breadcrumb, paginação e variantes de card.</p>
+  <p class="sec-note">Organização e navegação: abas, acordeão, avatares, trilha de navegação, paginação e variantes de cartão.</p>
   <div class="group-lbl">Abas</div>
   <div><div class="tabs"><button class="tab active">Visão geral</button><button class="tab">Aulas</button><button class="tab">Materiais</button></div><div class="tab-panel">Conteúdo da aba ativa. No produto: <code>aria-selected</code> + navegação por setas do teclado.</div></div>
   <div class="group-lbl">Acordeão</div>
   <div class="acc" style="max-width:560px"><details open><summary>O que está incluído? <svg aria-hidden="true"><use href="#ph-caret"/></svg></summary><div class="acc-body">Acesso a todas as aulas, materiais em PDF e certificado de conclusão.</div></details><details><summary>Posso cancelar? <svg aria-hidden="true"><use href="#ph-caret"/></svg></summary><div class="acc-body">Sim, dentro do período de garantia de 7 dias.</div></details></div>
   <div class="group-lbl">Avatar</div>
   <div class="comp-row" style="gap:18px;align-items:center"><span class="av">EJ</span><span class="av">AC<span class="dot"></span></span><span class="av-stack"><span class="av">A</span><span class="av">B</span><span class="av">C</span><span class="av">+5</span></span></div>
-  <div class="group-lbl">Breadcrumb · Paginação</div>
+  <div class="group-lbl">Trilha de navegação · Paginação</div>
   <nav class="crumb"><a href="#">Início</a><span class="sep">/</span><a href="#">Cursos</a><span class="sep">/</span><span class="cur">Celulite PRO</span></nav>
   <div class="pager" style="margin-top:14px"><button class="pg" disabled aria-label="Anterior">‹</button><button class="pg active">1</button><button class="pg">2</button><button class="pg">3</button><button class="pg" aria-label="Próxima">›</button></div>
-  <div class="group-lbl">Card · variantes</div>
+  <div class="group-lbl">Cartão · variantes</div>
   <div class="form-grid">
-    <div class="cardv"><h4>Card básico</h4><p>Superfície com borda e raio padrão.</p></div>
-    <div class="cardv inter"><h4>Card interativo</h4><p>Elevação ao passar o mouse.</p></div>
-    <div class="cardv cardv-media" style="padding:0"><div class="media"></div><div class="body"><h4>Card com mídia</h4><p>Imagem/gradiente no topo.</p></div></div>
-    <div class="cardv"><div class="card-h"><span class="thumb"></span><div><h4 style="margin:0 0 4px">Card horizontal</h4><p>Miniatura + texto.</p></div></div></div>
+    <div class="cardv"><h4>Cartão básico</h4><p>Superfície com borda e raio padrão.</p></div>
+    <div class="cardv inter"><h4>Cartão interativo</h4><p>Elevação ao passar o mouse.</p></div>
+    <div class="cardv cardv-media" style="padding:0"><div class="media"></div><div class="body"><h4>Cartão com mídia</h4><p>Imagem/gradiente no topo.</p></div></div>
+    <div class="cardv"><div class="card-h"><span class="thumb"></span><div><h4 style="margin:0 0 4px">Cartão horizontal</h4><p>Miniatura + texto.</p></div></div></div>
   </div>
 </div></section>
 
 <!-- COMPONENTES AVANÇADOS -->
 <section id="sec-avancados"><div class="wrap">
   <div class="sec-title" id="nav-avancados"><span class="num">09</span><h2>Componentes avançados</h2></div>
-  <p class="sec-note">Camada de produto avançada, para áreas logadas e fluxos densos: data table, date picker, navbar e sidebar de produto, e command palette.</p>
-  <div class="group-lbl">Data table</div>
+  <p class="sec-note">Camada de produto avançada, para áreas logadas e fluxos densos: tabela de dados, seletor de data, barra de navegação e barra lateral de produto, e paleta de comandos.</p>
+  <div class="group-lbl">Tabela de dados</div>
   <div class="dtable-wrap">
     <div class="dtable-tools">
       <input class="input" type="search" placeholder="Buscar protocolo" aria-label="Buscar protocolo">
@@ -1332,7 +1332,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
       <th aria-sort="ascending"><button class="ths">Protocolo <svg aria-hidden="true"><use href="#ph-caret"/></svg></button></th>
       <th><button class="ths">Área <svg aria-hidden="true"><use href="#ph-caret"/></svg></button></th>
       <th><button class="ths">Sessões <svg aria-hidden="true"><use href="#ph-caret"/></svg></button></th>
-      <th>Status</th>
+      <th>Estado</th>
       </tr></thead>
       <tbody>
       <tr class="is-sel"><td class="col-ck"><label class="check"><input type="checkbox" checked aria-label="Selecionar linha"></label></td><td>Celulite grau 2</td><td>Glúteos</td><td>8</td><td><span class="st ok"><i></i>Ativo</span></td></tr>
@@ -1343,7 +1343,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
     </div>
     <div class="dtable-foot"><span>3 de 18 protocolos</span><div class="pager" style="margin:0"><button class="pg" disabled aria-label="Anterior">‹</button><button class="pg active">1</button><button class="pg">2</button><button class="pg">3</button><button class="pg" aria-label="Próxima">›</button></div></div>
   </div>
-  <div class="group-lbl">Date picker</div>
+  <div class="group-lbl">Seletor de data</div>
   <div class="dpick">
     <label class="dpick-lbl">Agendar sessão</label>
     <div class="dpick-field" role="button" tabindex="0" aria-haspopup="dialog" aria-expanded="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="16" rx="2"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/></svg><span class="v">17/06/2026 a 20/06/2026</span></div>
@@ -1389,7 +1389,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
       </div>
     </div>
   </div>
-  <div class="group-lbl">Navbar e sidebar de produto</div>
+  <div class="group-lbl">Barra de navegação e barra lateral de produto</div>
   <div class="appshell-x">
   <div class="appshell">
     <nav class="appside" aria-label="Navegação do produto">
@@ -1408,7 +1408,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
     </div>
   </div>
   </div>
-  <div class="group-lbl">Command palette</div>
+  <div class="group-lbl">Paleta de comandos</div>
   <div class="cmdk-demo">
     <div class="cmdk-scrim"></div>
     <div class="cmdk" role="dialog" aria-modal="true" aria-label="Paleta de comandos">
@@ -1436,7 +1436,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
     <div class="a11y-col">
       <div class="a11y-h">Tema dark</div>
       <div class="a11y-row"><span>Texto em fundo</span><span class="ok">18.9:1</span></div>
-      <div class="a11y-row"><span>Muted em card</span><span class="ok">4.9:1</span></div>
+      <div class="a11y-row"><span>Secundário em cartão</span><span class="ok">4.9:1</span></div>
       <div class="a11y-row"><span>Coral claro (links) em fundo</span><span class="ok">6.8:1</span></div>
       <div class="a11y-row"><span>Dourado em fundo</span><span class="ok">16.1:1</span></div>
       <div class="a11y-row"><span>Branco no botão (bordô)</span><span class="ok">7.8:1</span></div>
@@ -1445,7 +1445,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
     <div class="a11y-col">
       <div class="a11y-h">Tema light</div>
       <div class="a11y-row"><span>Texto em fundo</span><span class="ok">16.9:1</span></div>
-      <div class="a11y-row"><span>Muted em fundo</span><span class="ok">6.0:1</span></div>
+      <div class="a11y-row"><span>Secundário em fundo</span><span class="ok">6.0:1</span></div>
       <div class="a11y-row"><span>Bordô (accent/links)</span><span class="ok">7.8:1</span></div>
       <div class="a11y-row"><span>Dourado-ink (texto)</span><span class="ok">6.4:1</span></div>
       <div class="a11y-row"><span>Rosa-ink (texto)</span><span class="ok">5.3:1</span></div>
@@ -1495,17 +1495,17 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
     <div class="elev-box" style="box-shadow:var(--elev-4)">elev-4</div>
   </div>
 
-  <div class="group-lbl">Opacidade · borda · blur</div>
+  <div class="group-lbl">Opacidade · borda · desfoque</div>
   <div class="fnd-row">
     <div class="fnd-box"><div class="fnd-op" style="opacity:var(--opacity-disabled)"></div>disabled<br>.45</div>
     <div class="fnd-box"><div class="fnd-op" style="opacity:var(--opacity-muted)"></div>muted<br>.66</div>
-    <div class="fnd-box"><div class="fnd-op" style="opacity:var(--opacity-overlay)"></div>overlay<br>.58</div>
+    <div class="fnd-box"><div class="fnd-op" style="opacity:var(--opacity-overlay)"></div>Sobreposição<br>.58</div>
     <div class="fnd-box"><div class="fnd-op" style="opacity:var(--opacity-hover)"></div>hover<br>.08</div>
     <div class="fnd-box"><div class="fnd-sw" style="border-width:var(--bw-hair)"></div>hair · 1</div>
     <div class="fnd-box"><div class="fnd-sw" style="border-width:var(--bw-2)"></div>bw-2 · 2</div>
     <div class="fnd-box"><div class="fnd-blur"><span></span></div>blur-md<br>12</div>
   </div>
-  <div class="group-lbl">Breakpoints · sizing · proporção</div>
+  <div class="group-lbl">Pontos de quebra · dimensionamento · proporção</div>
   <div class="fnd-row">
     <span class="fnd-bp">phone · 390</span>
     <span class="fnd-bp">tablet · 810</span>
@@ -1518,9 +1518,9 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
     <div class="fnd-box"><div class="fnd-sw" style="height:auto;width:64px;aspect-ratio:var(--ar-wide)"></div>16:9</div>
   </div>
   <div class="group-lbl">Elevação semântica</div>
-  <p class="sec-note" style="margin:6px 0 0">Papéis mapeados na escala de sombra: <b class="hl">raised</b> = elev-1 · <b class="hl">overlay</b> = elev-3 · <b class="hl">modal</b> = elev-4. Use o papel (`--elev-raised/overlay/modal`), não o número. Sombras agora em <b class="hl">camadas + matiz do brand</b> (não preto puro).</p>
+  <p class="sec-note" style="margin:6px 0 0">Papéis mapeados na escala de sombra: <b class="hl">Elevado</b> = elev-1 · <b class="hl">Sobreposição</b> = elev-3 · <b class="hl">Modal</b> = elev-4. Use o papel (`--elev-raised/overlay/modal`), não o número. Sombras agora em <b class="hl">camadas + matiz do brand</b> (não preto puro).</p>
 
-  <div class="group-lbl">Cantos aninhados (nested corners)</div>
+  <div class="group-lbl">Cantos aninhados</div>
   <p class="sec-note" style="margin-bottom:0">Elemento arredondado dentro de outro: os cantos devem ser <b class="hl">concêntricos</b> (mesmo centro de arco). Regra: <b class="hl">raio interno = raio externo − padding</b>, pra o espaçamento ficar uniforme inclusive nos cantos.</p>
   <div class="nc-grid">
     <div class="nc-demo">
@@ -1538,9 +1538,9 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
   <table class="nc-tbl">
     <thead><tr><th>Contexto</th><th>Externo</th><th>Padding</th><th>Interno</th></tr></thead>
     <tbody>
-      <tr><td>Card grande</td><td>24</td><td>16</td><td>8</td></tr>
-      <tr><td>Card médio</td><td>16</td><td>8</td><td>8</td></tr>
-      <tr><td>Card pequeno / input</td><td>12</td><td>8</td><td>4</td></tr>
+      <tr><td>Cartão grande</td><td>24</td><td>16</td><td>8</td></tr>
+      <tr><td>Cartão médio</td><td>16</td><td>8</td><td>8</td></tr>
+      <tr><td>Cartão pequeno / campo</td><td>12</td><td>8</td><td>4</td></tr>
       <tr><td>Tile compacto</td><td>8</td><td>8</td><td class="muted">0 · reto</td></tr>
       <tr><td>Pill / botão</td><td class="muted">full</td><td class="muted">—</td><td class="muted">exceção</td></tr>
     </tbody>
@@ -1564,7 +1564,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
   <div class="group-lbl">Versionamento e contribuição</div>
   <p class="sec-note" style="margin-bottom:0"><b class="hl">SemVer</b> (MAJOR.MINOR.PATCH) + <code>CHANGELOG.md</code> + política de depreciação. Contribuição: <b class="hl">regra das 3 equipes</b> (só vira padrão o que serve 3+ usos) + revisão antes de virar componente. Ver <code>CONTRIBUTING.md</code> no pacote.</p>
   <div class="group-lbl">Faça / Não faça</div>
-  <div class="logo-rules"><div class="lr ok"><b>Faça</b><ul><li>Consumir tokens (nunca hex solto).</li><li>Dark + light em paridade, contraste WCAG AA.</li><li>Ícone + texto nos estados (cor nunca sozinha).</li><li>Foco visível em tudo que é focável.</li></ul></div><div class="lr no"><b>Não faça</b><ul><li>Cor / raio / sombra fora dos tokens.</li><li>Texto claro sem contraste no light.</li><li>Animar sem propósito ou ignorar reduced-motion.</li><li>Botão <code>&lt;a&gt;</code> sem href.</li></ul></div></div>
+  <div class="logo-rules"><div class="lr ok"><b>Faça</b><ul><li>Consumir tokens (nunca hex solto).</li><li>Escuro + claro em paridade, contraste WCAG AA.</li><li>Ícone + texto nos estados (cor nunca sozinha).</li><li>Foco visível em tudo que é focável.</li></ul></div><div class="lr no"><b>Não faça</b><ul><li>Cor / raio / sombra fora dos tokens.</li><li>Texto claro sem contraste no light.</li><li>Animar sem propósito ou ignorar reduced-motion.</li><li>Botão <code>&lt;a&gt;</code> sem href.</li></ul></div></div>
 </div></section>
 
 <!-- 12 TOKENS PARA COPIAR -->
@@ -1572,7 +1572,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
   <div class="sec-title" id="nav-tokens"><span class="num">13</span><h2>Tokens para copiar</h2></div>
   <p class="sec-note">Cole as CSS variables em um Code Component / override do Framer, ou use a tabela JSON para criar os Color Styles e Text Styles manualmente. Inclui os dois temas: <b class="hl">dark</b> (padrão) e <b class="hl">light</b> (classe <code>.light</code>).</p>
 
-  <div class="group-lbl">CSS variables</div>
+  <div class="group-lbl">Variáveis CSS</div>
 <div class="code"><span class="c">/* Corporal Class · tokens (derivados do brandbook Corporal Academy) */</span>
 :root{
   <span class="c">/* institucionais */</span>
@@ -1600,7 +1600,7 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
   <span class="k">--space-2</span>:8px; <span class="k">--space-4</span>:16px; <span class="k">--space-6</span>:24px; <span class="k">--space-8</span>:32px;
   <span class="k">--motion</span>:.2s; <span class="k">--ease</span>:cubic-bezier(.2,.8,.2,1); <span class="k">--focus</span>:0 0 0 3px rgba(232,138,146,.55);
 
-  <span class="c">/* foundations: opacidade · borda · blur · breakpoints · sizing · proporção */</span>
+  <span class="c">/* fundações: opacidade · borda · desfoque · pontos de quebra · dimensionamento · proporção */</span>
   <span class="k">--opacity-disabled</span>:.45; <span class="k">--opacity-muted</span>:.66; <span class="k">--opacity-hover</span>:.08; <span class="k">--opacity-overlay</span>:.58;
   <span class="k">--bw-hair</span>:1px; <span class="k">--bw-2</span>:2px; <span class="k">--blur-sm</span>:6px; <span class="k">--blur-md</span>:12px; <span class="k">--blur-lg</span>:20px;
   <span class="k">--bp-phone</span>:390px; <span class="k">--bp-tablet</span>:810px; <span class="k">--bp-desktop</span>:1200px;
@@ -1635,18 +1635,18 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
   <span class="k">"brand/Amarelado"</span>:   "#FFCA9B",
   <span class="k">"bg/BG"</span>:             "#0E0708",
   <span class="k">"bg/BG2"</span>:            "#1A1012",
-  <span class="k">"bg/Card"</span>:           "#241619",
-  <span class="k">"bg/Card2"</span>:          "#2E1B1F",
-  <span class="k">"bordô/Deep"</span>:         "#5A2730",
-  <span class="k">"bordô/Bright"</span>:       "#E0727A",
+  <span class="k">"bg/Cartão"</span>:           "#241619",
+  <span class="k">"bg/Cartão2"</span>:          "#2E1B1F",
+  <span class="k">"bordô/Profundo"</span>:         "#5A2730",
+  <span class="k">"bordô/Brilhante"</span>:       "#E0727A",
   <span class="k">"text/Texto"</span>:        "#FAF7F8",
-  <span class="k">"text/Muted"</span>:        "#B0898E",
-  <span class="k">"text/Coral claroSoft"</span>:    "#F0A6AD",
+  <span class="k">"text/Secundário"</span>:        "#B0898E",
+  <span class="k">"text/Coral claroSuave"</span>:    "#F0A6AD",
   <span class="k">"text/Legal"</span>:        "#A07B82",
-  <span class="k">"accent/Gold"</span>:       "#FFE4A4",
-  <span class="k">"accent/GoldDeep"</span>:   "#D6C08A",
-  <span class="k">"accent/Rose"</span>:       "#FFB1BD",
-  <span class="k">"accent/Peach"</span>:      "#FFCA9B",
+  <span class="k">"accent/Dourado"</span>:       "#FFE4A4",
+  <span class="k">"accent/DouradoProfundo"</span>:   "#D6C08A",
+  <span class="k">"accent/Rosa"</span>:       "#FFB1BD",
+  <span class="k">"accent/Pêssego"</span>:      "#FFCA9B",
   <span class="k">"line"</span>:              "rgba(232,138,146,.14)",
   <span class="c">// feedback · valor dark (paridade light no comentário)</span>
   <span class="k">"feedback/Success"</span>:   "#45C08A",   <span class="c">// light #147A45</span>
@@ -1654,42 +1654,42 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
   <span class="k">"feedback/Danger"</span>:    "#FF7D93",   <span class="c">// light #C72F49</span>
   <span class="k">"feedback/Info"</span>:      "#E88A92"    <span class="c">// light #8A4550</span>
 }</div>
-<div class="code"><span class="c">// Text Styles (Silka) · size por breakpoint Framer [desktop, tablet, phone]</span>
+<div class="code"><span class="c">// Text Styles (Silka) · tamanho por breakpoint Framer [desktop, tablet, phone]</span>
 {
-  <span class="k">"Display/H1"</span>:  { size:[60,44,34], weight:600, lh:1.03, ls:"-0.025em" },
-  <span class="k">"Heading/H2"</span>: { size:[38,32,26], weight:600, lh:1.12, ls:"-0.02em" },
-  <span class="k">"Sub/H3"</span>:     { size:[24,22,20], weight:600, lh:1.2 },
-  <span class="k">"Sub/H4"</span>:     { size:[20,19,18], weight:600, lh:1.25, ls:"-0.01em" },
-  <span class="k">"Sub/H5"</span>:     { size:[17,16,16], weight:600, lh:1.3 },
-  <span class="k">"Sub/H6"</span>:     { size:[15,14,14], weight:600, lh:1.35 },
-  <span class="k">"Eyebrow"</span>:    { size:[12,12,11], weight:600, lh:1.2, ls:"0.18em", uppercase:true },
-  <span class="k">"Lead"</span>:       { size:[18,17,16], weight:300, lh:1.5 },
-  <span class="k">"Body"</span>:       { size:[16,16,16], weight:300, lh:1.65 },
-  <span class="k">"BodySmall"</span>:  { size:[14,13,13], weight:300, lh:1.6 },
+  <span class="k">"Destaque/H1"</span>:  { size:[60,44,34], weight:600, lh:1.03, ls:"-0.025em" },
+  <span class="k">"Título/H2"</span>: { size:[38,32,26], weight:600, lh:1.12, ls:"-0.02em" },
+  <span class="k">"Subtítulo/H3"</span>:     { size:[24,22,20], weight:600, lh:1.2 },
+  <span class="k">"Subtítulo/H4"</span>:     { size:[20,19,18], weight:600, lh:1.25, ls:"-0.01em" },
+  <span class="k">"Subtítulo/H5"</span>:     { size:[17,16,16], weight:600, lh:1.3 },
+  <span class="k">"Subtítulo/H6"</span>:     { size:[15,14,14], weight:600, lh:1.35 },
+  <span class="k">"Rótulo"</span>:    { size:[12,12,11], weight:600, lh:1.2, ls:"0.18em", uppercase:true },
+  <span class="k">"Texto de abertura"</span>:       { size:[18,17,16], weight:300, lh:1.5 },
+  <span class="k">"Corpo"</span>:       { size:[16,16,16], weight:300, lh:1.65 },
+  <span class="k">"CorpoPequeno"</span>:  { size:[14,13,13], weight:300, lh:1.6 },
   <span class="k">"Numeral"</span>:    { size:[44,38,32], weight:700, lh:1 },
   <span class="k">"Legal"</span>:      { size:[12,11,11], weight:300, lh:1.5 }
 }</div>
   </div>
-  <div class="group-lbl">Configuração no Framer · light / dark automático</div>
-  <p class="sec-note" style="margin-top:0">No Framer, crie cada cor como um <b class="hl">Color Style</b> com um valor de <b class="hl">Light</b> e um de <b class="hl">Dark</b>. O site publicado segue a aparência do sistema do visitante automaticamente (<code>prefers-color-scheme</code>); dá pra adicionar um toggle e lembrar a escolha do visitante. Atalho no canvas: Ctrl+Cmd+N. Valores por estilo:</p>
+  <div class="group-lbl">Configuração no Framer · claro / escuro automático</div>
+  <p class="sec-note" style="margin-top:0">No Framer, crie cada cor como um <b class="hl">Color Style</b> com um valor de <b class="hl">Claro</b> e um de <b class="hl">Escuro</b>. O site publicado segue a aparência do sistema do visitante automaticamente (<code>prefers-color-scheme</code>); dá pra adicionar um toggle e lembrar a escolha do visitante. Atalho no canvas: Ctrl+Cmd+N. Valores por estilo:</p>
   <div class="fr">
-    <div class="fr-row head"><div>Color Style</div><div>Light</div><div>Dark</div></div>
+    <div class="fr-row head"><div>Color Style</div><div>Claro</div><div>Escuro</div></div>
     <div class="fr-row"><div class="nm">bg / Fundo</div><div class="val"><span class="fr-sw" style="background:#FFFFFF"></span>#FFFFFF</div><div class="val"><span class="fr-sw" style="background:#0E0708"></span>#0E0708</div></div>
-    <div class="fr-row"><div class="nm">bg / Surface</div><div class="val"><span class="fr-sw" style="background:#FBF3F3"></span>#FBF3F3</div><div class="val"><span class="fr-sw" style="background:#1A1012"></span>#1A1012</div></div>
-    <div class="fr-row"><div class="nm">bg / Card</div><div class="val"><span class="fr-sw" style="background:#FEF8F8"></span>#FEF8F8</div><div class="val"><span class="fr-sw" style="background:#241619"></span>#241619</div></div>
-    <div class="fr-row"><div class="nm">line / Border</div><div class="val"><span class="fr-sw" style="background:rgba(214,81,92,.16)"></span>rgba(214,81,92,.16)</div><div class="val"><span class="fr-sw" style="background:rgba(232,138,146,.14)"></span>rgba(232,138,146,.14)</div></div>
+    <div class="fr-row"><div class="nm">bg / Superfície</div><div class="val"><span class="fr-sw" style="background:#FBF3F3"></span>#FBF3F3</div><div class="val"><span class="fr-sw" style="background:#1A1012"></span>#1A1012</div></div>
+    <div class="fr-row"><div class="nm">bg / Cartão</div><div class="val"><span class="fr-sw" style="background:#FEF8F8"></span>#FEF8F8</div><div class="val"><span class="fr-sw" style="background:#241619"></span>#241619</div></div>
+    <div class="fr-row"><div class="nm">line / Borda</div><div class="val"><span class="fr-sw" style="background:rgba(214,81,92,.16)"></span>rgba(214,81,92,.16)</div><div class="val"><span class="fr-sw" style="background:rgba(232,138,146,.14)"></span>rgba(232,138,146,.14)</div></div>
     <div class="fr-row"><div class="nm">text / Texto</div><div class="val"><span class="fr-sw" style="background:#2A1517"></span>#2A1517</div><div class="val"><span class="fr-sw" style="background:#FAF7F8"></span>#FAF7F8</div></div>
-    <div class="fr-row"><div class="nm">text / Muted</div><div class="val"><span class="fr-sw" style="background:#8B656B"></span>#8B656B</div><div class="val"><span class="fr-sw" style="background:#B0898E"></span>#B0898E</div></div>
+    <div class="fr-row"><div class="nm">text / Secundário</div><div class="val"><span class="fr-sw" style="background:#8B656B"></span>#8B656B</div><div class="val"><span class="fr-sw" style="background:#B0898E"></span>#B0898E</div></div>
     <div class="fr-row"><div class="nm">accent / Bordô (CTA)</div><div class="val"><span class="fr-sw" style="background:#D6515C"></span>#D6515C</div><div class="val"><span class="fr-sw" style="background:#D6515C"></span>#D6515C</div></div>
     <div class="fr-row"><div class="nm">accent / Coral claro (link)</div><div class="val"><span class="fr-sw" style="background:#D6515C"></span>#D6515C</div><div class="val"><span class="fr-sw" style="background:#E88A92"></span>#E88A92</div></div>
-    <div class="fr-row"><div class="nm">accent / Gold · texto</div><div class="val"><span class="fr-sw" style="background:#7A5A0E"></span>#7A5A0E</div><div class="val"><span class="fr-sw" style="background:#FFE4A4"></span>#FFE4A4</div></div>
-    <div class="fr-row"><div class="nm">accent / Gold · fill</div><div class="val"><span class="fr-sw" style="background:#FFE4A4"></span>#FFE4A4</div><div class="val"><span class="fr-sw" style="background:#FFE4A4"></span>#FFE4A4</div></div>
-    <div class="fr-row"><div class="nm">accent / Rose · texto</div><div class="val"><span class="fr-sw" style="background:#B04A5E"></span>#B04A5E</div><div class="val"><span class="fr-sw" style="background:#FFB1BD"></span>#FFB1BD</div></div>
-    <div class="fr-row"><div class="nm">chrome / Nav</div><div class="val"><span class="fr-sw" style="background:rgba(255,255,255,.82)"></span>rgba(255,255,255,.82)</div><div class="val"><span class="fr-sw" style="background:rgba(10,7,14,.82)"></span>rgba(10,7,14,.82)</div></div>
-    <div class="fr-row"><div class="nm">chrome / Legal bg</div><div class="val"><span class="fr-sw" style="background:#FAEDED"></span>#FAEDED</div><div class="val"><span class="fr-sw" style="background:#0A0606"></span>#0A0606</div></div>
-    <div class="fr-row"><div class="nm">chrome / Legal text</div><div class="val"><span class="fr-sw" style="background:#8B656B"></span>#8B656B</div><div class="val"><span class="fr-sw" style="background:#A07B82"></span>#A07B82</div></div>
+    <div class="fr-row"><div class="nm">accent / Dourado · texto</div><div class="val"><span class="fr-sw" style="background:#7A5A0E"></span>#7A5A0E</div><div class="val"><span class="fr-sw" style="background:#FFE4A4"></span>#FFE4A4</div></div>
+    <div class="fr-row"><div class="nm">accent / Dourado · preenchimento</div><div class="val"><span class="fr-sw" style="background:#FFE4A4"></span>#FFE4A4</div><div class="val"><span class="fr-sw" style="background:#FFE4A4"></span>#FFE4A4</div></div>
+    <div class="fr-row"><div class="nm">accent / Rosa · texto</div><div class="val"><span class="fr-sw" style="background:#B04A5E"></span>#B04A5E</div><div class="val"><span class="fr-sw" style="background:#FFB1BD"></span>#FFB1BD</div></div>
+    <div class="fr-row"><div class="nm">chrome / Navegação</div><div class="val"><span class="fr-sw" style="background:rgba(255,255,255,.82)"></span>rgba(255,255,255,.82)</div><div class="val"><span class="fr-sw" style="background:rgba(10,7,14,.82)"></span>rgba(10,7,14,.82)</div></div>
+    <div class="fr-row"><div class="nm">chrome / Rodapé · fundo</div><div class="val"><span class="fr-sw" style="background:#FAEDED"></span>#FAEDED</div><div class="val"><span class="fr-sw" style="background:#0A0606"></span>#0A0606</div></div>
+    <div class="fr-row"><div class="nm">chrome / Rodapé · texto</div><div class="val"><span class="fr-sw" style="background:#8B656B"></span>#8B656B</div><div class="val"><span class="fr-sw" style="background:#A07B82"></span>#A07B82</div></div>
   </div>
-  <p class="sec-note" style="margin-top:16px;font-size:12.5px">Refs Framer: <a href="https://www.framer.com/help/articles/light-and-dark-mode-options/" style="color:var(--coral)">Light and dark mode options</a> &middot; <a href="https://www.framer.com/academy/lessons/light-dark-mode" style="color:var(--coral)">Academy: Light e Dark Mode</a></p>
+  <p class="sec-note" style="margin-top:16px;font-size:12.5px">Refs Framer: <a href="https://www.framer.com/help/articles/light-and-dark-mode-options/" style="color:var(--coral)">Modo claro e escuro no Framer</a> &middot; <a href="https://www.framer.com/academy/lessons/light-dark-mode" style="color:var(--coral)">Academy: modo claro e escuro</a></p>
 </div></section>
 
 <footer><div class="wrap">Corporal Class · Design System · <b class="hl">desenvolvido por Edegar Junior</b>. Cores derivadas do brandbook Corporal Academy (Studio Bah, 07/2022). Tipografia: Silka (fallback system-ui).</div></footer>
@@ -1749,9 +1749,9 @@ body{font-family:'Silka','Poppins',system-ui,-apple-system,Segoe UI,Roboto,sans-
       var url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=filename;
       document.body.appendChild(a);a.click();document.body.removeChild(a);setTimeout(function(){URL.revokeObjectURL(url);},1000);
     }
-    /* Degradê -> PNG em alta: renderiza o CSS real via <foreignObject> num canvas 1920x1080 (pixel-perfect). */
+    /* Degradê -> PNG em alta: renderiza o CSS real via <foreignObject> num canvas 3840x2160 / 4K (pixel-perfect). */
     function gradToPNG(el,name,btn){
-      var W=1920,H=1080,cs=getComputedStyle(el);
+      var W=3840,H=2160,cs=getComputedStyle(el);
       var div='<div xmlns="http://www.w3.org/1999/xhtml" style="width:'+W+'px;height:'+H+'px;background-color:'+cs.backgroundColor+';background-image:'+cs.backgroundImage+';"></div>';
       var svg='<svg xmlns="http://www.w3.org/2000/svg" width="'+W+'" height="'+H+'"><foreignObject x="0" y="0" width="100%" height="100%">'+div+'</foreignObject></svg>';
       var img=new Image();

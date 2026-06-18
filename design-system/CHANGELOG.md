@@ -14,6 +14,10 @@ versionamento segue [SemVer](https://semver.org/lang/pt-BR/):
 
 _Nada pendente no momento._
 
+## [1.4.1] — 2026-06-18
+### Adicionado
+- `IMPLEMENTACAO.md`: documentação técnica de implementação (arquitetura sem build, tokens e theming, fundamentos, botões e todos os estados/microinterações, componentes, comportamentos JS, acessibilidade, responsividade, consumo/Framer, deploy/infra, governança e diferenças por marca). Referenciada no `DESIGN-SYSTEM.md`.
+
 ## [1.4.0] — 2026-06-17
 ### Adicionado
 - Nova seção "Voz e tom" (13) no showcase, no grupo Sistema do menu: as regras de copy renderizadas na página (adjetivos da voz, faça/não faça, estrangeirismos traduzir/manter, separação de domínio, microcopy modelo). Espelha o guia do pacote `voz-e-tom.md`. WCAG 0 falhas nos dois temas.

@@ -78,7 +78,7 @@
 /* Valores do tema light, reutilizados pelos dois seletores abaixo */
 @media (prefers-color-scheme: light){
   :root:not([data-theme="dark"]){
-    --bg:#FAFAFA; --bg2:#FBF3F3; --card:#FEF8F8; --card2:#FAEDED;
+    --bg:#FAFAFA; --bg2:#F6F4F2; --card:#FCFAF8; --card2:#F2EFEB;
     --line:rgba(214,81,92,.16);
     --bordo:#5A2730; --bordo2:#D6515C; --bordo-bright:#E0727A;
     --coral:#C2434E; --coral-soft:#B05059;
@@ -97,7 +97,7 @@
   }
 }
 [data-theme="light"]{
-  --bg:#FAFAFA; --bg2:#FBF3F3; --card:#FEF8F8; --card2:#FAEDED;
+  --bg:#FAFAFA; --bg2:#F6F4F2; --card:#FCFAF8; --card2:#F2EFEB;
   --line:rgba(214,81,92,.16);
   --bordo:#5A2730; --bordo2:#D6515C; --bordo-bright:#E0727A;
   --coral:#C2434E; --coral-soft:#B05059;

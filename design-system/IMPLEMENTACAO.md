@@ -79,9 +79,9 @@ Os `--brand-*` **não** mudam entre temas; os tokens de tema abaixo é que deriv
 | Token | Dark | Light | Uso |
 |---|---|---|---|
 | `--bg` | `#0E0708` | `#FAFAFA` | fundo da página |
-| `--bg2` | `#1A1012` | `#FBF3F3` | fundo alt / app shell |
-| `--card` | `#241619` | `#FEF8F8` | superfície de cartão/controle |
-| `--card2` | `#2E1B1F` | `#FAEDED` | superfície elevada/hover |
+| `--bg2` | `#1A1012` | `#F6F4F2` | fundo alt / app shell |
+| `--card` | `#241619` | `#FCFAF8` | superfície de cartão/controle |
+| `--card2` | `#2E1B1F` | `#F2EFEB` | superfície elevada/hover |
 | `--line` | `rgba(232,138,146,.14)` | `rgba(214,81,92,.16)` | bordas/divisores |
 | `--txt` | `#FAF7F8` | `#2A1517` | texto principal |
 | `--mut` | `#CBBDBF` | `#835D63` | texto secundário |

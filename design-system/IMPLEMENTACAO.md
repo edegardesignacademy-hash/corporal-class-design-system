@@ -227,7 +227,7 @@ Classe base **`.b`** (drop-in: `.cc-btn`). Composição: `.b` + tamanho (`.sm`/`
 .b.ghost:hover{color:var(--coral-soft);text-decoration:underline;text-underline-offset:3px}
 
 /* Dourado e dourado contorno */
-.b.gold{background:var(--gold);color:#140D1B}
+.b.gold{background:var(--gold);color:#140D1B;border:1px solid var(--gold-ink)}
 .b.gold:hover{background:var(--gold-deep)}
 .b.gold-o{background:transparent;color:var(--gold-ink);border:1px solid var(--gold-line)}
 .b.gold-o:hover{border-color:var(--gold-ink)}
